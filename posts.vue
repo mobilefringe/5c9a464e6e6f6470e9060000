@@ -6,10 +6,13 @@
                 <div class="margin_20"></div>
             </div>
             <div class="col-xs-7 blogpost_txt">
-                <h2 class="blogpost_title">{{ title }}</h2>
+                <h2 class="blogpost_title">{{ item.title }}</h2>
                 <div class="blogpost_content">
-                    <p class="blogpost_date">{{#author}}<span class="blog-author">by {{ author }}</span> <span class="regular">|</span>{{/author}} {{ published_on }}</p>
-                    <p class="blogpost_discription">{{ description_short }}</p>
+                    <p class="blogpost_date">
+                        <span v-if="item.author" class="blog-author">by {{ item.author }}<span class="regular">|</span></span> 
+                        {{ item.published_on }}
+                    </p>
+                    <p class="blogpost_discription">{{ item.description_short }}</p>
                     <a href='/posts/{{slug}}' class="readmore">Read More</a>
                 </div>
                 <div class="margin_20"></div>
