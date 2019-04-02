@@ -42,7 +42,6 @@
                 ...Vuex.mapGetters([
                     'property',
                     'timezone',
-                    'blogs',
                     'findBlogByName'
                 ]),
                 posts() {
