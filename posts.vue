@@ -48,34 +48,29 @@
                     'findBlogByName'
                 ]),
                 postList() {
-                    var blog = this.findBlogByName("Main Blog");
-                    console.log("blog", blog)
-                    if (blog) {
-                        blog = blog.posts
-        
-                        var vm = this;
-                        var temp_blog = [];
-                        _.forEach(blog, function(value, key) {
-                            var today = moment().tz(vm.timezone);
-                            var webDate = moment(value.publish_date).tz(vm.timezone);
-                            if (today >= webDate) {
-                                // if (_.includes(value.image_url, 'missing')) {
-                                //     value.image_url = "//codecloud.cdn.speedyrails.net/sites/5c0581a36e6f643f53050000/image/jpeg/1527006352000/bccblogplaceholder.jpg";
-                                // }
-                                
-                                if (value.body.length > 99) {
-                                    value.body_short = _.truncate(value.body, { 'length': 99, 'separator': ' ' });
-                                } else {
-                                    value.body_short = value.body;
-                                }
-                                
-                                temp_blog.push(value);
+                    var blog = this.findBlogByName("Main Blog").posts;
+                    var vm = this;
+                    var temp_blog = [];
+                    _.forEach(blog, function(value, key) {
+                        var today = moment().tz(vm.timezone);
+                        var webDate = moment(value.publish_date).tz(vm.timezone);
+                        if (today >= webDate) {
+                            // if (_.includes(value.image_url, 'missing')) {
+                            //     value.image_url = "//codecloud.cdn.speedyrails.net/sites/5c0581a36e6f643f53050000/image/jpeg/1527006352000/bccblogplaceholder.jpg";
+                            // }
+                            
+                            if (value.body.length > 99) {
+                                value.body_short = _.truncate(value.body, { 'length': 99, 'separator': ' ' });
+                            } else {
+                                value.body_short = value.body;
                             }
-                        });
-                        
-                        blog = _.reverse(_.sortBy(temp_blog, function (o) { return o.publish_date }));
-                        return blog
-                    }
+                            
+                            temp_blog.push(value);
+                        }
+                    });
+                    
+                    blog = _.reverse(_.sortBy(temp_blog, function (o) { return o.publish_date }));
+                    return blog
                 }   
             },
             methods: {
