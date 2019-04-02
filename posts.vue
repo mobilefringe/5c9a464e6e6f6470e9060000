@@ -3,6 +3,11 @@
         <loading-spinner v-if="!dataLoaded"></loading-spinner>
         <transition name="fade">
             <div v-if="dataLoaded" v-cloak>
+                <div class="inside_header_background" :style="{ backgroundImage: 'url(' + pageBanner.image_url + ')' }">
+                    <div class="main_container">
+                        <h2>Promotions</h2>
+                    </div>
+                </div>
                 <div v-if="postList">
                     <div class="row"  v-for="(item, index) in postList">
                         <div class="col-xs-5 blogpost_img">
@@ -36,17 +41,25 @@
             data: function () {
                 return {
                     dataloaded: false,
-                    posts: [],
-                    morePosts: [],
-                    morePostsFetched: false,
-                    noMorePosts: false,
-                    noPosts: false
+                    pageBanner: null,
+                    // posts: [],
+                    // morePosts: [],
+                    // morePostsFetched: false,
+                    // noMorePosts: false,
+                    // noPosts: false
                 }
             },
             created() {
                 this.loadData().then(response => {
-                    this.firstPost
-                    this.posts
+                    var temp_repo = this.findRepoByName('Promotions Banner').images;
+                    if(temp_repo != null) {
+                        this.pageBanner = temp_repo[0];
+                    } else {
+                        this.pageBanner = {
+                            "image_url": "//codecloud.cdn.speedyrails.net/sites/5b2925776e6f6432b6110000/image/png/1531495616000/inside_banner.png"
+                        }
+                    }
+                    
                     this.dataloaded = true;
                 });
             },
@@ -75,47 +88,17 @@
                     });
                     blog = _.reverse(_.sortBy(temp_blog, function (o) { return o.publish_date }));
                     return blog
-                },
-                firstPost() {
-                    var first_post = _.slice(this.blogs, 0, 1);
-                    return first_post
-                },
-                blogList() {
-                    var blog_list = _.drop(this.blogs);
-                    return blog_list
                 }
             },
             methods: {
                 loadData: async function () {
                     try {
-                        let results = await Promise.all([this.$store.dispatch("getData", "blogs")]);
+                        let results = await Promise.all([
+                            this.$store.dispatch("getData", "blogs")
+                        ]);
                     } catch (e) {
                         console.log("Error loading data: " + e.message);
                     }
-                },
-                handleButton: function () {
-                    if(!this.morePostsFetched){
-                        this.morePosts = this.blogList;
-                        this.posts = this.morePosts.splice(0, 3);
-                        this.morePostsFetched = true;
-                    } else {
-                        var nextPosts = this.morePosts.splice(0, 3);
-                        // Add 3 more posts to posts array
-                        var vm = this;
-                        _.forEach(nextPosts, function(value, key) {
-                            vm.posts.push(value);
-                        });
-                    }
-                    if(this.blogList.length === 0){
-                        this.noMorePosts = true
-                        this.noPosts = true
-                    } else {
-
-                    }
-                },
-                shareURL(slug) {
-                    var share_url = "https://www.bramaleacitycentre.com/posts/" + slug
-                    return share_url
                 }
             }
         });
