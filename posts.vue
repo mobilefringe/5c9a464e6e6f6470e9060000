@@ -26,7 +26,7 @@
 
 <script>
     define(["Vue", "vuex", "moment", "moment-timezone"], function (Vue, Vuex, moment, tz) {
-        return Vue.component("blog-component", {
+        return Vue.component("news-component", {
             template: template, // the variable template will be injected
             data: function () {
                 return {
