@@ -1,0 +1,40 @@
+[
+    {
+        "name": "Directory",
+        "href": "/stores"
+    },
+    {
+        "name": "Events & Promotions",
+        "href": "/events-and-promotions"
+    },
+    {
+        "name": "What's New",
+        "id": "menu1",
+        "href": "",
+        "sub_menu": [
+            {
+                "name": "News",
+                "href": "/news"
+            },
+            {
+                "name": "Blog",
+                "href": "/posts"
+            }
+        ]
+    },
+    {
+        "name": "Contact Us",
+        "id": "menu2",
+        "href": "",
+        "sub_menu": [
+            {
+                "name": "Directions",
+                "href": "/directions"
+            },
+            {
+                "name": "Contact Us",
+                "href": "/contact-us"
+            }
+        ]
+    }
+]
