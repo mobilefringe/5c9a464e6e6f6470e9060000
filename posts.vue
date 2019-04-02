@@ -5,7 +5,7 @@
             <div v-if="dataLoaded" v-cloak>
                 <div class="inside_header_background" :style="{ backgroundImage: 'url(' + pageBanner.image_url + ')' }">
                     <div class="main_container">
-                        <h2>Promotions</h2>
+                        <h2>Blog</h2>
                     </div>
                 </div>
                 <div v-if="postList">
