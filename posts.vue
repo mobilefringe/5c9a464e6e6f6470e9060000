@@ -1,21 +1,23 @@
 <template>
     <div> <!-- without an outer container div this component template will not render -->
-        <div class="row" v-if="posts" v-for="(item, index) in posts">
-            <div class="col-xs-5 blogpost_img">
-                <!--<img src="{{ image_url }}" />-->
-                <div class="margin_20"></div>
-            </div>
-            <div class="col-xs-7 blogpost_txt">
-                <h2 class="blogpost_title">{{ item.title }}</h2>
-                <div class="blogpost_content">
-                    <p class="blogpost_date">
-                        <span v-if="item.author" class="blog-author">by {{ item.author }}<span class="regular">|</span></span> 
-                        {{ item.published_on }}
-                    </p>
-                    <p class="blogpost_discription">{{ item.body_short }}</p>
-                    <a :href="'/posts/' + item.slug" class="readmore">Read More</a>
+        <div v-if="posts">
+            <div class="row"  v-for="(item, index) in posts">
+                <div class="col-xs-5 blogpost_img">
+                    <!--<img src="{{ image_url }}" />-->
+                    <div class="margin_20"></div>
                 </div>
-                <div class="margin_20"></div>
+                <div class="col-xs-7 blogpost_txt">
+                    <h2 class="blogpost_title">{{ item.title }}</h2>
+                    <div class="blogpost_content">
+                        <p class="blogpost_date">
+                            <span v-if="item.author" class="blog-author">by {{ item.author }}<span class="regular">|</span></span> 
+                            {{ item.published_on }}
+                        </p>
+                        <p class="blogpost_discription">{{ item.body_short }}</p>
+                        <a :href="'/posts/' + item.slug" class="readmore">Read More</a>
+                    </div>
+                    <div class="margin_20"></div>
+                </div>
             </div>
         </div>
     </div>
