@@ -27,12 +27,7 @@
             template: template, // the variable template will be injected
             data: function () {
                 return {
-                    dataloaded: false,
-                    posts: [],
-                    morePosts: [],
-                    morePostsFetched: false,
-                    noMorePosts: false,
-                    noPosts: false
+                    dataloaded: false
                 }
             },
             created() {
