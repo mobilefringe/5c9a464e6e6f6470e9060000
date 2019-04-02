@@ -50,7 +50,7 @@
                 postList() {
                     var blog = this.findBlogByName("Main Blog");
                     console.log("blog", blog)
-                    if (blog){
+                    if (blog) {
                         blog = blog.posts
         
                         var vm = this;
