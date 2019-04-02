@@ -12,7 +12,7 @@
                         <span v-if="item.author" class="blog-author">by {{ item.author }}<span class="regular">|</span></span> 
                         {{ item.published_on }}
                     </p>
-                    <p class="blogpost_discription">{{ item.description_short }}</p>
+                    <p class="blogpost_discription">{{ item.body_short }}</p>
                     <a :href="'/posts/' + item.slug" class="readmore">Read More</a>
                 </div>
                 <div class="margin_20"></div>
@@ -50,8 +50,8 @@
                     var vm = this;
                     var temp_blog = [];
                     _.forEach(blog, function(value, key) {
-                        today = moment().tz(vm.timezone);
-                        webDate = moment(value.publish_date).tz(vm.timezone);
+                        var today = moment().tz(vm.timezone);
+                        var webDate = moment(value.publish_date).tz(vm.timezone);
                         if (today >= webDate) {
                             if (_.includes(value.image_url, 'missing')) {
                                 value.image_url = "//codecloud.cdn.speedyrails.net/sites/5c0581a36e6f643f53050000/image/jpeg/1527006352000/bccblogplaceholder.jpg";
