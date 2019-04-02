@@ -1,7 +1,7 @@
 <template>
     <div> <!-- without an outer container div this component template will not render -->
         <div v-if="posts">
-            <div class="row"  v-for="(item, index) in posts">
+            <div class="row"  v-for="(item, index) in postList">
                 <div class="col-xs-5 blogpost_img">
                     <!--<img src="{{ image_url }}" />-->
                     <div class="margin_20"></div>
@@ -35,8 +35,8 @@
             created() {
                 this.loadData().then(response => {
                     // this.firstPost
-                    this.posts
-                    console.log("this.posts", this.posts)
+                    // this.postList
+                    console.log("this.posts", this.postList)
                     this.dataloaded = true;
                 });
             },
@@ -47,7 +47,7 @@
                     'blogs',
                     'findBlogByName'
                 ]),
-                posts() {
+                postList() {
                     var blog = this.findBlogByName("Blog").posts;
                     console.log("blog", blog)
                     var vm = this;
