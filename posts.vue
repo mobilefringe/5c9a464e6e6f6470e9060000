@@ -34,6 +34,7 @@
                 this.loadData().then(response => {
                     // this.firstPost
                     this.posts
+                    console.log("this.posts", this.posts)
                     this.dataloaded = true;
                 });
             },
@@ -56,7 +57,12 @@
                             if (_.includes(value.image_url, 'missing')) {
                                 value.image_url = "//codecloud.cdn.speedyrails.net/sites/5c0581a36e6f643f53050000/image/jpeg/1527006352000/bccblogplaceholder.jpg";
                             }
-                            value.body_short = _.truncate(value.body, { 'length': 99, 'separator': ' ' });
+                            
+                            if (value.body.length > 99) {
+                                value.body_short = _.truncate(value.body, { 'length': 99, 'separator': ' ' });
+                            } else {
+                                value.body_short = value.body;
+                            }
                             
                             temp_blog.push(value);
                         }
