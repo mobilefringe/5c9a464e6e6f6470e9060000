@@ -1,26 +1,26 @@
 <template>
     <div v-if="dataloaded"> <!-- without an outer container div this component template will not render -->
      {{ postList }}
-        <!--<div v-if="postList">-->
-        <!--    <div class="row"  v-for="(item, index) in postList">-->
-        <!--        <div class="col-xs-5 blogpost_img">-->
-                    <!--<img src="{{ image_url }}" />-->
-        <!--            <div class="margin_20"></div>-->
-        <!--        </div>-->
-        <!--        <div class="col-xs-7 blogpost_txt">-->
-        <!--            <h2 class="blogpost_title">{{ item.title }}</h2>-->
-        <!--            <div class="blogpost_content">-->
-        <!--                <p class="blogpost_date">-->
-        <!--                    <span v-if="item.author" class="blog-author">by {{ item.author }}<span class="regular">|</span></span> -->
-        <!--                    {{ item.published_on }}-->
-        <!--                </p>-->
-        <!--                <p class="blogpost_discription">{{ item.body_short }}</p>-->
-        <!--                <a :href="'/posts/' + item.slug" class="readmore">Read More</a>-->
-        <!--            </div>-->
-        <!--            <div class="margin_20"></div>-->
-        <!--        </div>-->
-        <!--    </div>-->
-        <!--</div>-->
+        <div v-if="postList">
+            <div class="row"  v-for="(item, index) in postList">
+                <div class="col-xs-5 blogpost_img">
+                    <img src="{{ image_url }}" />
+                    <div class="margin_20"></div>
+                </div>
+                <div class="col-xs-7 blogpost_txt">
+                    <h2 class="blogpost_title">{{ item.title }}</h2>
+                    <div class="blogpost_content">
+                        <p class="blogpost_date">
+                            <span v-if="item.author" class="blog-author">by {{ item.author }}<span class="regular">|</span></span> 
+                            {{ item.published_on }}
+                        </p>
+                        <p class="blogpost_discription">{{ item.body_short }}</p>
+                        <a :href="'/posts/' + item.slug" class="readmore">Read More</a>
+                    </div>
+                    <div class="margin_20"></div>
+                </div>
+            </div>
+        </div>
     </div>
 </template>
 
