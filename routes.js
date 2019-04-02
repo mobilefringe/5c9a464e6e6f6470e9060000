@@ -94,21 +94,14 @@ define([], function () {
         {
             path: '/posts',
             component: view('default'),
-            children: [
-                {
+            children: [{
                     path: '',
                     component: view('posts'),
-                    // meta: {
-                    //     pageName: 'Promotions',
-                    // },
-                    name: 'posts'
+                    name: 'postList'
                 },
                 {
                     path: ':id',
                     component: view('post_details'),
-                    meta: {
-                        pageName: 'Promotions',
-                    },
                     name: 'postDetails',
                     props: true
                 }
