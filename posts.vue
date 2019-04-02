@@ -40,7 +40,7 @@
             template: template, // the variable template will be injected
             data: function () {
                 return {
-                    dataloaded: false,
+                    dataLoaded: false,
                     pageBanner: null,
                     // posts: [],
                     // morePosts: [],
@@ -60,7 +60,7 @@
                         }
                     }
                     
-                    this.dataloaded = true;
+                    this.dataLoaded = true;
                 });
             },
             computed: {
