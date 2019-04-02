@@ -32,8 +32,8 @@
             },
             created() {
                 this.loadData().then(response => {
-                    this.firstPost
-                    this.posts
+                    // this.firstPost
+                    // this.posts
                     this.dataloaded = true;
                 });
             },
