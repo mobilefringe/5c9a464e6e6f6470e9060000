@@ -1,5 +1,5 @@
 <template>
-    <div> <!-- without an outer container div this component template will not render -->
+    v-if="dataloaded" <!-- without an outer container div this component template will not render -->
      {{ postList }}
         <!--<div v-if="postList">-->
         <!--    <div class="row"  v-for="(item, index) in postList">-->
