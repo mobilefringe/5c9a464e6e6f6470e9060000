@@ -1,6 +1,6 @@
 <template>
     <div> <!-- without an outer container div this component template will not render -->
-        <div class="row">
+        <div class="row" v-for="(item, index) in posts">
             <div class="col-xs-5 blogpost_img">
                 <img src="{{ image_url }}" />
                 <div class="margin_20"></div>
@@ -46,7 +46,7 @@
                     'blogs',
                     'findBlogByName'
                 ]),
-                blogs() {
+                posts() {
                     var blog = this.findBlogByName("Blog").posts;
                     var vm = this;
                     var temp_blog = [];
