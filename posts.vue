@@ -33,7 +33,7 @@
             created() {
                 this.loadData().then(response => {
                     // this.firstPost
-                    // this.posts
+                    this.posts
                     this.dataloaded = true;
                 });
             },
@@ -46,6 +46,7 @@
                 ]),
                 posts() {
                     var blog = this.findBlogByName("Blog").posts;
+                    console.log("blog", blog)
                     var vm = this;
                     var temp_blog = [];
                     _.forEach(blog, function(value, key) {
