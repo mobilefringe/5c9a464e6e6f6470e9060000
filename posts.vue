@@ -1,6 +1,6 @@
 <template>
     <div> <!-- without an outer container div this component template will not render -->
-        <div class="row" v-for="(item, index) in posts">
+        <div class="row" v-if="posts" v-for="(item, index) in posts">
             <div class="col-xs-5 blogpost_img">
                 <!--<img src="{{ image_url }}" />-->
                 <div class="margin_20"></div>
