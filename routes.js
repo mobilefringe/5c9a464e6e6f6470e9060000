@@ -98,10 +98,10 @@ define([], function () {
                 {
                     path: '',
                     component: view('posts'),
-                    meta: {
-                        pageName: 'Promotions',
-                    },
-                    name: 'promotions='
+                    // meta: {
+                    //     pageName: 'Promotions',
+                    // },
+                    name: 'posts'
                 },
                 {
                     path: ':id',
