@@ -67,6 +67,7 @@
                 ...Vuex.mapGetters([
                     'property',
                     'timezone',
+                    'findRepoByName',
                     'blogs',
                     'findBlogByName'
                 ]),
