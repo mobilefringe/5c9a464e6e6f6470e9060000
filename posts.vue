@@ -25,19 +25,24 @@
 </template>
 
 <script>
-    define(["Vue", "vuex", "moment", "moment-timezone"], function (Vue, Vuex, moment, tz) {
+    define(["Vue", "vuex", "moment", "moment-timezone", "vue-moment", "vue-lazy-load", "vue-social-sharing"], function (Vue, Vuex, moment, tz, VueMoment, VueLazyload, SocialSharing) {
+        Vue.use(VueLazyload);
         return Vue.component("news-component", {
             template: template, // the variable template will be injected
             data: function () {
                 return {
-                    dataloaded: false
+                    dataloaded: false,
+                    posts: [],
+                    morePosts: [],
+                    morePostsFetched: false,
+                    noMorePosts: false,
+                    noPosts: false
                 }
             },
             created() {
                 this.loadData().then(response => {
-                    // this.firstPost
-                    // this.postList
-                    console.log("this.posts", this.postList)
+                    this.firstPost
+                    this.posts
                     this.dataloaded = true;
                 });
             },
@@ -49,61 +54,65 @@
                     'findBlogByName'
                 ]),
                 postList() {
-                    var blog = this.findBlogByName("Main Blog").posts;
+                    var blog = this.findBlogByName("Bramalea City Centre").posts;
                     var vm = this;
                     var temp_blog = [];
                     _.forEach(blog, function(value, key) {
-                        var today = moment().tz(vm.timezone);
-                        var webDate = moment(value.publish_date).tz(vm.timezone);
+                        today = moment().tz(vm.timezone);
+                        webDate = moment(value.publish_date).tz(vm.timezone);
                         if (today >= webDate) {
-                            // if (_.includes(value.image_url, 'missing')) {
-                            //     value.image_url = "//codecloud.cdn.speedyrails.net/sites/5c0581a36e6f643f53050000/image/jpeg/1527006352000/bccblogplaceholder.jpg";
-                            // }
-                            
-                            if (value.body.length > 99) {
-                                value.body_short = _.truncate(value.body, { 'length': 99, 'separator': ' ' });
-                            } else {
-                                value.body_short = value.body;
+                            if (_.includes(value.image_url, 'missing')) {
+                                value.image_url = "//codecloud.cdn.speedyrails.net/sites/5c0581a36e6f643f53050000/image/jpeg/1527006352000/bccblogplaceholder.jpg";
                             }
+                            value.body_short = _.truncate(value.body, { 'length': 99, 'separator': ' ' });
                             
                             temp_blog.push(value);
                         }
                     });
-                    
                     blog = _.reverse(_.sortBy(temp_blog, function (o) { return o.publish_date }));
                     return blog
-                }   
+                },
+                firstPost() {
+                    var first_post = _.slice(this.blogs, 0, 1);
+                    return first_post
+                },
+                blogList() {
+                    var blog_list = _.drop(this.blogs);
+                    return blog_list
+                }
             },
             methods: {
                 loadData: async function () {
                     try {
-                        let results = await Promise.all([
-                            this.$store.dispatch("getData", "blogs")
-                        ]);
+                        let results = await Promise.all([this.$store.dispatch("getData", "blogs")]);
                     } catch (e) {
                         console.log("Error loading data: " + e.message);
                     }
                 },
-                // handleButton: function () {
-                //     if(!this.morePostsFetched){
-                //         this.morePosts = this.blogList;
-                //         this.posts = this.morePosts.splice(0, 3);
-                //         this.morePostsFetched = true;
-                //     } else {
-                //         var nextPosts = this.morePosts.splice(0, 3);
-                //         // Add 3 more posts to posts array
-                //         var vm = this;
-                //         _.forEach(nextPosts, function(value, key) {
-                //             vm.posts.push(value);
-                //         });
-                //     }
-                //     if(this.blogList.length === 0){
-                //         this.noMorePosts = true
-                //         this.noPosts = true
-                //     } else {
+                handleButton: function () {
+                    if(!this.morePostsFetched){
+                        this.morePosts = this.blogList;
+                        this.posts = this.morePosts.splice(0, 3);
+                        this.morePostsFetched = true;
+                    } else {
+                        var nextPosts = this.morePosts.splice(0, 3);
+                        // Add 3 more posts to posts array
+                        var vm = this;
+                        _.forEach(nextPosts, function(value, key) {
+                            vm.posts.push(value);
+                        });
+                    }
+                    if(this.blogList.length === 0){
+                        this.noMorePosts = true
+                        this.noPosts = true
+                    } else {
 
-                //     }
-                // }
+                    }
+                },
+                shareURL(slug) {
+                    var share_url = "https://www.bramaleacitycentre.com/posts/" + slug
+                    return share_url
+                }
             }
         });
     });
