@@ -13,7 +13,7 @@
                         {{ item.published_on }}
                     </p>
                     <p class="blogpost_discription">{{ item.description_short }}</p>
-                    <a href='/posts/{{slug}}' class="readmore">Read More</a>
+                    <a :href="'/posts/' + item.slug" class="readmore">Read More</a>
                 </div>
                 <div class="margin_20"></div>
             </div>
