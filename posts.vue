@@ -78,26 +78,26 @@
                         console.log("Error loading data: " + e.message);
                     }
                 },
-                handleButton: function () {
-                    if(!this.morePostsFetched){
-                        this.morePosts = this.blogList;
-                        this.posts = this.morePosts.splice(0, 3);
-                        this.morePostsFetched = true;
-                    } else {
-                        var nextPosts = this.morePosts.splice(0, 3);
-                        // Add 3 more posts to posts array
-                        var vm = this;
-                        _.forEach(nextPosts, function(value, key) {
-                            vm.posts.push(value);
-                        });
-                    }
-                    if(this.blogList.length === 0){
-                        this.noMorePosts = true
-                        this.noPosts = true
-                    } else {
+                // handleButton: function () {
+                //     if(!this.morePostsFetched){
+                //         this.morePosts = this.blogList;
+                //         this.posts = this.morePosts.splice(0, 3);
+                //         this.morePostsFetched = true;
+                //     } else {
+                //         var nextPosts = this.morePosts.splice(0, 3);
+                //         // Add 3 more posts to posts array
+                //         var vm = this;
+                //         _.forEach(nextPosts, function(value, key) {
+                //             vm.posts.push(value);
+                //         });
+                //     }
+                //     if(this.blogList.length === 0){
+                //         this.noMorePosts = true
+                //         this.noPosts = true
+                //     } else {
 
-                    }
-                }
+                //     }
+                // }
             }
         });
     });
