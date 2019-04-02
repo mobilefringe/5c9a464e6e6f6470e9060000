@@ -6,7 +6,7 @@ define([], function () {
             component: view('home')
         },
         {
-            path: '/contact_us',
+            path: '/contact-us',
             component: view('default'),
             children: [
                 {
@@ -62,64 +62,6 @@ define([], function () {
                     },
                     name: 'jobDetails',
                     props: true
-                }
-            ]
-        },
-        {
-            path: '/hours',
-            component: view('default'),
-            children: [
-                {
-                    path: '',
-                    component: view('hours'),
-                    meta: {
-                        pageName: 'Hours',
-                    },
-                    name: 'hours'
-                }
-            ]
-        },
-        {
-            path: '/leasing',
-            component: view('default'),
-            children: [
-                {   
-                    path: '',
-                    component: view('leasing'),
-                    meta: {
-                        pageName: 'Leasing',
-                    },
-                    name: 'leasing'
-                },
-                {   
-                    path: '/leasing/permanent',
-                    component: view('leasing_permanent'),
-                    meta: {
-                        pageName: 'Permanent Leasing',
-                    },
-                    name: 'permanentLeasing'
-                },
-                {   
-                    path: '/leasing/specialty',
-                    component: view('leasing_temporary'),
-                    meta: {
-                        pageName: 'Specialty Leasing',
-                    },
-                    name: 'specialtyLeasing'
-                }
-            ]
-        },
-        {
-            path: '/map',
-            component: view('default'),
-            children: [
-                {   
-                    path: '',
-                    component: view('map'),
-                    meta: {
-                        pageName: 'Centre Map',
-                    },
-                    name: 'map'
                 }
             ]
         },
