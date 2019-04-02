@@ -44,6 +44,7 @@
                 ...Vuex.mapGetters([
                     'property',
                     'timezone',
+                    'blogs',
                     'findBlogByName'
                 ]),
                 posts() {
@@ -75,7 +76,9 @@
             methods: {
                 loadData: async function () {
                     try {
-                        let results = await Promise.all([this.$store.dispatch("getData", "blogs")]);
+                        let results = await Promise.all([
+                            this.$store.dispatch("getData", "blogs")
+                        ]);
                     } catch (e) {
                         console.log("Error loading data: " + e.message);
                     }
