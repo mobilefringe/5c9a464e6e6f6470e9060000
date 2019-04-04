@@ -42,42 +42,24 @@
 </template>
 
 <script>
-    define(["Vue", "vuex", "moment", "moment-timezone", "vue-moment", "json!site.json", "lightbox"], function (Vue, Vuex, moment, tz, VueMoment, site, lightbox) {
+    define(["Vue", "vuex", "json!site.json"], function (Vue, Vuex, site) {
         return Vue.component("footer-component", {
             template: template, // the variable template will be injected,
             data: function data() {
                 return {
                     dataLoaded: false,
-                    leasingFeed: null,
                     siteInfo: site,
                     newsletter_email: ""
                 }
             },
             created () {
-                var socialFeed = this.findRepoByName("Leasing Images");
-                if(socialFeed != null && socialFeed !== undefined && socialFeed.images.length > 0){
-                    socialFeed = socialFeed.images;
-                    this.leasingFeed = _.slice(socialFeed, [0], [14]);
-                }
                 this.dataLoaded = true;
             },
             computed: {
                 ...Vuex.mapGetters([
                     'property',
-                    'timezone',
-                    'getPropertyHours',
-                    'getPropertyHolidayHours',
                     'findRepoByName'
                 ]),
-                weekdayHours() {
-                    return _.filter(this.getPropertyHours, function(o) { return o.day_of_week == 1 });
-                },
-                saturdayHours() {
-                    return _.filter(this.getPropertyHours, function(o) { return o.day_of_week == 6 });
-                },
-                sundayHours() {
-                    return _.filter(this.getPropertyHours, function(o) { return o.day_of_week == 0 });
-                },
                 copyright_year() {
                     return moment().year();
                 },
