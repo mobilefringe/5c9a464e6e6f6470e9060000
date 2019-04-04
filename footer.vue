@@ -29,12 +29,10 @@
         <section class="footer_privacy ">
             <div class="main_container row">
                 <div class="col-sm-4 col-md-6">
-                    <p class="footer_text">&#169; {{copyright_year}} {{property.name}}</p>
-                    <p class="footer_text">Powered by <a href="https://www.mallmaverick.com/" target="_blank">Mall Maverick</a></p>
+                    <p class="footer_text">&#169; {{copyright_year}} {{property.name}} | Powered by <a href="https://www.mallmaverick.com/" target="_blank">Mall Maverick</a></p>
                 </div>
                 <div class="col-sm-8 col-md-6">
-                    <p class="footer_text"><a :href="siteInfo.googleMapsURL" target="_blank">{{ getPropertyAddress }}</a></p> 
-                    <p class="footer_text"><a :href="'tel:' +  property.contact_phone">{{ property.contact_phone }}</a> | <a href=" /pages/gerrardsquare-privacy-policy">Privacy Policy</a> | <router-link to="/jobs" exact>Jobs</router-link> | <a :href="siteInfo.propertyManagementURL" target="_blank">{{ siteInfo.propertyManagementName }}</a></p>
+                    <p class="footer_text"><span v-if="property.contact_phone"><a :href="'tel:' +  property.contact_phone">{{ property.contact_phone }}</a> | </span><a href="">Privacy Policy</a> | <router-link to="/jobs" exact>Jobs</router-link> | <a :href="siteInfo.propertyManagementURL" target="_blank">{{ siteInfo.propertyManagementName }}</a></p>
                 </div>
             </div>
         </section>
