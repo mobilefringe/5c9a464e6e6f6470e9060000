@@ -42,7 +42,7 @@
 </template>
 
 <script>
-    define(["Vue", "vuex", "json!site.json"], function (Vue, Vuex, site) {
+    define(["Vue", "vuex", "moment", "moment-timezone", "json!site.json"], function (Vue, Vuex, moment, tz, site) {
         return Vue.component("footer-component", {
             template: template, // the variable template will be injected,
             data: function data() {
@@ -58,6 +58,7 @@
             computed: {
                 ...Vuex.mapGetters([
                     'property',
+                    'timezone',
                     'findRepoByName'
                 ]),
                 copyright_year() {
