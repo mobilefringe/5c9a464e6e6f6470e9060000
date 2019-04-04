@@ -434,7 +434,7 @@ footer {
 .footer_menu {
     padding: 20px 0;
     .col-md-4 {
-        min-height: 208px;
+        min-height: 288px;
     }
     .footer_hours {
         .clock_icon {
