@@ -30,6 +30,19 @@
     font-style: normal;
 }
 
+/* *** MIXINS *** */
+@mixin responsive-ratio($x,$y, $pseudo: false) {
+    $padding: unquote( ( $y / $x ) * 100 + '%' );
+    @if $pseudo {
+        &:before {
+            @include pseudo($pos: relative);
+            width: 100%;
+            padding-top: $padding;
+        }
+    } @else {
+        padding-top: $padding;
+    }
+}
 
 /* *** COLOURS *** */
 $primary: #b70200;
@@ -534,7 +547,8 @@ footer {
         margin-bottom: 40px;
     }
     .banner_image {
-        height: 500px;
+        @include responsive-ratio(64,15);
+        // height: 500px;
         background-size: cover;
         background-repeat: no-repeat;
         background-position: 50%;
