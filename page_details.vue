@@ -65,18 +65,18 @@
                         // Determine the incoming route
                         var route_url = "";
                         if (_.includes(this.$route.path, "leasing")) {  
-                            route_url = this.property.mm_host + "/pages/" + this.property.slug + "-leasing.json";
+                            route_url = "/pages/" + this.property.slug + "-leasing.json";
                         } else if (_.includes(this.$route.path, "privacy-policy")) {
-                            route_url = this.property.mm_host + "/pages/" + this.property.slug + "-leasing.json"
+                            route_url = "/pages/" + this.property.slug + "-leasing.json"
                         } else if (_.includes(this.$route.path, "terms-of-use")) {
-                            route_url = this.property.mm_host + "/pages/" + this.property.slug + "-leasing.json"
+                            route_url = "/pages/" + this.property.slug + "-leasing.json"
                         } else {
                             route_url = this.id;
                         }
                         
                         var _this = this;
                         this.property.mm_host = this.property.mm_host.replace("http:", "");
-                        this.$store.dispatch('LOAD_PAGE_DATA', { url: route_url }).then(function (response) {
+                        this.$store.dispatch('LOAD_PAGE_DATA', { url: this.property.mm_host +   route_url }).then(function (response) {
                             _this.currentPage = response.data;
                             _this.dataLoaded = true;
                         }, function (error) {
