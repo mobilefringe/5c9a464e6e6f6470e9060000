@@ -5,7 +5,7 @@
             <div v-if="dataLoaded" v-cloak>
                 <div class="inside_header_background">
                     <div class="main_container">
-                        <h2>Events & Promotions</h2>
+                        <h2>Sales & Events</h2>
                     </div>
                 </div>
                 <div class="main_container mobile_padding margin_30">
@@ -129,6 +129,15 @@
             },
             created (){
                 this.loadData().then(response => {
+                    var temp_repo = this.findRepoByName('Inside Page Banner').images;
+                    if (temp_repo != null) {
+                        this.pageBanner = temp_repo[0];
+                    } else {
+                        this.pageBanner = {
+                            "image_url": "//codecloud.cdn.speedyrails.net/sites/5b2925776e6f6432b6110000/image/png/1531495616000/inside_banner.png"
+                        }
+                    }
+                    
                     this.dataLoaded = true;
                 });
             },
