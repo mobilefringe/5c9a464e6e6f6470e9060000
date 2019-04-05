@@ -390,7 +390,7 @@ hr{
         position: absolute;
         bottom: 0;
         left: 50%;
-        transform: translateY(-50%);
+        transform: translateX(-50%);
         background-color: transparent;
         transition: 0.3s background-color ease;
     }
