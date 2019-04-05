@@ -131,8 +131,16 @@ require(['Vue', 'vuex', 'vue2-filters', 'vue_router', 'routes', 'vuex-router-syn
                 try{
                     await this.$store.dispatch('initializeApi', { site: "altalomasquare", version: "v4" });
                     await this.$store.dispatch("getData","property");
-                    let results = await Promise.all([this.$store.dispatch("INITIALIZE_LOCALE"), this.$store.dispatch("getData", "hours"), this.$store.dispatch("getData", "stores"), this.$store.dispatch("getData", "repos"),this.$store.dispatch("getData", "events"),this.$store.dispatch("getData", "promotions"),this.$store.dispatch("getData", "jobs")]);
-                    await Promise.all([this.$store.dispatch("LOAD_META_DATA")]);
+                    let results = await Promise.all([
+                        this.$store.dispatch("INITIALIZE_LOCALE"), 
+                        this.$store.dispatch("getData", "hours"), 
+                        this.$store.dispatch("getData", "stores"), 
+                        this.$store.dispatch("getData", "repos"),
+                        this.$store.dispatch("getData", "events"),
+                        this.$store.dispatch("getData", "promotions"),
+                        this.$store.dispatch("getData", "jobs")
+                    ]);
+                    // await Promise.all([this.$store.dispatch("LOAD_META_DATA")]);
                 } catch (e) {
                     console.log("Error loading data: " + e.message);    
                 }
