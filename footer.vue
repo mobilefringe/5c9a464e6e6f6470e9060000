@@ -8,6 +8,7 @@
                 </div>
                 <div class="col-xs-12 col-sm-6 col-md-4 footer_newsletter">
                     <p class="footer_heading">NEWSLETTER SUBSCRIPTION</p>
+                    <p>Stay up to date on the latest news from {{ property.name }}!</p>
                     <label for="emailAddress" class="accessibility">Enter Email Address</label>
                     <input id="emailAddress" v-model="newsletter_email" type="text" placeholder="Susbcribe to Newsletter" class="newsletter_control" required />
                     <button @click="newsletterRoute" class="newsletter_btn animated_btn">Subscribe</button>
