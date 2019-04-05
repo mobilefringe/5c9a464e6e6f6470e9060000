@@ -439,6 +439,9 @@ footer {
         letter-spacing: 0.5px;
         color: $text;;
     }
+    .fb_iframe_widget {
+        max-height: 250px;
+    }
 }
 .footer_menu {
     padding: 20px 0;
