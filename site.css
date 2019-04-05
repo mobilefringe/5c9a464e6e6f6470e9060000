@@ -400,9 +400,9 @@ hr{
 	&:after {
         background-color: $primary;
     }
-	> a {
-	    color: #FFF;
-	}
+// 	> a {
+// 	    color: #FFF;
+// 	}
 }
 #primary_nav ul ul {
 	padding: 0;
