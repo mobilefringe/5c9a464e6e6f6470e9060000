@@ -11,7 +11,7 @@
                 <div class="main_container margin_30">
                     <div class="details_row">
                         <div class="details_col_3 hidden_phone">
-                            <img class="img_max" src="//codecloud.cdn.speedyrails.net/sites/5b2925776e6f6432b6110000/image/jpeg/1531500084000/sidebanner11.jpg" alt="" />    
+                            <img class="img_max" src="http://placehold.it/440x1200" alt="" />    
                         </div>
                         <div class="details_col_9">
                             <div class="row">
