@@ -62,7 +62,7 @@
                     this.property.mm_host = this.property.mm_host.replace("http:", "");
                     try {
                         let results = await Promise.all([
-                            this.$store.dispatch('LOAD_PAGE_DATA', { url: this.property.mm_host + "/pages/"+ this.property.slug + "about-us.json" })
+                            this.$store.dispatch('LOAD_PAGE_DATA', { url: this.property.mm_host + "/pages/"+ this.property.slug + "-about-us.json" })
                         ]);
                         return results;
                     } catch (e) {
