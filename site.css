@@ -389,21 +389,16 @@ hr{
         bottom: 0;
         left: 50%;
         transform: translateY(-50%);
-        width: 100%;
+        width: 25px;
         height: 3px;
         background-color: transparent;
         transition: 0.3s background-color ease;
     }
 }
 #primary_nav ul .menu_item:hover {
-// 	background: rgba(0,0,0,0.8);
-// 	color: #FFF;
 	&:after {
         background-color: $primary;
     }
-// 	> a {
-// 	    color: #FFF;
-// 	}
 }
 #primary_nav ul ul {
 	padding: 0;
