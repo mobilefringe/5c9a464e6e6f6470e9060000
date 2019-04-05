@@ -13,16 +13,8 @@
                     <button @click="newsletterRoute" class="newsletter_btn animated_btn">Subscribe</button>
                 </div>
                 <div class="col-xs-12 col-sm-12 col-md-4 footer_insta">
-                    <router-link class="pull-right insta_view_more" to="/leasing">View More <i class="fa fa-caret-right"></i></router-link>
-                    <p class="footer_heading text-uppercase">Leasing</p>
-                    <div class="insta-feed-container">
-                        <div class="insta-feed-image-container" v-for="(item, index) in leasingFeed">
-                            <a :href="item.image_url" data-lightbox="leasing images">
-                                <div class="insta-feed-image" v-bind:style="{ backgroundImage: 'url(' + item.image_url + ')' }"></div>
-                                <p style="display:none;">{{item.id}}</p>
-                            </a>
-                        </div>
-                    </div> 
+                    <p class="footer_heading">FOLLOW US ON FACEBOOK</p>
+                    <div class="fb-page" data-href="https://www.facebook.com/facebook" data-tabs="timeline" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true"><blockquote cite="https://www.facebook.com/facebook" class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/facebook">Facebook</a></blockquote></div>
                 </div>
             </div>
         </section>
