@@ -37,16 +37,19 @@
                 }
             },
             created() {
-                var temp_repo = this.findRepoByName('Inside Page Banner').images;
-                if(temp_repo != null) {
-                    this.pageBanner = temp_repo[0];
-                } else {
-                    this.pageBanner = {
-                        "image_url": "//codecloud.cdn.speedyrails.net/sites/5b2925776e6f6432b6110000/image/png/1531495616000/inside_banner.png"
+                this.loadData().then(response => {
+                    var temp_repo = this.findRepoByName('Inside Page Banner').images;
+                    if (temp_repo != null) {
+                        this.pageBanner = temp_repo[0];
+                    } else {
+                        this.pageBanner = {
+                            "image_url": "//codecloud.cdn.speedyrails.net/sites/5b2925776e6f6432b6110000/image/png/1531495616000/inside_banner.png"
+                        }
                     }
-                }
-                this.currentPage = response[0].data;
-                this.dataLoaded = true;
+                    
+                    this.currentPage = response[0].data;
+                    this.dataLoaded = true;
+                });
             },
             computed: {
                 ...Vuex.mapGetters([
