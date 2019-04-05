@@ -16,7 +16,7 @@
                             <img class="img_max" src="http://placehold.it/440x1200" alt="" />    
                         </div>
                         <div class="details_col_9">
-                            
+                            <div class="contact_page_body" v-html="currentPage.body"></div>
                         </div>
                     </div>
                 </div>
