@@ -11,7 +11,7 @@
                     </div>
                 </div>
                 <div class="main_container margin_30">
-                    <div class="details_row">
+                    <div class="row">
                         <!--<div class="details_col_3 hidden_phone">-->
                         <!--    <h3 class="inside_page_title">Address</h3>-->
                         <!--    <p class="inside_page_link">-->
@@ -21,7 +21,7 @@
                         <!--    </p>-->
                         <!--    <a class="animated_btn" :href="siteInfo.googleMapsURL" target="_blank">Driving Direction</a>  -->
                         <!--</div>-->
-                        <!--<div class="details_col_">-->
+                        <div class="col-md-12">
                             <p class="inside_page_link">Be the first to know about upcoming events and special announcements from {{ property.name }}!</p>
                             <form class="form-horizontal" action="//mobilefringe.createsend.com/t/d/s/vuutyk/" method="post" @submit.prevent="validateBeforeSubmit">
                                 <div class="row">
@@ -55,7 +55,7 @@
                                     </div>
                                 </div>
                             </form> 
-                        <!--</div>-->
+                        </div>
                     </div>
                 </div>
             </div>
