@@ -47,7 +47,6 @@
                             "image_url": "//codecloud.cdn.speedyrails.net/sites/5b2925776e6f6432b6110000/image/png/1531495616000/inside_banner.png"
                         }
                     }
-                    
                     this.currentPage = response[0].data;
                     this.dataLoaded = true;
                 });
@@ -63,7 +62,7 @@
                     this.property.mm_host = this.property.mm_host.replace("http:", "");
                     try {
                         let results = await Promise.all([
-                            this.$store.dispatch('LOAD_PAGE_DATA', { url: this.property.mm_host + "/pages/"+ this.property.slug + "directions.json" })
+                            this.$store.dispatch('LOAD_PAGE_DATA', { url: this.property.mm_host + "/pages/"+ this.property.slug + "-directions.json" })
                         ]);
                         return results;
                     } catch (e) {
