@@ -67,9 +67,9 @@
                         if (_.includes(this.$route.path, "leasing")) {  
                             route_url = "/pages/" + this.property.slug + "-leasing.json";
                         } else if (_.includes(this.$route.path, "privacy-policy")) {
-                            route_url = "/pages/" + this.property.slug + "-leasing.json"
+                            route_url = "/pages/" + this.property.slug + "-privacy-policy.json"
                         } else if (_.includes(this.$route.path, "terms-of-use")) {
-                            route_url = "/pages/" + this.property.slug + "-leasing.json"
+                            route_url = "/pages/" + this.property.slug + "-terms-of-use.json"
                         } else {
                             route_url = this.id;
                         }
