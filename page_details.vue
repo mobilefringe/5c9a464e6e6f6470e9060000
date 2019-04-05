@@ -62,41 +62,27 @@
             methods: {
                 updateCurrentPage(id) {
                     this.$nextTick(function() {
+                        // Determine the incoming route
+                        var route_url = "";
+                        if (_.includes(this.$route.path, "leasing")) {  
+                            route_url = this.property.mm_host + "/pages/" + this.property.slug + "-leasing.json";
+                        } else if (_.includes(this.$route.path, "privacy-policy")) {
+                            route_url = this.property.mm_host + "/pages/" + this.property.slug + "-leasing.json"
+                        } else if (_.includes(this.$route.path, "terms-of-use")) {
+                            route_url = this.property.mm_host + "/pages/" + this.property.slug + "-leasing.json"
+                        } else {
+                            route_url = this.id;
+                        }
+                        
                         var _this = this;
                         this.property.mm_host = this.property.mm_host.replace("http:", "");
-                        if (_.includes(this.$route.path, "leasing")) {
-                            this.$store.dispatch('LOAD_PAGE_DATA', { url: this.property.mm_host + "/pages/" + this.property.slug + "-leasing.json" }).then(function (response) {
-                                _this.currentPage = response.data;
-                                _this.dataLoaded = true;
-                            }, function (error) {
-                                console.error( "Could not retrieve data from server. Please check internet connection and try again.");
-                                _this.$router.replace({ name: 'home' });
-                            });
-                        } else if (_.includes(this.$route.path, "privacy-policy")) {
-                             this.$store.dispatch('LOAD_PAGE_DATA', { url: this.property.mm_host + "/pages/" + this.property.slug + "-privacy-policy.json" }).then(function (response) {
-                                _this.currentPage = response.data;
-                                _this.dataLoaded = true;
-                            }, function (error) {
-                                console.error( "Could not retrieve data from server. Please check internet connection and try again.");
-                                _this.$router.replace({ name: 'home' });
-                            });
-                        } else if (_.includes(this.$route.path, "terms-of-use")) {
-                             this.$store.dispatch('LOAD_PAGE_DATA', { url: this.property.mm_host + "/pages/" + this.property.slug + "-terms-of-use.json" }).then(function (response) {
-                                _this.currentPage = response.data;
-                                _this.dataLoaded = true;
-                            }, function (error) {
-                                console.error( "Could not retrieve data from server. Please check internet connection and try again.");
-                                _this.$router.replace({ name: 'home' });
-                            });
-                        } else {
-                             this.$store.dispatch('LOAD_PAGE_DATA', { url: this.property.mm_host + "/pages/" + this.id + ".json" }).then(function (response) {
-                                _this.currentPage = response.data;
-                                _this.dataLoaded = true;
-                            }, function (error) {
-                                console.error( "Could not retrieve data from server. Please check internet connection and try again.");
-                                _this.$router.replace({ name: 'home' });
-                            });
-                        }
+                        this.$store.dispatch('LOAD_PAGE_DATA', { url: route_url }).then(function (response) {
+                            _this.currentPage = response.data;
+                            _this.dataLoaded = true;
+                        }, function (error) {
+                            console.error( "Could not retrieve data from server. Please check internet connection and try again.");
+                            _this.$router.replace({ name: 'home' });
+                        });
                     });
                 }
             }
