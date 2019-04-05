@@ -3,7 +3,7 @@
         <loading-spinner v-if="!dataLoaded"></loading-spinner>
         <transition name="fade">
             <div v-if="dataLoaded" v-cloak>
-                <div class="inside_header_background" :style="{ backgroundImage: 'url(' + pageBanner.image_url + ')' }">
+                <div class="inside_header_background" v-if="pageBanner" :style="{ backgroundImage: 'url(' + pageBanner.image_url + ')' }">
                     <div class="main_container">
                         <div class="page_container">
                             <h2>About Us</h2>
@@ -38,10 +38,8 @@
             },
             created() {
                 this.loadData().then(response => {
-                    var temp_repo = this.findRepoByName('Inside Page Banner');
-                    console.log("temp_repo", temp_repo)
+                    var temp_repo = this.findRepoByName('Inside Page Banner').images;
                     if (temp_repo != null) {
-                        temp_repo = temp_repo.images;
                         this.pageBanner = temp_repo[0];
                     } else {
                         this.pageBanner = {
