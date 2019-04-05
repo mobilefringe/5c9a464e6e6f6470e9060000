@@ -79,7 +79,9 @@
                         this.property.mm_host = this.property.mm_host.replace("http:", "");
                         this.$store.dispatch('LOAD_PAGE_DATA', { url: this.property.mm_host +   route_url }).then(function (response) {
                             _this.currentPage = response.data;
-                            console.log("response". response)
+                            if (!_.includes(_this.currentPage.image_url, "missing")) {
+                                _this.currentImage = _this.currentPage.image_url;
+                            }
                             _this.dataLoaded = true;
                         }, function (error) {
                             console.error( "Could not retrieve data from server. Please check internet connection and try again.");
