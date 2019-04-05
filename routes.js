@@ -86,6 +86,20 @@ define([], function () {
             ]
         },
         {
+            path: '/leasing',
+            component: view('default'),
+            children: [
+                {
+                    path: '',
+                    component: view('page_details'),
+                    meta: {
+                        pageName: 'Leasing',
+                    },
+                    name: 'leasing'
+                }
+            ]
+        },
+        {
             path: '/newsletter',
             component: view('default'),
             children: [
@@ -124,6 +138,20 @@ define([], function () {
                     component: view('post_details'),
                     name: 'postDetails',
                     props: true
+                }
+            ]
+        },
+        {
+            path: '/privacy-policy',
+            component: view('default'),
+            children: [
+                {
+                    path: '',
+                    component: view('page_details'),
+                    meta: {
+                        pageName: 'Privacy Policy',
+                    },
+                    name: 'privacy-policy'
                 }
             ]
         },
@@ -190,6 +218,20 @@ define([], function () {
                         pageName: 'Search Results',
                     },
                     name: 'search-results'
+                }
+            ]
+        },
+        {
+            path: '/terms-of-use',
+            component: view('default'),
+            children: [
+                {
+                    path: '',
+                    component: view('page_details'),
+                    meta: {
+                        pageName: 'Terms of Use',
+                    },
+                    name: 'terms-of-use'
                 }
             ]
         },
