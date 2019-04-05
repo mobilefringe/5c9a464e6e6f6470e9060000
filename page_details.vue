@@ -9,13 +9,16 @@
                     </div>
                 </div>
                 <div class="main_container mobile_padding margin_30">
-                    <div class="details_row">
+                    <div v-if="currentImage" class="details_row">
                         <div class="details_col_3 hidden_phone">
-                            <img class="img_max" v-if="currentImage" :src="currentImage" alt="" />    
+                            <img class="img_max" :src="currentImage" alt="" />    
                         </div>
                         <div class="details_col_9">
                             <div class="page_body" v-html="currentPage.body"></div>
                         </div>
+                    </div>
+                    <div else class="row">
+                         <div class="page_body" v-html="currentPage.body"></div>
                     </div>
                 </div>
             </div>
