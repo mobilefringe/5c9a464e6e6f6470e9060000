@@ -26,7 +26,7 @@
 </template>
 <script>
     define(["Vue", "vuex", "json!site.json"], function(Vue, Vuex, site) {
-        return Vue.component("newsletter-component", {
+        return Vue.component("about-component", {
             template: template, // the variable template will be injected
             props:['inside_banner'],
             data: function() {
