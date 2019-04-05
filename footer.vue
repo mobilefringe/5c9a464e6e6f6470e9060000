@@ -25,11 +25,11 @@
                     <p class="footer_text">
                         <router-link to="/terms-of-use" exact>Terms of Use</router-link> |
                         <router-link to="/privacy-policy" exact>Privacy Policy</router-link> |
-                        <router-link to="/leasing" exact>Leasing</router-link> |
+                        <router-link to="/leasing" exact>Leasing</router-link>
                     </p>
                 </div>
                 <div class="col-md-4">
-                    <p class="footer_text">Powered by <a href="https://www.mallmaverick.com/" target="_blank">Mall Maverick</a></p>
+                    <p class="footer_text text-center">Powered by <a href="https://www.mallmaverick.com/" target="_blank">Mall Maverick</a></p>
                 </div>
                 <div class="col-md-4">
                     <p class="footer_text">&#169; {{copyright_year}} {{property.name}} | <a :href="siteInfo.propertyManagementURL" target="_blank">{{ siteInfo.propertyManagementName }}</a></p>
