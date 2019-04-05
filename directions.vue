@@ -11,44 +11,11 @@
                     </div>
                 </div>
                 <div class="main_container margin_30">
-                    <div class="details_row">
-                        <div class="details_col_3 hidden_phone">
-                            <img class="img_max" src="http://placehold.it/440x1200" alt="" />    
-                        </div>
-                        <div class="details_col_9">
-                            <p class="inside_page_link">Be the first to know about upcoming events and special announcements from {{ property.name }}!</p>
-                            <form class="form-horizontal" action="//mobilefringe.createsend.com/t/d/s/vuutyk/" method="post" @submit.prevent="validateBeforeSubmit">
-                                <div class="row">
-                                    <div class="col-md-6">
-                                        <label for="fieldzyklkj">First Name</label>
-                                        <input id="fieldzyklkj" class="margin_20 form-control" name="cm-f-zyklkj" type="text" required placeholder="First Name" />
-                                    </div>
-                                    <div class="col-md-6">
-                                        <label for="fieldzyklkt">Last Name</label>
-                                        <input id="fieldzyklkt" class="margin_20 form-control" name="cm-f-zyklkt" type="text" required placeholder="Last Name" />
-                                    </div>
-                                    <div class="col-md-6">
-                                        <label for="fieldzyklki">Postal Code</label>
-                                        <input id="fieldzyklki" class="margin_20 form-control" name="cm-f-zyklki" type="text" placeholder="Postal Code"/>
-                                    </div>
-                                    <div class="col-md-6">
-                                        <label for="cm-vuutyk-vuutyk">Email</label>
-                                        <input id="cm-vuutyk-vuutyk" required class="margin_20 form-control" name="cm-vuutyk-vuutyk" type="email" placeholder="Email">
-                                    </div>
-                                    <div class="col-md-12">
-                                        <div style="margin-left: 20px">
-                                            <label class="checkbox">
-                                                <input name="agree_newsletter" required  type="checkbox">
-                                                    I agree to receive communications from {{ property.name }}.
-                                            </label>
-                                        </div>
-            					    </div>
-            					    <div class="margin_20 clearfix"></div>
-                                    <div class="col-xs-12">
-                                        <button class="animated_btn" type="submit" :disabled="formSuccess">Subscribe</button>
-                                    </div>
-                                </div>
-                            </form> 
+                    <div class="row">
+                        <div class="col-md-12">
+                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3302.5050034806413!2d-117.61748678478888!3d34.13341998058389!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80c33743971a8557%3A0x2c1fbba344c1504d!2sAlta+Loma+Square!5e0!3m2!1sen!2sca!4v1554413797361!5m2!1sen!2sca" width="100%" height="250" frameborder="0" style="border:0" allowfullscreen></iframe>
+                            
+                             
                         </div>
                     </div>
                 </div>
@@ -57,40 +24,31 @@
     </div>
 </template>
 <script>
-    define(["Vue", "vuex", "jquery", "vee-validate", "json!site.json"], function(Vue, Vuex, $, VeeValidate, site) {
-        Vue.use(VeeValidate);
-        return Vue.component("newsletter-component", {
+    define(["Vue", "vuex", "json!site.json"], function(Vue, Vuex, site) {
+        return Vue.component("directions-component", {
             template: template, // the variable template will be injected
             props:['inside_banner'],
             data: function() {
                 return {
                     dataLoaded: true,
                     pageBanner: null,
-                    siteInfo: site,
-                    form_data : {},
-                    formSuccess : false,
-                    formError: false
+                    currentPage: null
                 }
             },
             created() {
-                var temp_repo = this.findRepoByName('Inside Page Banner').images;
-                if(temp_repo != null) {
-                    this.pageBanner = temp_repo[0];
-                } else {
-                    this.pageBanner = {
-                        "image_url": "//codecloud.cdn.speedyrails.net/sites/5b2925776e6f6432b6110000/image/png/1531495616000/inside_banner.png"
+                this.loadData().then(response => {
+                    var temp_repo = this.findRepoByName('Inside Page Banner').images;
+                    if(temp_repo != null) {
+                        this.pageBanner = temp_repo[0];
+                    } else {
+                        this.pageBanner = {
+                            "image_url": "//codecloud.cdn.speedyrails.net/sites/5b2925776e6f6432b6110000/image/png/1531495616000/inside_banner.png"
+                        }
                     }
-                }
-            },
-            mounted () {
-                this.form_data.email = this.$route.query.email;
-                $("#cm-vuutyk-vuutyk").val(this.form_data.email);
-            },
-            watch : {
-                $route () {
-                    this.form_data.email = this.$route.query.email;
-                    $("#cm-vuutyk-vuutyk").val(this.form_data.email);
-                }
+                    
+                    this.currentPage = response[0].data;
+                    this.dataLoaded = true;
+                });
             },
             computed: {
                 ...Vuex.mapGetters([
@@ -99,20 +57,14 @@
                 ])
             },
             methods: {
-                validateBeforeSubmit(form) {
-                    this.$validator.validateAll().then((result) => {
-                        if (result) {
-                            let errors = this.errors;
-                            
-                            if(errors.length > 0) {
-                                console.log("Error");
-                            } else {
-                                console.log("No Error");
-                                // return true;
-                                form.target.submit();
-                            }
-                        }
-                    })
+                loadData: async function () {
+                    this.property.mm_host = this.property.mm_host.replace("http:", "");
+                    try {
+                        let results = await Promise.all([this.$store.dispatch('LOAD_PAGE_DATA', {url: this.property.mm_host + "/pages/gerrardsquare-contact-us.json"})]);
+                        return results;
+                    } catch (e) {
+                        console.log("Error loading data: " + e.message);
+                    }
                 }
             }
         });
