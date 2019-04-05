@@ -23,9 +23,9 @@
             <div class="main_container row">
                 <div class="col-md-4">
                     <p class="footer_text">
+                        <router-link to="/leasing" exact>Leasing</router-link> |
                         <router-link to="/terms-of-use" exact>Terms of Use</router-link> |
-                        <router-link to="/privacy-policy" exact>Privacy Policy</router-link> |
-                        <router-link to="/leasing" exact>Leasing</router-link>
+                        <router-link to="/privacy-policy" exact>Privacy Policy</router-link>
                     </p>
                 </div>
                 <div class="col-md-4">
