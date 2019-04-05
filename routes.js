@@ -6,6 +6,20 @@ define([], function () {
             component: view('home')
         },
         {
+            path: '/about-us',
+            component: view('default'),
+            children: [
+                {
+                    path: '',
+                    component: view('about'),
+                    meta: {
+                        pageName: 'About Us',
+                    },
+                    name: 'about'
+                }
+            ]
+        },
+        {
             path: '/contact-us',
             component: view('default'),
             children: [
@@ -20,19 +34,25 @@ define([], function () {
             ]
         },
         {
-            path: '/events',
+            path: '/directions',
             component: view('default'),
             children: [
                 {
                     path: '',
-                    component: view('events'),
+                    component: view('directions'),
                     meta: {
-                        pageName: 'Events',
+                        pageName: 'Directions',
                     },
-                    name: 'events'
-                },
+                    name: 'directions'
+                }
+            ]
+        },
+        {
+            path: '/events/:id',
+            component: view('default'),
+            children: [
                 {
-                    path: ':id',
+                    path: '',
                     component: view('event_details'),
                     meta: {
                         pageName: 'Events',
@@ -108,43 +128,34 @@ define([], function () {
             ]
         },
         {
-            path: '/promotions',
+            path: '/promotions/:id',
             component: view('default'),
             children: [
                 {
                     path: '',
-                    component: view('promotions'),
-                    meta: {
-                        pageName: 'Promotions',
-                    },
-                    name: 'promotions='
-                },
-                {
-                    path: ':id',
                     component: view('promotion_details'),
                     meta: {
-                        pageName: 'Promotions',
+                        pageName: 'Sales',
                     },
                     name: 'promotionDetails',
                     props: true
                 }
             ]
         },
-        // {
-        //     path: '/promotions',
-        //     component: view('default'),
-        //     children: [
-        //         {
-        //             path: ':id',
-        //             component: view('promotion_details'),
-        //             meta: {
-        //                 pageName: 'Promotions',
-        //             },
-        //             name: 'promotionDetails',
-        //             props: true
-        //         }
-        //     ]
-        // },
+        {
+            path: '/sales-and-events',
+            component: view('default'),
+            meta: {
+                breadcrumb: 'Sales & Events',
+            },
+            children: [
+                {
+                    path: '',
+                    component: view('sales_and_events'),
+                    name: 'sales_and_events'
+                }
+            ]
+        },
         {
             path: '/stores',
             component: view('default'),
