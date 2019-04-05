@@ -18,7 +18,7 @@
                         </div>
                     </div>
                     <div v-else class="row">
-                         <div class="page_body" v-html="currentPage.body"></div>
+                        <div class="page_body" v-html="currentPage.body"></div>
                     </div>
                 </div>
             </div>
