@@ -67,7 +67,7 @@
     </div>
 </template>
 <script>
-    define(["Vue", "vuex", "vee-validate"], function (Vue, Vuex, VeeValidate) {
+    define(["Vue", "vuex", "vue!inside_banner.vue", "vee-validate"], function (Vue, Vuex, insideBanner, VeeValidate) {
         Vue.use(VeeValidate);
         return Vue.component("contact-component", {
             template: template, // the variable template will be injected
