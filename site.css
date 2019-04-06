@@ -503,33 +503,15 @@ footer {
             color: #333;
         }
     }
-    .footer_insta {
-        .insta_view_more {
-            font-family: Avenir-Book;
-            font-size: 0.75rem;
-            color: $text;
-            letter-spacing: 0.5px;
-        }  
-        .insta-feed-image-container {
-            margin: 2.5px;
-            height: 54px;
-            width: calc(33% - 5px);
-            float: left;
-            .insta-feed-image {
-                margin: 0;
-                height: 54px;
-                width: 100%;
-                display: block;
-                display: inline-block;
-                background-size: cover;
-                background-position: center center;
-                background-repeat: no-repeat;
-                img {
-                    max-width:100%;
-                    max-height:100%;
-                }
-            }
-        }
+    .footer_logo {
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-align: end;
+        -webkit-align-items: flex-end;
+        -ms-flex-align: end;
+        align-items: flex-end;
     }
 }
 .footer_privacy {
