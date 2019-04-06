@@ -559,6 +559,9 @@ footer {
         -webkit-justify-content: flex-end;
         -ms-flex-pack: end;
         justify-content: flex-end;
+        a {
+            line-height: 0;
+        }
         .property_mgmt {
             margin-left: 20px;
             max-width: 128px;
