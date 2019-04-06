@@ -1208,6 +1208,9 @@ footer {
 }
 
 /******* Contact Us ********/
+.form-control {
+    border-radius: 0;
+}
 .form-control-feedback {
     position: absolute;
     bottom: 0;
