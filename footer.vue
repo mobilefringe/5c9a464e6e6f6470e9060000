@@ -32,10 +32,12 @@
                     <p class="footer_text text-center">Powered by <a href="https://www.mallmaverick.com/" target="_blank">Mall Maverick</a></p>
                 </div>
                 <div class="col-md-4">
-                    <p class="footer_text">&#169; {{copyright_year}} {{property.name}}</p>
-                    <a :href="siteInfo.propertyManagementURL" target="_blank">
-                        <img src="//codecloud.cdn.speedyrails.net/sites/5c9a464e6e6f6470e9060000/image/png/1554491926156/LewisRetailCentersWhite11.png" class="" alt="Lewis Retail Centers Logo">
-                    </a>
+                    <div class="footer_logo">
+                        <p class="footer_text">&#169; {{copyright_year}} {{property.name}}</p>
+                        <a :href="siteInfo.propertyManagementURL" target="_blank">
+                            <img src="//codecloud.cdn.speedyrails.net/sites/5c9a464e6e6f6470e9060000/image/png/1554491926156/LewisRetailCentersWhite11.png" class="" alt="Lewis Retail Centers Logo">
+                        </a>
+                    </div>
                 </div>
             </div>
         </section>
