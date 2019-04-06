@@ -296,6 +296,7 @@ hr{
     }
 }
 .header_social_container {
+    margin-bottom: 30px;
     display: -webkit-box;
     display: -webkit-flex;
     display: -ms-flexbox;
