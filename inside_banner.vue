@@ -10,7 +10,7 @@
 
 <script>
     define(["Vue", "vuex"], function(Vue, Vuex){
-        return Vue.component("messages-component", {
+        return Vue.component("banner-component", {
             template: template, // the variable template will be injected
             props:['page_name'],
             data: function() {
