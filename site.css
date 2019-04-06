@@ -1442,7 +1442,7 @@ footer {
         }
         .footer_privacy {
             .main_container {
-                div:firt-child {
+                > div:firt-child {
                     width: 100%;
                 }
             }
