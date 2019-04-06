@@ -3,11 +3,7 @@
         <loading-spinner v-if="!dataLoaded"></loading-spinner>
         <transition name="fade">
             <div v-if="dataLoaded" v-cloak>
-                <div class="inside_header_background" :style="{ backgroundImage: 'url(' + pageBanner.image_url + ')' }">
-                    <div class="main_container">
-                        <h2>Jobs</h2>
-                    </div>
-                </div>
+                <banner-component :page_name="pageName"></banner-component>
                 <div class="main_container mobile_padding margin_30">
                     <div class="details_row">
                         <div class="details_col_3 hidden_phone">
@@ -66,7 +62,7 @@
 </template>
 
 <script>
-define(["Vue", "vuex", "moment", "moment-timezone", "vue-moment", "bootstrap-vue"], function (Vue, Vuex, moment, tz, VueMoment, BootstrapVue) {
+    define(["Vue", "vuex", "moment", "moment-timezone", "vue-moment", "bootstrap-vue", "vue!inside_banner.vue"], function (Vue, Vuex, moment, tz, VueMoment, BootstrapVue, insideBanner) {
         Vue.use(BootstrapVue);
         return Vue.component("jobs-component", {
             template: template, // the variable template will be injected
@@ -74,7 +70,7 @@ define(["Vue", "vuex", "moment", "moment-timezone", "vue-moment", "bootstrap-vue
             data: function () {
                 return {
                     dataLoaded: false,
-                    pageBanner: null,
+                    pageName: "Jobs".
                     toggleJobs: false,
                 }
             },
