@@ -1452,6 +1452,9 @@ footer {
                     width: 100%;
                     text-align: center;
                 }
+                div:last-child {
+                    margin-bottom: 0;
+                }
             }
         }
     }
