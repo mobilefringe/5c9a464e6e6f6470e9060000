@@ -102,7 +102,8 @@
             },
             computed: {
                 ...Vuex.mapGetters([
-                    'property'
+                    'property',
+                    'findRepoByName'
                 ])
             },
             methods: {
