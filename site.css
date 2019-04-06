@@ -1441,10 +1441,17 @@ footer {
             }
         }
         .footer_privacy {
-            .main_container > div {
-                margin-bottom: 10px;
-                width: 100%;
-                text-align: center;
+            .main_container {
+                -webkit-box-orient: vertical;
+                -webkit-box-direction: normal;
+                -webkit-flex-direction: column;
+                -ms-flex-direction: column;
+                flex-direction: column;
+                > div {
+                    margin-bottom: 10px;
+                    width: 100%;
+                    text-align: center;
+                }
             }
         }
     }
