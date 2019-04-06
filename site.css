@@ -186,39 +186,39 @@ hr{
     display: none;
 }
 #search_component_wrapper {
-//   position: absolute;
-//   right: 30px;
-  margin-top: 10px;
-  margin-bottom: 20px;
-  margin-right:30px;
-  transition: all ease 0.5s;
-  .search_component_container {
-    position: relative;
-    border-bottom: 1px solid #000;
-    p.control.has-icon.has-icon-right {
-      margin-bottom: 0;
-    }
-    .fa {
-      height: 21px;
-      position: absolute;
-      top: 50%;
-      left: 110px;
-      transform: translate(-50%, -50%);
-    }
-    .search-component {
-      width: 100px !important;
-      .options-list {
-        top: 40px;
-        li {
-          z-index: 9999999;
-          font-size: 0.8rem;
-          font-family: Avenir-Book;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    margin-right: 30px;
+    transition: all ease 0.5s;
+    .search_component_container {
+        position: relative;
+        border-bottom: 1px solid #000;
+        p.control.has-icon.has-icon-right {
+            margin-bottom: 0;
         }
-        li.highlighted {
-          background: $primary;
-          color: #FFF;
+        .fa {
+            width: 25px;
+            height: 25px;
+            position: absolute;
+            top: 50%;
+            left: 110px;
+            transform: translate(-50%, -50%);
+            background-color: $primary;
         }
-      }
+        .search-component {
+            width: 100px !important;
+            .options-list {
+                top: 40px;
+            li {
+                z-index: 9999999;
+                font-size: 0.8rem;
+                font-family: Avenir-Book;
+            }
+            li.highlighted {
+                background: $primary;
+                color: #FFF;
+            }
+        }
     }
     .search-component .input,
     .sub_input_text {
