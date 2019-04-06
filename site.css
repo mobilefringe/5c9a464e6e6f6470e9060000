@@ -193,7 +193,7 @@ hr{
     .search_component_container {
         position: relative;
         .search-component {
-            width: 150px !important;
+            width: 175px !important;
             .options-list {
                 top: 40px;
                 li {
