@@ -192,9 +192,23 @@ hr{
     transition: all ease 0.5s;
     .search_component_container {
         position: relative;
-        
+        .search-component {
+            width: 150px !important;
+            .options-list {
+                top: 40px;
+            li {
+                z-index: 9999999;
+                font-size: 0.8rem;
+                font-family: Avenir-Book;
+            }
+            li.highlighted {
+                background: $primary;
+                color: #FFF;
+            }
+        }
         p.control.has-icon.has-icon-right {
             margin-bottom: 0;
+            width: 100%;
             position: relative;
             border: 1px solid #000;
         }
@@ -211,20 +225,6 @@ hr{
                 top: 50%;
                 left: 50%;
                 transform: translate(-50%, -50%);
-                color: #FFF;
-            }
-        }
-        .search-component {
-            width: 150px !important;
-            .options-list {
-                top: 40px;
-            li {
-                z-index: 9999999;
-                font-size: 0.8rem;
-                font-family: Avenir-Book;
-            }
-            li.highlighted {
-                background: $primary;
                 color: #FFF;
             }
         }
