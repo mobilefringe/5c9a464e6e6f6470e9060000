@@ -201,8 +201,8 @@ hr{
             height: 25px;
             position: absolute;
             top: 50%;
-            left: 110px;
-            transform: translate(-50%, -50%);
+            right: 0;
+            transform: translateY(-50%);
             background-color: $primary;
             &:before {
                 position: absolute;
