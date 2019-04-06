@@ -1440,6 +1440,13 @@ footer {
                 margin: 40px 0;
             }
         }
+        .footer_privacy {
+            .main_container {
+                div:firt-child {
+                    width: 100%;
+                }
+            }
+        }
     }
     .home_banner_container .banner_image {
         height: 300px;
