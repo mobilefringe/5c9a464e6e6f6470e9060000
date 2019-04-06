@@ -2,7 +2,7 @@
     <div class="inside_header_background" v-if="pageBanner" :style="{ backgroundImage: 'url(' + pageBanner.image_url + ')' }">
         <div class="main_container">
             <div class="page_container">
-                <h2>About Us</h2>
+                <h2>{{ page_name }}</h2>
             </div>
         </div>
     </div>
