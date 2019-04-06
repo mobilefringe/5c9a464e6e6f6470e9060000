@@ -4,13 +4,6 @@
         <transition name="fade">
             <div v-if="dataLoaded" v-cloak>
                 <banner-component page_name="pageName"></banner-component>
-                <!--<div class="inside_header_background" v-if="pageBanner" :style="{ backgroundImage: 'url(' + pageBanner.image_url + ')' }">-->
-                <!--    <div class="main_container">-->
-                <!--        <div class="page_container">-->
-                <!--            <h2>About Us</h2>-->
-                <!--        </div>-->
-                <!--    </div>-->
-                <!--</div>-->
                 <div class="main_container margin_30">
                     <div class="details_row">
                         <div class="details_col_3 hidden_phone">
