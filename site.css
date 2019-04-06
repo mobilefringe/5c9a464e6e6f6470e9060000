@@ -1441,10 +1441,8 @@ footer {
             }
         }
         .footer_privacy {
-            .main_container {
-                > div:firt-child {
-                    width: 100%;
-                }
+            .main_container > div {
+                width: 50%;
             }
         }
     }
