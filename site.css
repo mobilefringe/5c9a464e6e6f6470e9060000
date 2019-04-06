@@ -1442,7 +1442,9 @@ footer {
         }
         .footer_privacy {
             .main_container > div {
-                width: 50%;
+                margin-bottom: 10px;
+                width: 100%;
+                text-align: center;
             }
         }
     }
