@@ -13,7 +13,7 @@
                 <div class="main_container margin_30">
                     <div class="details_row">
                         <div class="details_col_3 hidden_phone">
-                            <img class="img_max" src="http://placehold.it/440x1200" alt="" />    
+                            <img class="img_max" v-if="currentImage" :src="currentImage" alt="" />    
                         </div>
                         <div class="details_col_9">
                             <div class="contact_page_body" v-if="currentPage" v-html="currentPage.body"></div>
@@ -53,7 +53,6 @@
                         var img_repo = this.findRepoByName('Inside Page Default Side Image').images;
                         if (img_repo != null) {
                             var image_url = img_repo[0].image_url;
-                            console.log("image_url", image_url)
                             this.currentImage = image_url;
                         }
                     } else {
