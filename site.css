@@ -186,10 +186,8 @@ hr{
     display: none;
 }
 #search_component_wrapper {
-    margin-top: 10px;
-    margin-bottom: 20px;
     margin-right: 30px;
-    transition: all ease 0.5s;
+    // transition: all ease 0.5s;
     .search_component_container {
         position: relative;
         .search-component {
@@ -312,7 +310,7 @@ hr{
     justify-content: flex-end;
 }
 .header_social {
-    margin-bottom: 28px;
+    // margin-bottom: 28px;
     display: -webkit-box;
     display: -webkit-flex;
     display: -ms-flexbox;
