@@ -3,11 +3,7 @@
         <loading-spinner v-if="!dataLoaded"></loading-spinner>
         <transition name="fade">
             <div v-if="dataLoaded" v-cloak>
-                <div class="inside_header_background" v-if="pageBanner" :style="{ backgroundImage: 'url(' + pageBanner.image_url + ')' }">
-                    <div class="main_container">
-                        <h2>Contact Us</h2>
-                    </div>
-                </div>
+                <banner-component page_name="pageName"></banner-component>
                 <div class="main_container margin_30">
                     <div class="details_row">
                         <div class="details_col_3 hidden_phone">
@@ -78,7 +74,7 @@
             data: function data() {
                 return {
                     dataLoaded: false,
-                    pageBanner: null,
+                    pageName: "Contact Us",
                     form_data: {},
                     loginPending: null,
                     formSuccess: false,
@@ -89,22 +85,13 @@
             },
             created() {
                 this.loadData().then(response => {
-                    var temp_repo = this.findRepoByName('Inside Page Banner').images;
-                    if(temp_repo != null) {
-                        this.pageBanner = temp_repo[0];
-                    } else {
-                        this.pageBanner = {
-                            "image_url": "//codecloud.cdn.speedyrails.net/sites/5b2925776e6f6432b6110000/image/png/1531495616000/inside_banner.png"
-                        }
-                    }
                     this.currentPage = response[0].data;
                     this.dataLoaded = true;
                 });
             },
             computed: {
                 ...Vuex.mapGetters([
-                    'property',
-                    'findRepoByName'
+                    'property'
                 ])
             },
             methods: {
