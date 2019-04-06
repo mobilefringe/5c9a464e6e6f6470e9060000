@@ -52,7 +52,7 @@
                     if (this.currentPage.image_url === null) {
                         var img_repo = this.findRepoByName('Inside Page Default Side Image').images;
                         if (img_repo != null) {
-                            var image_url = temp_img[0];
+                            var image_url = img_repo[0];
                             console.log("image_url", image_url)
                             this.currentImage = image_url;
                         }
