@@ -35,7 +35,7 @@
                     <div class="footer_logo">
                         <p class="footer_text">&#169; {{copyright_year}} {{property.name}}</p>
                         <a :href="siteInfo.propertyManagementURL" target="_blank">
-                            <img src="//codecloud.cdn.speedyrails.net/sites/5c9a464e6e6f6470e9060000/image/png/1554491926156/LewisRetailCentersWhite11.png" class="" alt="Lewis Retail Centers Logo">
+                            <img src="//codecloud.cdn.speedyrails.net/sites/5c9a464e6e6f6470e9060000/image/png/1554491926156/LewisRetailCentersWhite11.png" class="property_mgmt" alt="Lewis Retail Centers Logo">
                         </a>
                     </div>
                 </div>
