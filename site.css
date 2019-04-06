@@ -1455,6 +1455,12 @@ footer {
                 div:last-child {
                     margin-bottom: 0;
                 }
+                .footer_logo {
+                    -webkit-box-pack: center;
+                    -webkit-justify-content: center;
+                    -ms-flex-pack: center;
+                    justify-content: center;
+                }
             }
         }
     }
