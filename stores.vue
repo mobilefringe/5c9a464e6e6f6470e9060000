@@ -27,11 +27,6 @@
                                 <span class="legend"><span class="coming_soon_store"><i class="far fa-clock"></i></span> Coming Soon</span>
                             </div>
                         </div>
-                        <!--<div class="row center">-->
-                        <!--    <div class="col-md-12">-->
-                                
-                        <!--    </div>-->
-                        <!--</div>-->
                         <div class="row" v-if="sortByStores">
                             <div class="col-md-6">
                                 <div v-if="listOne" v-for="(stores, index) in listOne">
@@ -114,7 +109,7 @@
                     listOne: null,
                     listTwo: null,
                     filteredStores: null,
-                    selectedCat: "Select a Category"
+                    selectedCat: "Filter List"
                 }
             },
             created(){
@@ -129,7 +124,7 @@
                     }
                     
                     this.allStores;
-                    this.sortByStores = true;
+                    // this.sortByStores = true;
                     this.dataLoaded = true;
                 });
             },
@@ -163,30 +158,32 @@
                 dropDownCats() {
                     var cats = _.filter(this.processedCategories, function(o) { return o.store_ids !== null && o.store_ids.length > 0 });
                     cats = _.map(cats, 'name');
-                    cats.unshift('All');
+                    cats.unshift('Alphabetical');
                     return cats;
                 }
             },
             methods: {
                 loadData: async function () {
                     try {
-                        let results = await Promise.all([this.$store.dispatch("getData", "categories")]);
+                        let results = await Promise.all([
+                            this.$store.dispatch("getData", "categories")
+                        ]);
                         return results;
                     } catch (e) {
                         console.log("Error loading data: " + e.message);
                     }
                 },
-                changeMode (mode) {
-                    this.sortByStores = true;
-                },
+                // changeMode (mode) {
+                //     this.sortByStores = true;
+                // },
                 filteredByCategory (cat_id) {
-                    if(cat_id == "Select a Category" || cat_id == "All" || cat_id == null || cat_id == undefined){
-                        category_id = "All";
+                    if (cat_id == "Filter List" || cat_id == "All" || cat_id == null || cat_id == undefined){
+                        category_id = "all";
                     } else {
                         category_id = this.findCategoryByName(cat_id).id;
                     }
                     
-                    if(category_id == "All"){
+                    if (category_id == "all") {
                         this.sortByStores = true;
                     } else {
                         this.sortByStores = false;
