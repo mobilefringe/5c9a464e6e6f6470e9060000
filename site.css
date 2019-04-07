@@ -1162,14 +1162,16 @@ footer {
 // }
 .store_details_image {
     margin-bottom: 20px; 
-    max-width: 100%;
+    // max-width: 100%;
     @include responsive-ratio(1, 1);
     border: 1px solid #D8D8D8;
     .no_logo {
         width: 100%;
-        // height: 220px;
+
         @include responsive-ratio(1, 1);
-        position: relative;
+        position: absolute;
+        top: 0;
+        left: 0;
         .store_details_name {
             margin: 0;
             padding: 10px;
