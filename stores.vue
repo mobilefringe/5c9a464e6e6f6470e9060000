@@ -18,9 +18,10 @@
                             <!--    <span>Sort By: </span>-->
                             <!--    <a class="store_nav_link hvr-underline-from-center" v-on:click="changeMode('alphabetical')">Alphabetical</a>-->
                             <!--</div>-->
-                            <div class="col-md-6">
+                            <div class="col-md-3">
                                 <v-select v-model="selectedCat" :options="dropDownCats" :searchable="false" :on-change="filteredByCategory" class="category-select" placeholder="Select a Category" id="selectByCat" transition="menu-fade"></v-select>
                             </div>
+                            <div class="col-md-3"></div>
                             <div class="col-md-6">
                                 <span class="legend"><span class="promo_exist"><i class="fas fa-tag"></i></span> Promotion</span>  
                                 <span class="legend"><span class="new_store"><i class="fas fa-star"></i></span> New Store </span>
