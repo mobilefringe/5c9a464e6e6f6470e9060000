@@ -1007,7 +1007,7 @@ footer {
     .store_nav_link {
         position: relative;
         display: inline-block;
-        font-size: 18px;
+        // font-size: 18px;
         color: $text;
         text-decoration: none;
         text-transform: uppercase;
