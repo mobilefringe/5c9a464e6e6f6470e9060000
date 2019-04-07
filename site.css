@@ -1056,7 +1056,8 @@ footer {
         width: calc(100% - 50px);
         position: absolute;
         top: 0;
-        right: 0;
+        left: 0;
+        right: unset;
         text-align: left;
         text-transform: capitalize;
     }
