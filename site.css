@@ -1044,7 +1044,7 @@ footer {
         right: unset;
         font-family: Avenir-Book, sans-serif;
         text-align: left;
-        text-transform: capitalize;
+        text-transform: uppercase;
     }
     .open-indicator {
         bottom: 5px;
@@ -1061,7 +1061,7 @@ footer {
         li {
             a {
                 white-space: initial;
-                text-transform: capitalize;
+                text-transform: uppercase;
             }
         }
     }
