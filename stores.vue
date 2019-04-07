@@ -110,7 +110,7 @@
                     listOne: null,
                     listTwo: null,
                     filteredStores: null,
-                    selectedCat: "Filter List"
+                    selectedCat: "FILTER LIST"
                 }
             },
             created(){
@@ -178,7 +178,7 @@
                 //     this.sortByStores = true;
                 // },
                 filteredByCategory (cat_id) {
-                    if (cat_id == "Filter List" || cat_id == "All" || cat_id == null || cat_id == undefined){
+                    if (cat_id == "Alphabetical" || cat_id == null || cat_id == undefined){
                         category_id = "all";
                     } else {
                         category_id = this.findCategoryByName(cat_id).id;
