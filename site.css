@@ -1053,14 +1053,19 @@ footer {
         border: none;    
     }
     .selected-tag {
-        width: 100%;
+        width: calc(100% - 50px);
         position: absolute;
         top: 0;
         right: 0;
-        text-transform:capitalize;
+        text-align: left;
+        text-transform: capitalize;
     }
-    .open-indicator:before {
-        border-color: $text;;
+    
+    .open-indicator {
+        bottom: 5px;
+        &:before {
+            border-color: $text;
+        }
     }
     .dropdown-menu {
         padding: 0;
