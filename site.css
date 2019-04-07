@@ -993,7 +993,6 @@ footer {
 /* *** STORES *** */
 .store_nav {
     margin-bottom: 20px;
-    padding-bottom: 10px;
     display: -webkit-box;
     display: -webkit-flex;
     display: -ms-flexbox;
@@ -1081,7 +1080,7 @@ footer {
 }
 
 .store_nav .col-md-3:nth-child(2) {
-    border-right: 1px solid #979797;
+    border-right: 2px solid #979797;
 }
 .stores_container {
     max-height: 2400px;
