@@ -1060,7 +1060,6 @@ footer {
         text-align: left;
         text-transform: capitalize;
     }
-    
     .open-indicator {
         bottom: 5px;
         &:before {
