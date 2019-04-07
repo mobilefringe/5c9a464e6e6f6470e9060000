@@ -1168,6 +1168,7 @@ footer {
     .no_logo {
         width: 100%;
         // height: 220px;
+        @include responsive-ratio(1, 1);
         position: relative;
         .store_details_name {
             margin: 0;
