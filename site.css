@@ -993,6 +993,7 @@ footer {
 /* *** STORES *** */
 .store_nav {
     margin-bottom: 20px;
+    padding-bottom: 10px;
     display: -webkit-box;
     display: -webkit-flex;
     display: -ms-flexbox;
@@ -1040,11 +1041,10 @@ footer {
     }
 }
 .v-select {
-    margin-bottom: 10px;
     .open-indicator {
         right: 0;
     }
-    li>a {
+    li > a {
         white-space: initial !important;
     }
 }
