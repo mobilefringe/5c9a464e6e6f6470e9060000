@@ -1167,7 +1167,6 @@ footer {
     border: 1px solid #D8D8D8;
     .no_logo {
         width: 100%;
-
         @include responsive-ratio(1, 1);
         position: absolute;
         top: 0;
@@ -1187,6 +1186,12 @@ footer {
             color: $primary;
             text-align: center;
         }
+    }
+    img {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
     }
 }
 .store_details_phone {
