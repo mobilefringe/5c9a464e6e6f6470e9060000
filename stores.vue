@@ -18,7 +18,7 @@
                             <!--    <span>Sort By: </span>-->
                             <!--    <a class="store_nav_link hvr-underline-from-center" v-on:click="changeMode('alphabetical')">Alphabetical</a>-->
                             <!--</div>-->
-                            <div class="col-md-3">
+                            <div class="col-md-6">
                                 <v-select v-model="selectedCat" :options="dropDownCats" :searchable="false" :on-change="filteredByCategory" class="category-select" placeholder="Select a Category" id="selectByCat" transition="menu-fade"></v-select>
                             </div>
                             <div class="col-md-6">
