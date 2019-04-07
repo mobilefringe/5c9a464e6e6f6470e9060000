@@ -13,11 +13,6 @@
                 <div class="main_container margin_30">
                     <div class="">
                         <div class="row store_nav">
-                            
-                            <!--<div class="col-md-3">-->
-                            <!--    <span>Sort By: </span>-->
-                            <!--    <a class="store_nav_link hvr-underline-from-center" v-on:click="changeMode('alphabetical')">Alphabetical</a>-->
-                            <!--</div>-->
                             <div class="col-md-3">
                                 <v-select v-model="selectedCat" :options="dropDownCats" :searchable="false" :on-change="filteredByCategory" class="category-select" placeholder="FILTER LIST" id="selectByCat" transition="menu-fade"></v-select>
                             </div>
@@ -125,7 +120,6 @@
                     // }
                     
                     this.allStores;
-                    // this.sortByStores = true;
                     this.dataLoaded = true;
                 });
             },
@@ -174,9 +168,6 @@
                         console.log("Error loading data: " + e.message);
                     }
                 },
-                // changeMode (mode) {
-                //     this.sortByStores = true;
-                // },
                 filteredByCategory (cat_id) {
                     if (cat_id == "Alphabetical" || cat_id == null || cat_id == undefined){
                         category_id = "all";
