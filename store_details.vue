@@ -162,6 +162,8 @@
                     'property',
                     'timezone',
                     'processedStores',
+                    'processedPromos',
+                    'processedJobs',
                     'findStoreBySlug',
                     'findHourById',
                     'findPromoById',
@@ -214,18 +216,17 @@
             methods: {
                 loadData: async function() {
                     try {
-                        // avoid making LOAD_META_DATA call for now as it will cause the entire Promise.all to fail since no meta data is set up.
-                        let results = await Promise.all([this.$store.dispatch("getData","promotions"), this.$store.dispatch("getData", "jobs"), this.$store.dispatch("getData", "repos")]);
+                        let results = await Promise.all([
+                            this.$store.dispatch("getData","promotions"), this.$store.dispatch("getData", "jobs"), this.$store.dispatch("getData", "repos")]);
                     } catch (e) {
                         console.log("Error loading data: " + e.message);
                     }
                 },
                 updateCurrentStore (id) {
                     this.currentStore = this.findStoreBySlug(id);
-                    if (this.currentStore === null || this.currentStore === undefined){
+                    if (this.currentStore === null || this.currentStore === undefined) {
                         this.$router.replace({ path: '/'});
-                    }
-                    else {
+                    } else {
                         this.currentStore.zoom = 2;
                         // if ( _.includes(this.currentStore.store_front_url_abs, 'missing')) {
                         //     this.currentStore.store_front_url_abs = this.property.default_logo_url;
