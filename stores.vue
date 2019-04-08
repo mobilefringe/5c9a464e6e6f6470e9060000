@@ -104,8 +104,6 @@
             },
             created(){
                 this.loadData().then(response => {
-
-                    
                     this.allStores;
                     this.dataLoaded = true;
                 });
