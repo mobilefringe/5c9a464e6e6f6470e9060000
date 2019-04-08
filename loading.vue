@@ -2,43 +2,39 @@
     <div v-if="dataLoaded" id="overlay">
         <div class="loading-container">
             <div class="loader">Loading...</div>
-            
-            <!--<vue-simple-spinner size="huge" :message="property.name + ' is Loading...'"></vue-simple-spinner>-->
         </div>
-        <h1>{{ property.name }} is loading... </h1>
     </div>
 </template>
 
 <script>
-    define(["Vue", "vuex", "vue-simple-spinner"], function (Vue, Vuex, Spinner) {
-        Vue.component("vue-simple-spinner", Spinner);
+    define(["Vue", "vuex"], function (Vue, Vuex) {
         return Vue.component("loading-spinner", {
             template: template, // the variable template will be injected,
-            data: function () {
-                return {
-                    dataLoaded: false
-                };
-            },
-            created (){
-                this.loadData().then(response => {
-                    this.dataLoaded = true;
-                });
-            },
-            computed: {
-                ...Vuex.mapGetters([
-                    'property'
-                ])
-            },
-            methods: {
-                loadData: async function () {
-                    try {
-                        let results = await Promise.all([this.$store.dispatch("getData", "property")]);
-                        return results;
-                    } catch (e) {
-                        console.log("Error loading data: " + e.message);
-                    }
-                }
-            }
+            // data: function () {
+            //     return {
+            //         dataLoaded: false
+            //     };
+            // },
+            // created (){
+            //     this.loadData().then(response => {
+            //         this.dataLoaded = true;
+            //     });
+            // },
+            // computed: {
+            //     ...Vuex.mapGetters([
+            //         'property'
+            //     ])
+            // },
+            // methods: {
+            //     loadData: async function () {
+            //         try {
+            //             let results = await Promise.all([this.$store.dispatch("getData", "property")]);
+            //             return results;
+            //         } catch (e) {
+            //             console.log("Error loading data: " + e.message);
+            //         }
+            //     }
+            // }
         });
     });
 </script>
