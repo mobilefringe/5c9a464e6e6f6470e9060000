@@ -94,7 +94,7 @@
             data: function() {
                 return {
                     dataLoaded: false,
-                    page_name: "Stores",
+                    pageName: "Stores",
                     sortByStores: true,
                     listOne: null,
                     listTwo: null,
