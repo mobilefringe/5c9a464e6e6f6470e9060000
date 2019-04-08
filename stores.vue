@@ -155,7 +155,7 @@
                 },
                 filteredByCategory (cat_id) {
                     console.log("cat", cat_id)
-                    if ((_.includes(cat_id, "Filter List")) || cat_id === null || cat_id === undefined){
+                    if (cat_id === null || cat_id === undefined || _.includes(cat_id, "FILTER LIST")){
                         console.log("here")
                         category_id = "all";
                     } else {
