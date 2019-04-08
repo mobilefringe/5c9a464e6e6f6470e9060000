@@ -69,16 +69,16 @@
 				});
 			},
 			watch: {
-                currentJob : function (){
-                    if(this.currentJob != null) {
-                        if (this.currentJob.store != null && this.currentJob.store != undefined && _.includes(this.currentJob.store.store_front_url_abs, 'missing')) {
-                            this.currentJob.store.store_front_url_abs = "http://placehold.it/400x400";
-                        } else if (this.currentJob.store == null || this.currentJob.store == undefined) {
-                            this.currentJob.store = {};
-                            this.currentJob.store.store_front_url_abs =  "http://placehold.it/400x400";
-                        }
-                    }
-                }
+                // currentJob : function (){
+                //     if(this.currentJob != null) {
+                //         if (this.currentJob.store != null && this.currentJob.store != undefined && _.includes(this.currentJob.store.store_front_url_abs, 'missing')) {
+                //             this.currentJob.store.store_front_url_abs = "http://placehold.it/400x400";
+                //         } else if (this.currentJob.store == null || this.currentJob.store == undefined) {
+                //             this.currentJob.store = {};
+                //             this.currentJob.store.store_front_url_abs =  "http://placehold.it/400x400";
+                //         }
+                //     }
+                // }
             },
             computed: {
                 ...Vuex.mapGetters([
