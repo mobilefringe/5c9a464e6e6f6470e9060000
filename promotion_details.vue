@@ -11,7 +11,7 @@
                         </div>
                         <div class="details_col_9" v-if="currentPromo">
                             <router-link to="/sales-and-events">
-                                <div class="inside_page_header"><i class="fa fa-caret-left"></i> Back to List</div>
+                                <div class="inside_page_header"><i class="fa fa-caret-left"></i> Back to Sales & Events</div>
                             </router-link>
                             <img v-lazy="currentPromo.image_url" :alt="'Promotion: ' + currentPromo.name" class="margin_20 img_max"/>
                             <h3 class="promo_name">{{ currentPromo.name }}</h3>
