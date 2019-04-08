@@ -56,7 +56,7 @@
 </template>
 
 <script>
-    define(["Vue", "vuex", "jquery", "json!site.json"], function(Vue, Vuex, $, site) {
+    define(["Vue", "vuex", "jquery", "vue!inside_banner.vue", "json!site.json"], function(Vue, Vuex, $, insideBanner, site) {
         return Vue.component("search-results", {
             template: template, // the variable template will be injected
             data() {
