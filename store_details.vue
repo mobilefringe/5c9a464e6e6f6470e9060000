@@ -7,7 +7,6 @@
                 <div class="main_container margin_30">
                     <div class="details_row">
                         <div class="details_col_3">
-                            <!--<img class="store_details_image center-block" :src="currentStore.store_front_url_abs" :alt="currentStore.name + ' Logo'" />-->
                             <div v-if="currentStore.no_logo" class="store_details_image center-block">
                                 <div class="no_logo">
                                     <p class="store_details_name">{{ currentStore.name }}</p>
@@ -29,6 +28,10 @@
                             <div class="inside_page_header">Store Hours & Information</div>
                             <ul v-if="storeHours" class="store_details_hours_list">
                                 <li v-for="hour in storeHours" :class="{ today: hour.todays_hours }">
+                                    <span class="col-xs-5 text-left">{{hour.day_of_week | moment("dddd", timezone)}}</span>
+								<span v-if="hour.is_closed" class="col-xs-7 text-left">Closed</span>
+								<span v-else class="col-xs-7 text-right">{{hour.open_time | moment("h:mm A", timezone)}} - {{hour.close_time | moment("h:mm A", timezone)}}</span>
+								
                                     <div v-if="hour.is_closed">
                                         <span class="hours_list_day">{{hour.day_of_week | moment("dddd", timezone)}} </span>CLOSED
                                     </div>
@@ -36,7 +39,8 @@
                                         <span class="hours_list_day">{{hour.day_of_week | moment("dddd", timezone)}} </span>Open 24 Hours
                                     </div>
                                     <div v-else>
-                                        <span class="hours_list_day">{{hour.day_of_week | moment("dddd", timezone)}} </span>{{hour.open_time | moment("h:mma", timezone)}} - {{hour.close_time | moment("h:mma", timezone)}}
+                                        <span class="hours_list_day">{{hour.open_time | moment("h:mm A", timezone)}} - {{hour.close_time | moment("h:mm A", timezone)}}
+                                        {{hour.day_of_week | moment("dddd", timezone)}} </span>{{hour.open_time | moment("h:mma", timezone)}} - {{hour.close_time | moment("h:mma", timezone)}}
                                     </div>
                                 </li>
                             </ul>
