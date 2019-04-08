@@ -3,11 +3,7 @@
         <loading-spinner v-if="!dataLoaded"></loading-spinner>
         <transition name="fade">
             <div v-if="dataLoaded" v-cloak>
-                <div class="inside_header_background" :style="{ backgroundImage: 'url(' + pageBanner.image_url + ')' }">
-                    <div class="main_container">
-                        <h2>Sales & Events</h2>
-                    </div>
-                </div>
+                <banner-component :page_name="pageName"></banner-component>
                 <div class="main_container mobile_padding margin_30">
                     <div class="details_row">
                         <div class="details_col_3 hidden_phone">
@@ -115,7 +111,7 @@
 </template>
 
 <script>
-    define(["Vue", "vuex", "moment", "moment-timezone", "vue-moment", "vue-lazy-load", "bootstrap-vue"], function (Vue, Vuex, moment, tz, VueMoment, VueLazyload, BootstrapVue) {
+    define(["Vue", "vuex", "moment", "moment-timezone", "vue-moment", "vue!inside_banner.vue", "vue-lazy-load", "bootstrap-vue"], function (Vue, Vuex, moment, tz, VueMoment, insideBanner, VueLazyload, BootstrapVue) {
         Vue.use(BootstrapVue);
         Vue.use(VueLazyload);
         return Vue.component("promotions-and-events-component", {
@@ -123,20 +119,21 @@
             data: function () {
                 return {
                     dataLoaded: false,
+                    pageName: "Sales & Events",
                     toggleEvents: false,
                     togglePromos: false
                 }
             },
             created (){
                 this.loadData().then(response => {
-                    var temp_repo = this.findRepoByName('Inside Page Banner').images;
-                    if (temp_repo != null) {
-                        this.pageBanner = temp_repo[0];
-                    } else {
-                        this.pageBanner = {
-                            "image_url": "//codecloud.cdn.speedyrails.net/sites/5b2925776e6f6432b6110000/image/png/1531495616000/inside_banner.png"
-                        }
-                    }
+                    // var temp_repo = this.findRepoByName('Inside Page Banner').images;
+                    // if (temp_repo != null) {
+                    //     this.pageBanner = temp_repo[0];
+                    // } else {
+                    //     this.pageBanner = {
+                    //         "image_url": "//codecloud.cdn.speedyrails.net/sites/5b2925776e6f6432b6110000/image/png/1531495616000/inside_banner.png"
+                    //     }
+                    // }
                     
                     this.dataLoaded = true;
                 });
@@ -174,7 +171,6 @@
                         this.toggleEvents = true;
                     }
                     return sortedEvents
-                    
                 },
                 promoList: function promos() {
                     var vm = this;
@@ -206,7 +202,10 @@
             methods: {
                 loadData: async function () {
                     try {
-                        let results = await Promise.all([this.$store.dispatch("getData", "events"), this.$store.dispatch("getData","promotions")]);
+                        let results = await Promise.all([
+                            this.$store.dispatch("getData", "events"), 
+                            this.$store.dispatch("getData","promotions")
+                        ]);
                     } catch (e) {
                         console.log("Error loading data: " + e.message);
                     }
