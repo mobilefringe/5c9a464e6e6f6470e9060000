@@ -3,13 +3,7 @@
         <loading-spinner v-if="!dataLoaded"></loading-spinner>
         <transition name="fade">
             <div v-if="dataLoaded" v-cloak>
-                <div class="inside_header_background" :style="{ backgroundImage: 'url(' + pageBanner.image_url + ')' }">
-                    <div class="main_container">
-                        <div class="page_container">
-                            <h2>Stores</h2>
-                        </div>
-                    </div>
-                </div>
+                <banner-component :page_name="pageName"></banner-component>
                 <div class="main_container margin_30">
                     <div class="">
                         <div class="row store_nav">
@@ -100,7 +94,7 @@
             data: function() {
                 return {
                     dataLoaded: false,
-                    pageBanner: null,
+                    page_name: "Stores",
                     sortByStores: true,
                     listOne: null,
                     listTwo: null,
@@ -110,14 +104,7 @@
             },
             created(){
                 this.loadData().then(response => {
-                    // var temp_repo = this.findRepoByName('Inside Page Banner').images;
-                    // if (temp_repo != null) {
-                    //     this.pageBanner = temp_repo[0];
-                    // } else {
-                        this.pageBanner = {
-                            "image_url": "//codecloud.cdn.speedyrails.net/sites/5b2925776e6f6432b6110000/image/png/1531495616000/inside_banner.png"
-                        }
-                    // }
+
                     
                     this.allStores;
                     this.dataLoaded = true;
