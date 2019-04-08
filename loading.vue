@@ -10,16 +10,16 @@
     define(["Vue", "vuex"], function (Vue, Vuex) {
         return Vue.component("loading-spinner", {
             template: template, // the variable template will be injected,
-            // data: function () {
-            //     return {
-            //         dataLoaded: false
-            //     };
-            // },
-            // created (){
-            //     this.loadData().then(response => {
-            //         this.dataLoaded = true;
-            //     });
-            // },
+            data: function () {
+                return {
+                    dataLoaded: false
+                };
+            },
+            created (){
+                this.loadData().then(response => {
+                    this.dataLoaded = true;
+                });
+            },
             // computed: {
             //     ...Vuex.mapGetters([
             //         'property'
