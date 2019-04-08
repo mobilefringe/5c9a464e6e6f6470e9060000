@@ -226,15 +226,29 @@
                         }
                         
                         var vm = this;
-                        if (this.currentStore.store_hours) {
-                            var hours = this.currentStore.store_hours;
-                            var store_hours = [];
-                            _.forEach(hours, function (value, key) {
-                                store_hours.push(vm.findHourById(value));
-                            });
-                            this.storeHours = store_hours;
-                            console.log("this.storeHours ", this.storeHours )
-                        }
+                        var storeHours = [];
+                        _.forEach(this.currentStore.store_hours, function (value, key) {
+                            hours = vm.findHourById(value)
+                            today = moment().day();
+                            if( today == hours.day_of_week ){
+                                hours.todays_hours = true;
+                            } else {
+                                hours.todays_hours = false;
+                            }
+                            storeHours.push(hours);
+                        });
+                        this.storeHours = _.sortBy(storeHours, function(o) { return o.day_of_week });
+                        
+                        // var vm = this;
+                        // if (this.currentStore.store_hours) {
+                        //     var hours = this.currentStore.store_hours;
+                        //     var store_hours = [];
+                        //     _.forEach(hours, function (value, key) {
+                        //         store_hours.push(vm.findHourById(value));
+                        //     });
+                        //     this.storeHours = store_hours;
+                        //     console.log("this.storeHours ", this.storeHours )
+                        // }
                         
                         var vm = this;
                         var temp_promo = [];
