@@ -8,7 +8,6 @@
                     <div class="details_row">
                         <div class="details_col_3 hidden_phone">
                             <image-component></image-component>
-                            <!--<img class="img_max" src="http://placehold.it/440x1200" alt="" />    -->
                         </div>
                         <div class="details_col_9">
                             <p class="inside_page_link">Be the first to know about upcoming events and special announcements from {{ property.name }}!</p>
