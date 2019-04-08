@@ -138,6 +138,7 @@
             },
             created (){
                 this.loadData().then(response => {
+                    console.log("timezone", this.timezone)
                     this.updateCurrentStore(this.id);
                     this.dataLoaded = true;
                 });
