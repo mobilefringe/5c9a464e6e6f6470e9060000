@@ -111,9 +111,8 @@
 </template>
 
 <script>
-    define(["Vue", "vuex", "moment", "moment-timezone", "vue-moment", "vue!inside_banner.vue", "vue-lazy-load", "bootstrap-vue"], function (Vue, Vuex, moment, tz, VueMoment, insideBanner, VueLazyload, BootstrapVue) {
+    define(["Vue", "vuex", "moment", "moment-timezone", "vue-moment", "vue!inside_banner.vue", "bootstrap-vue"], function (Vue, Vuex, moment, tz, VueMoment, insideBanner, BootstrapVue) {
         Vue.use(BootstrapVue);
-        Vue.use(VueLazyload);
         return Vue.component("promotions-and-events-component", {
             template: template, // the variable template will be injected,
             data: function () {
