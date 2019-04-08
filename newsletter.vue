@@ -7,7 +7,8 @@
                 <div class="main_container margin_30">
                     <div class="details_row">
                         <div class="details_col_3 hidden_phone">
-                            <img class="img_max" src="http://placehold.it/440x1200" alt="" />    
+                            <side-image></side-image>
+                            <!--<img class="img_max" src="http://placehold.it/440x1200" alt="" />    -->
                         </div>
                         <div class="details_col_9">
                             <p class="inside_page_link">Be the first to know about upcoming events and special announcements from {{ property.name }}!</p>
@@ -51,7 +52,7 @@
     </div>
 </template>
 <script>
-    define(["Vue", "vuex", "jquery", "vee-validate", "json!site.json", "vue!inside_banner.vue"], function(Vue, Vuex, $, VeeValidate, site, insideBanner) {
+    define(["Vue", "vuex", "jquery", "vee-validate", "json!site.json", "vue!inside_banner.vue", "vue!side_image.vue"], function(Vue, Vuex, $, VeeValidate, site, insideBanner, sideImage) {
         Vue.use(VeeValidate);
         return Vue.component("newsletter-component", {
             template: template, // the variable template will be injected
