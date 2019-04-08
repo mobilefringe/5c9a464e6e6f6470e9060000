@@ -225,19 +225,22 @@
                             this.currentStore.no_logo = false
                         }
                         
-                        var vm = this;
-                        var storeHours = [];
-                        _.forEach(this.currentStore.store_hours, function (value, key) {
-                            hours = vm.findHourById(value)
-                            today = moment().day();
-                            if( today == hours.day_of_week ){
-                                hours.todays_hours = true;
-                            } else {
-                                hours.todays_hours = false;
-                            }
-                            storeHours.push(hours);
-                        });
-                        this.storeHours = _.sortBy(storeHours, function(o) { return o.day_of_week });
+                        var hours = this.currentStore.store_hours;
+                        if (hours) {
+                            var vm = this;
+                            var store_hours = [];
+                            _.forEach(hours, function (value, key) {
+                                var current_day = vm.findHourById(value)
+                                var today = moment().day();
+                                if( today == current_day.day_of_week ){
+                                    current_day.todays_hours = true;
+                                } else {
+                                    current_day.todays_hours = false;
+                                }
+                                store_hours.push(current_day);
+                            });
+                            this.storeHours = _.sortBy(store_hours, function(o) { return o.day_of_week });
+                        }
                         
                         // var vm = this;
                         // if (this.currentStore.store_hours) {
