@@ -83,11 +83,6 @@ require(['Vue', 'vuex', 'vue2-filters', 'vue_router', 'routes', 'vuex-router-syn
                         name: "Facebook",
                         url: "https://www.facebook.com/GerrardSquare",
                         iconClass: "fab fa-facebook-f"
-                    },
-                    {
-                        name: "Twitter",
-                        url: "https://twitter.com/GerrardSquare",
-                        iconClass: "fab fa-twitter"
                     }
                 ],
                 inside_banner : null
