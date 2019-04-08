@@ -44,7 +44,7 @@
 </template>
 
 <script>
-    define(["Vue", "vuex", "moment", "moment-timezone", "vue-social-sharing", "json!site.json", "vue!inside_banner.vue"], function(Vue, Vuex, moment, tz, SocialSharing, site, insideBanner) {
+    define(["Vue", "vuex", "moment", "moment-timezone", "vue!inside_banner.vue", "vue-social-sharing", "json!site.json"], function(Vue, Vuex, moment, tz, insideBanner, SocialSharing, site) {
         Vue.component('social-sharing', SocialSharing);
         return Vue.component("job-details-component", {
             template: template, // the variable template will be injected,
