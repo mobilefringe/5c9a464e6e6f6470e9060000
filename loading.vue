@@ -2,6 +2,7 @@
     <div v-if="dataLoaded" id="overlay">
         <div class="loading-container">
             <div class="loader">Loading...</div>
+            <h1>{{ property.name }} is loading... </h1>
             <!--<vue-simple-spinner size="huge" :message="property.name + ' is Loading...'"></vue-simple-spinner>-->
         </div>
     </div>
