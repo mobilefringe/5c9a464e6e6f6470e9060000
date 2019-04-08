@@ -113,7 +113,7 @@
 </style>
 
 <script>
-    define(['Vue', 'vuex', 'moment', "moment-timezone", "vue!mapplic-map", "vue!inside_banner.vue"], function(Vue, Vuex, moment, tz, MapplicComponent, insideBanner) {
+    define(['Vue', 'vuex', 'moment', 'moment-timezone', 'vue!inside_banner.vue', 'vue!mapplic-map'], function(Vue, Vuex, moment, tz, insideBanner, MapplicComponent) {
         return Vue.component("store-details-component", {
             template: template, // the variable template will be injected,
             data: function() {
