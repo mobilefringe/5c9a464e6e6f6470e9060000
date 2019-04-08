@@ -154,6 +154,7 @@
                     }
                 },
                 filteredByCategory (cat_id) {
+                    console.log("cat", cat_id)
                     if (cat_id == "Alphabetical" || cat_id == null || cat_id == undefined){
                         category_id = "all";
                     } else {
