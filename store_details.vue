@@ -137,8 +137,8 @@
             },
             created (){
                 this.loadData().then(response => {
-                    this.dataLoaded = true;
                     this.updateCurrentStore(this.id);
+                    this.dataLoaded = true;
                 });
             },
             computed: {
