@@ -155,11 +155,9 @@
                 },
                 filteredByCategory (cat_id) {
                     console.log("cat", cat_id)
-                    if (cat_id === null || cat_id === undefined || _.includes(cat_id, "FILTER LIST")){
-                        console.log("here")
+                    if (cat_id === null || cat_id === undefined || _.includes(cat_id, "FILTER LIST") ||  _.includes(cat_id, "Alphabetical")){
                         category_id = "all";
                     } else {
-                        console.log("there")
                         category_id = this.findCategoryByName(cat_id).id;
                     }
                     
