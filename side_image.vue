@@ -10,8 +10,7 @@
             template: template, // the variable template will be injected
             data: function() {
                 return {
-                    sideImage: null,
-                    pageName: null
+                    sideImage: null
                 }
             },
             mounted() {
@@ -20,9 +19,7 @@
                     // if (temp_repo != null) {
                     //     this.pageBanner = temp_repo[0];
                     // } else {
-                        this.sideImage = {
-                            "image_url": "//codecloud.cdn.speedyrails.net/sites/5c9a464e6e6f6470e9060000/image/png/1554587000151/default_side_banner.png"
-                        }
+                        this.sideImage = "//codecloud.cdn.speedyrails.net/sites/5c9a464e6e6f6470e9060000/image/png/1554587000151/default_side_banner.png"
                     // }
                 });
             },
