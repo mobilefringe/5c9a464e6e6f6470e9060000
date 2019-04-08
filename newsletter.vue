@@ -85,12 +85,10 @@
                     this.$validator.validateAll().then((result) => {
                         if (result) {
                             let errors = this.errors;
-                            
-                            if(errors.length > 0) {
+                            if (errors.length > 0) {
                                 console.log("Error");
                             } else {
                                 console.log("No Error");
-                                // return true;
                                 form.target.submit();
                             }
                         }
