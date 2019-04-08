@@ -86,7 +86,7 @@
 </template>
 
 <script>
-    define(["Vue", "vuex", "vue-select"], function(Vue, Vuex, VueSelect) {
+    define(["Vue", "vuex", "vue-select", "vue!inside_banner.vue"], function(Vue, Vuex, VueSelect, insideBanner) {
         Vue.component('v-select', VueSelect.VueSelect);
         return Vue.component("stores-component", {
             template: template, // the variable template will be injected
