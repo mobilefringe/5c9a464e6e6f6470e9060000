@@ -4,7 +4,7 @@
             <div class="row">
                 <div class="col-xs-12 col-sm-6 col-md-4 footer_hours">
                     <p class="footer_heading">DIRECTIONS</p>
-                    <iframe :src="site.googleMapURL" width="100%" height="250" frameborder="0" style="border:0" allowfullscreen></iframe>
+                    <iframe :src="siteInfo.googleMapURL" width="100%" height="250" frameborder="0" style="border:0" allowfullscreen></iframe>
                 </div>
                 <div class="col-xs-12 col-sm-6 col-md-4 footer_newsletter">
                     <p class="footer_heading">NEWSLETTER SUBSCRIPTION</p>
