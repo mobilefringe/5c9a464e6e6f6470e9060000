@@ -10,7 +10,7 @@
                             <img class="img_max" src="//codecloud.cdn.speedyrails.net/sites/5b2925776e6f6432b6110000/image/jpeg/1531500101000/sidebanner5.jpg" alt="" />    
                         </div>
                         <div class="details_col_9" v-if="currentPromo">
-                            <router-link to="/promotions">
+                            <router-link to="/sales-and-events">
                                 <div class="inside_page_header"><i class="fa fa-caret-left"></i> Back to List</div>
                             </router-link>
                             <img v-lazy="currentPromo.image_url" :alt="'Promotion: ' + currentPromo.name" class="margin_20 img_max"/>
@@ -58,15 +58,6 @@
                 }
             },
             created() {
-				// var temp_repo = this.findRepoByName('Promotions Banner').images;
-    //             if(temp_repo != null) {
-    //                 this.pageBanner = temp_repo[0];
-    //             } else {
-    //                 this.pageBanner = {
-    //                     "image_url": "//codecloud.cdn.speedyrails.net/sites/5b2925776e6f6432b6110000/image/png/1531495616000/inside_banner.png"
-    //                 }
-    //             }
-				
 				this.$store.dispatch("getData", "promotions").then(response => {
 					this.currentPromo = this.findPromoBySlug(this.id);
 					if (this.currentPromo === null || this.currentPromo === undefined) {
