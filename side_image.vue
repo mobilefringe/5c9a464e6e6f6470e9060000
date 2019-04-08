@@ -6,7 +6,7 @@
 
 <script>
     define(["Vue", "vuex"], function(Vue, Vuex){
-        return Vue.component("banner-component", {
+        return Vue.component("image-component", {
             template: template, // the variable template will be injected
             data: function() {
                 return {
