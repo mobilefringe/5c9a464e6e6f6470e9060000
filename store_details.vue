@@ -119,13 +119,13 @@
 </style>
 
 <script>
-    define(['Vue', 'vuex', 'moment', "vue!mapplic-map"], function(Vue, Vuex, moment, MapplicComponent) {
+    define(['Vue', 'vuex', 'moment', "vue!mapplic-map", "vue!inside_banner.vue"], function(Vue, Vuex, moment, MapplicComponent, insideBanner) {
         return Vue.component("store-details-component", {
             template: template, // the variable template will be injected,
             data: function() {
                 return {
                     dataLoaded: false,
-                    pageBanner: null,
+                    pageName: null,
                     currentStore: null,
                     storePromotions: null,
                     togglePromos: false,
@@ -144,15 +144,6 @@
             },
             created (){
                 this.loadData().then(response => {
-                    // var temp_repo = this.findRepoByName('Directory Banner').images;
-                    // if(temp_repo != null) {
-                    //     this.pageBanner = temp_repo[0];
-                    // } else {
-                        this.pageBanner = {
-                            "image_url": "//codecloud.cdn.speedyrails.net/sites/5b2925776e6f6432b6110000/image/png/1531495616000/inside_banner.png"
-                        }
-                    // }
-                    
                     this.dataLoaded = true;
                     this.updateCurrentStore(this.id);
                 });
@@ -222,11 +213,13 @@
                         console.log("Error loading data: " + e.message);
                     }
                 },
-                updateCurrentStore (id) {
+                updateCurrentStore(id) {
                     this.currentStore = this.findStoreBySlug(id);
                     if (this.currentStore === null || this.currentStore === undefined) {
                         this.$router.replace({ path: '/'});
                     } else {
+                        this.pageName = this.currentStore.name;
+                        
                         this.currentStore.zoom = 2;
                         // if ( _.includes(this.currentStore.store_front_url_abs, 'missing')) {
                         //     this.currentStore.store_front_url_abs = this.property.default_logo_url;
