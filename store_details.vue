@@ -241,18 +241,7 @@
                             });
                             this.storeHours = _.sortBy(store_hours, function(o) { return o.day_of_week });
                         }
-                        
-                        // var vm = this;
-                        // if (this.currentStore.store_hours) {
-                        //     var hours = this.currentStore.store_hours;
-                        //     var store_hours = [];
-                        //     _.forEach(hours, function (value, key) {
-                        //         store_hours.push(vm.findHourById(value));
-                        //     });
-                        //     this.storeHours = store_hours;
-                        //     console.log("this.storeHours ", this.storeHours )
-                        // }
-                        
+
                         var vm = this;
                         var temp_promo = [];
                         _.forEach(this.currentStore.promotions, function(value, key) {
