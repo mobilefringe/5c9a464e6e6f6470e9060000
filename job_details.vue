@@ -11,7 +11,7 @@
                         </div>
                         <div class="details_col_9" v-if="currentJob">
                             <router-link to="/jobs">
-                                <div class="inside_page_header"><i class="fa fa-caret-left"></i> Back to List</div>
+                                <div class="inside_page_header"><i class="fa fa-caret-left"></i> Back to Jobs</div>
                             </router-link>
                             <h3 class="promo_name">{{ currentJob.name }}</h3>
                             <p class="promo_store_name">
