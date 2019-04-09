@@ -553,9 +553,6 @@ footer {
             background: $primary;
             font-size: 0.875rem;
             color: $secondary_text;
-            &:hover {
-                color: #FFF;
-            }
         }
         .newsletter_label {
             font-size: 0.875rem;
