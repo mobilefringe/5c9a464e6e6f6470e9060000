@@ -7,7 +7,6 @@
         Vue.use(Meta);
         return Vue.component("default-component", {
             template: template, // the variable template will be injected
-            props:['inside_banner'],
             data: function() {
                 return {
                     meta: {
