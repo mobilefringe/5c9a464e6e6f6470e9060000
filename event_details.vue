@@ -63,7 +63,7 @@
 				this.$store.dispatch("getData", "events").then(response => {
 					this.currentEvent = this.findEventBySlug(this.id);
 					if (this.currentEvent === null || this.currentEvent === undefined) {
-						this.$router.replace({ name: '404' });
+						this.$router.replace({ path: '/sales-and-events' });
 					}
 					this.dataLoaded = true;
 				}, error => {
@@ -73,14 +73,8 @@
 			watch: {
                 currentEvent : function (){
                     if(this.currentEvent != null) {
-                        if (this.currentEvent.eventable_type === "Store"){
-                            if (_.includes(this.currentEvent.event_image_url_abs, 'missing')) {
-                                this.currentEvent.image_url = this.currentEvent.store.store_front_url_abs; 
-                            }
-                        } else {
-                            if (_.includes(this.currentEvent.event_image_url_abs, 'missing')) {
-                                this.currentEvent.image_url = "//codecloud.cdn.speedyrails.net/sites/5b2925776e6f6432b6110000/image/png/1531496511000/event placeholder.png";    
-                            }
+                        if (_.includes(this.currentEvent.event_image_url_abs, 'missing')) {
+                            this.currentEvent.image_url = ""
                         }
                     }
                 }
@@ -89,7 +83,6 @@
 				...Vuex.mapGetters([
 					'property',
 					'timezone',
-					'findRepoByName',
 					'processedEvents',
 					'findEventBySlug',
 				])
