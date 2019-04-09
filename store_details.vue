@@ -23,7 +23,9 @@
                                 <h3 class="inside_page_title">Address</h3>
                                 <p class="store_details_phone">{{ currentStore.unit }}</p>    
                             </div>
-                            <a v-if="currentStore.website" class="animated_btn" :href="currentStore.website" target="_blank">Visit Website</a>
+                            <a v-if="currentStore.website" :href="currentStore.website" target="_blank">
+                                <div class="animated_btn">Visit Website</div>
+                            </a>
                         </div>
                         <div class="details_col_9">
                             <div id="map" class="margin_20">
