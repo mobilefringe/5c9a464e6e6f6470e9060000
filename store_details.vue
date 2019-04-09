@@ -27,7 +27,7 @@
                                 <div class="animated_btn">Visit Website</div>
                             </a>
                         </div>
-                        <div class="details_col_9">
+                        <div class="details_col_9 store_details">
                             <div class="inside_page_header">Store Hours & Information</div>
                             <ul v-if="storeHours" class="store_details_hours_list">
                                 <li v-for="hour in storeHours" :class="{ today: hour.todays_hours }">
