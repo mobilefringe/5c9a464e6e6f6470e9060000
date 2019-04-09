@@ -14,7 +14,7 @@
                             <div class="blogpost_content">
                                 <p class="blogpost_date">
                                     <span v-if="item.author" class="blog-author">by {{ item.author }}<span class="regular">|</span></span> 
-                                    {{ item.published_on }}
+                                    {{ item.start_date | moment("MMMM D", timezone)}}
                                 </p>
                                 <p class="blogpost_discription">{{ item.body_short }}</p>
                                 <router-link :to="'/posts/'+ item.slug" >
@@ -74,6 +74,7 @@
                         }
                     });
                     blog = _.reverse(_.sortBy(temp_blog, function (o) { return o.publish_date }));
+                    console.log("blog", blog)
                     return blog
                 }
             },
