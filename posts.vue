@@ -3,11 +3,7 @@
         <loading-spinner v-if="!dataLoaded"></loading-spinner>
         <transition name="fade">
             <div v-if="dataLoaded" v-cloak>
-                <div class="inside_header_background" :style="{ backgroundImage: 'url(' + pageBanner.image_url + ')' }">
-                    <div class="main_container">
-                        <h2>Blog</h2>
-                    </div>
-                </div>
+                <banner-component :page_name="pageName"></banner-component>
                 <div v-if="postList">
                     <div class="row"  v-for="(item, index) in postList">
                         <div class="col-xs-5 blogpost_img">
@@ -41,7 +37,7 @@
             data: function () {
                 return {
                     dataLoaded: false,
-                    pageBanner: null,
+                    pageName: "What's New",
                     // posts: [],
                     // morePosts: [],
                     // morePostsFetched: false,
