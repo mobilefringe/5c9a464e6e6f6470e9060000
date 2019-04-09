@@ -559,7 +559,7 @@ footer {
 }
 .footer_privacy {
     padding: 15px 0;
-    background: $secondary_text;
+    background: #505050;
     color: #fff;
     .main_container {
         display: -webkit-box;
