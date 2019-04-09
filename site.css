@@ -410,15 +410,14 @@ hr{
             transform: translate(-50%, -50%);
             font-size: 1.125rem;
             line-height: normal;
-            color: #FFF;
+            color: $secondary_text;
             transition: color 0.3s ease;
         }
     }
     .social_icon:hover {
         div {
             border: 1px solid $secondary;
-            
-            background: transparent;    
+            background: $secondary_text;    
         }
         .fab {
             color: $primary;    
