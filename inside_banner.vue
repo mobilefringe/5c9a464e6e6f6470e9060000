@@ -1,5 +1,5 @@
 <template>
-    <div class="inside_header_background" v-if="pageBanner" :style="{ background: 'linear-gradient(0deg, rgba(255,119,0,0.7), rgba(255,119,0,0.7)), url(' + pageBanner.image_url + ') center center' }">
+    <div class="inside_header_background" v-if="pageBanner" :style="{ background: 'linear-gradient(0deg, rgba(255, 119, 0, 0.6), rgba(255, 119, 0, 0.6)), url(' + pageBanner.image_url + ') center center' }">
         <div class="main_container">
             <div class="page_container">
                 <h2 v-html="pageName"></h2>
