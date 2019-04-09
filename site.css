@@ -979,6 +979,12 @@ footer {
     color: #FFF !important;
 }
 
+/* *** NEWSLETTER *** */
+#newsletter_form {
+    .form-control::placeholder {
+        color: $secondary_text;
+    }
+}
 /* *** PAGES *** */
 .page_title {
     font-weight: 700;
