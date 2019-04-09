@@ -48,6 +48,7 @@
 $primary: #ff7700;
 $primaryRGB: rgb(183, 2, 0);
 $secondary: #8f7032;
+$accent: #ff9233;
 $text: #000;
 $secondary_text: #3A3A3A;
 
@@ -825,7 +826,7 @@ footer {
         width: 60px;
         height: 30px;
         border-radius: 50%;
-        background: $secondary;
+        background: $accent;
         -webkit-transform-origin: 100% 50%;
         transform-origin: 100% 50%;
         -webkit-transform: scale3d(1, 2, 1);
