@@ -13,7 +13,7 @@
                             <h2 class="blogpost_title">{{ item.title }}</h2>
                             <div class="blogpost_content">
                                 <p class="blogpost_date">
-                                    <span v-if="item.author" class="blog-author">by {{ item.author }}<span class="regular">|</span></span> 
+                                    <span v-if="item.author" class="blog-author">by {{ item.author }}<span class="regular"> | </span></span> 
                                     {{ item.publish_date | moment("MMMM D", timezone) }}
                                 </p>
                                 <p class="blogpost_discription">{{ item.body_short }}</p>
