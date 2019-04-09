@@ -287,7 +287,7 @@ hr{
                     top: 50%;
                     left: 50%;
                     transform: translate(-50%, -50%);
-                    color: #FFF;
+                    color: $secondary_text;
                 }
             }
         }
@@ -375,7 +375,6 @@ hr{
     justify-content: flex-end;
 }
 .header_social {
-    // margin-bottom: 28px;
     display: -webkit-box;
     display: -webkit-flex;
     display: -ms-flexbox;
@@ -398,7 +397,6 @@ hr{
             width: 30px;
             height: 30px;
             position: relative;
-            // border: 1px solid $primary;
             background: $primary; 
             border-radius: 50%;
             transition: color 0.3s ease;
@@ -416,7 +414,6 @@ hr{
     }
     .social_icon:hover {
         div {
-            // border: 1px solid $primary;
             background: $secondary_text;    
         }
         .fab {
