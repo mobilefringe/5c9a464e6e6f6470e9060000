@@ -61,7 +61,7 @@
 				this.$store.dispatch("getData", "promotions").then(response => {
 					this.currentPromo = this.findPromoBySlug(this.id);
 					if (this.currentPromo === null || this.currentPromo === undefined) {
-						this.$router.replace({ path: '/promotions' });
+						this.$router.replace({ path: '/sales-and-events' });
 					}
 					this.dataLoaded = true;
 				}, error => {
@@ -70,9 +70,8 @@
 			},
 			watch: {
                 currentPromo : function (){
-                    if(this.currentPromo != null) {
-
-                        if  (_.includes(this.currentPromo.promo_image_url_abs, 'missing')) {
+                    if (this.currentPromo != null) {
+                        if (_.includes(this.currentPromo.promo_image_url_abs, 'missing')) {
                             this.currentPromo.image_url = ""; 
                         }
                     }
@@ -82,7 +81,6 @@
                 ...Vuex.mapGetters([
                     'property',
                     'timezone',
-                    'findRepoByName',
                     'findPromoBySlug'
                 ])
             },
