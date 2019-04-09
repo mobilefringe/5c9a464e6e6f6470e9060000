@@ -49,15 +49,6 @@
             },
             created() {
                 this.loadData().then(response => {
-                    // var temp_repo = this.findRepoByName('Promotions Banner').images;
-                    // if(temp_repo != null) {
-                    //     this.pageBanner = temp_repo[0];
-                    // } else {
-                        this.pageBanner = {
-                            "image_url": "//codecloud.cdn.speedyrails.net/sites/5b2925776e6f6432b6110000/image/png/1531495616000/inside_banner.png"
-                        }
-                    // }
-                    
                     this.dataLoaded = true;
                 });
             },
@@ -65,7 +56,6 @@
                 ...Vuex.mapGetters([
                     'property',
                     'timezone',
-                    'findRepoByName',
                     'blogs',
                     'findBlogByName'
                 ]),
@@ -77,9 +67,9 @@
                         today = moment().tz(vm.timezone);
                         webDate = moment(value.publish_date).tz(vm.timezone);
                         if (today >= webDate) {
-                            // if (_.includes(value.image_url, 'missing')) {
-                            //     value.image_url = "//codecloud.cdn.speedyrails.net/sites/5c0581a36e6f643f53050000/image/jpeg/1527006352000/bccblogplaceholder.jpg";
-                            // }
+                            if (_.includes(value.image_url, 'missing')) {
+                                value.image_url = "//codecloud.cdn.speedyrails.net/sites/5c0581a36e6f643f53050000/image/jpeg/1527006352000/bccblogplaceholder.jpg";
+                            }
                             value.body_short = _.truncate(value.body, { 'length': 99, 'separator': ' ' });
                             
                             temp_blog.push(value);
