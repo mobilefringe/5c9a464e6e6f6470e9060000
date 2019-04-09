@@ -11,7 +11,7 @@
                     <p>Stay up to date on the latest news from {{ property.name }}!</p>
                     <label for="emailAddress" class="accessibility">Enter Email Address</label>
                     <input id="emailAddress" v-model="newsletter_email" type="text" placeholder="Susbcribe to Newsletter" class="newsletter_control" required />
-                    <button @click="newsletterRoute" class="newsletter_btn animated_btn caps"><i class="fas fa-arrow-right"></i></button>
+                    <button @click="newsletterRoute" class="newsletter_btn animated_btn caps"><i class="fa fa-arrow-right"></i></button>
                 </div>
                 <div class="col-xs-12 col-sm-12 col-md-4 footer_insta">
                     <p class="footer_heading">FOLLOW US ON FACEBOOK</p>
