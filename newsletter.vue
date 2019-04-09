@@ -11,7 +11,7 @@
                         </div>
                         <div class="details_col_9">
                             <p class="inside_page_link">Be the first to know about upcoming events and special announcements from {{ property.name }}!</p>
-                            <form class="form-horizontal" action="//mobilefringe.createsend.com/t/d/s/vuutyk/" method="post" @submit.prevent="validateBeforeSubmit">
+                            <form id="newsletter_form" class="form-horizontal" action="//mobilefringe.createsend.com/t/d/s/vuutyk/" method="post" @submit.prevent="validateBeforeSubmit">
                                 <div class="row">
                                     <div class="col-md-6">
                                         <label for="fieldzyklkj">First Name</label>
