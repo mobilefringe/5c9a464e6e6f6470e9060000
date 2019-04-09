@@ -119,7 +119,6 @@
                     showMobileMenu: false,
                     noScroll: false,
                     windowWidth: 0,
-                    
                     search_result: null,
                     suggestionAttribute: "name",
                     keys: ["name", "description", "tags", "keywords", "store.name"],
