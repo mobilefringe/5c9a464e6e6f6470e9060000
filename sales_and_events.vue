@@ -111,7 +111,7 @@
 </template>
 
 <script>
-    define(["Vue", "vuex", "moment", "moment-timezone", "vue-moment", "vue!inside_banner.vue", "bootstrap-vue"], function (Vue, Vuex, moment, tz, VueMoment, insideBanner, BootstrapVue) {
+    define(["Vue", "vuex", "moment", "moment-timezone", "vue-moment", "vue!inside_banner.vue", "vue!side_image.vue" "bootstrap-vue"], function (Vue, Vuex, moment, tz, VueMoment, insideBanner, sideImage, BootstrapVue) {
         Vue.use(BootstrapVue);
         return Vue.component("promotions-and-events-component", {
             template: template, // the variable template will be injected,
