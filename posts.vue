@@ -18,7 +18,9 @@
                                     {{ item.published_on }}
                                 </p>
                                 <p class="blogpost_discription">{{ item.body_short }}</p>
-                                <a :href="'/posts/' + item.slug" class="readmore">Read More</a>
+                                <router-link :to="'/posts/'+ item.slug" >
+	                                <i class="fa fa-caret-right"></i> <span class="read_more">View Post</span>
+                                </router-link>
                             </div>
                             <div class="margin_20"></div>
                         </div>
