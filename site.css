@@ -738,6 +738,9 @@ footer {
     padding-right: 50px;
     border-left: 1px solid #D8D8D8;
 }
+.details_col_9.store_details {
+    min-height: 450px;
+}
 .inside_header_background {
     margin-bottom: 40px;
     height: 148px;
