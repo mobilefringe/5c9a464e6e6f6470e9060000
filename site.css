@@ -1269,10 +1269,10 @@ footer {
     font-family: Avenir-Book;
     font-size: 1.125rem;
     color: $text;
-    &:hover {
-        color: inherit;
-        text-decoration: underline;
-    }
+}
+a.store_details_phone:hover {
+    color: inherit;
+    text-decoration: underline;
 }
 .store_details_hours_list {
     margin-bottom: 20px;
