@@ -36,9 +36,9 @@
         <h1 class="accessibility"></h1>
         <div id="app" v-cloak>
             <loading-spinner v-if="!dataLoaded"></loading-spinner>
-            <header-component :menu_items="menu_items" :social_media="social_media" v-if="dataLoaded"></header-component>
+            <header-component :menu_items="menu_items" v-if="dataLoaded"></header-component>
             <router-view v-if="dataLoaded" class="page-content" :inside_banner="inside_banner"></router-view>
-            <footer-component :social_media="social_media" v-if="dataLoaded"></footer-component>
+            <footer-component v-if="dataLoaded"></footer-component>
         </div>
         <div id="fb-root"></div>
         <script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v3.2"></script>
