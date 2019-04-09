@@ -30,7 +30,7 @@
 </template>
 
 <script>
-    define(["Vue", "vuex", "moment", "moment-timezone", "vue-moment", "vue-lazy-load", "vue-social-sharing"], function (Vue, Vuex, moment, tz, VueMoment, VueLazyload, SocialSharing) {
+    define(["Vue", "vuex", "moment", "moment-timezone", "vue-moment", "vue!inside_banner.vue", "vue-lazy-load", "vue-social-sharing"], function (Vue, Vuex, moment, tz, VueMoment, insideBanner, VueLazyload, SocialSharing) {
         Vue.use(VueLazyload);
         return Vue.component("blog-component", {
             template: template, // the variable template will be injected
