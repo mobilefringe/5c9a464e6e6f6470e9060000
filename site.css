@@ -67,8 +67,8 @@ body {
 [v-cloak] {
     display: none;
 }
-img{
-    max-width:100%;
+img {
+    max-width: 100%;
 }
 a {
     color: inherit;
