@@ -7,7 +7,7 @@
                 <div v-if="postList">
                     <div class="row"  v-for="(item, index) in postList">
                         <div class="col-xs-5 blogpost_img">
-                            <img :src="item.image_url" :alt="" />
+                            <img :src="item.image_url" :alt="item.title" />
                             <!--<div class="margin_20"></div>-->
                         </div>
                         <div class="col-xs-7 blogpost_txt">
