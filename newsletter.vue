@@ -33,7 +33,7 @@
                                         <div style="margin-left: 20px">
                                             <label class="checkbox">
                                                 <input name="agree_newsletter" required  type="checkbox">
-                                                    I agree to receive communications from {{ property.name }}.
+                                                    I agree to receive electronic communications from {{ property.name }}.
                                             </label>
                                         </div>
             					    </div>
