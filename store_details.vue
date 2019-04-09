@@ -19,6 +19,10 @@
                                 <h3 class="inside_page_title">Phone</h3>
                                 <a class="store_details_phone" :href="'tel:' + currentStore.phone">{{ currentStore.phone }}</a>    
                             </div>
+                            <div v-if="currentStore.unit">
+                                <h3 class="inside_page_title">Address</h3>
+                                <p class="store_details_phone">{{ currentStore.unit }}</p>    
+                            </div>
                             <a v-if="currentStore.website" class="animated_btn" :href="'http://' + currentStore.website" target="_blank">Visit Website</a>
                         </div>
                         <div class="details_col_9">
