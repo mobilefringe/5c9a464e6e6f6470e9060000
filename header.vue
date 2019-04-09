@@ -107,17 +107,19 @@
 </template>
 
 <script>
-    define(["Vue", "vuex", "bootstrap-vue", "json!site.json", 'vue!search-component'], function (Vue, Vuex, BootstrapVue, site, SearchComponent) {
+    define(["Vue", "vuex", "bootstrap-vue", "vue!search-component", "json!site.json", "json!social.json"], function (Vue, Vuex, BootstrapVue, SearchComponent, site, social) {
         Vue.use(BootstrapVue);
         return Vue.component("header-component", {
             template: template, // the variable template will be injected,
             data: function () {
                 return {
+                    siteInfo: site,
+                    socialInfo: social,
                     showMenu: false,
                     showMobileMenu: false,
                     noScroll: false,
                     windowWidth: 0,
-                    siteInfo: site,
+                    
                     search_result: null,
                     suggestionAttribute: "name",
                     keys: ["name", "description", "tags", "keywords", "store.name"],
