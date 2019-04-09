@@ -1202,6 +1202,7 @@ footer {
     color: #848484;
     .fas {
         font-size: 1rem;
+        color: $secondary_text;
         vertical-align: text-top;
     }
 }
