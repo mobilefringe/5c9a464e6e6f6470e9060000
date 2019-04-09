@@ -28,9 +28,6 @@
                             </a>
                         </div>
                         <div class="details_col_9">
-                            <div id="map" class="margin_20">
-                                <mapplic-map ref="svgmap_ref" :height="300" :minimap= "false" :deeplinking="false" :sidebar="false" :hovertip="true" :maxscale= "5" :storelist="processedStores" :floorlist="floorList" :svgWidth="2500" :svgHeight="2500" @updateMap="updateSVGMap" :key="currentStore.id"></mapplic-map>
-                            </div>
                             <div class="inside_page_header">Store Hours & Information</div>
                             <ul v-if="storeHours" class="store_details_hours_list">
                                 <li v-for="hour in storeHours" :class="{ today: hour.todays_hours }">
@@ -119,7 +116,7 @@
 </style>
 
 <script>
-    define(['Vue', 'vuex', 'moment', 'moment-timezone', 'vue!inside_banner.vue', 'vue!mapplic-map'], function(Vue, Vuex, moment, tz, insideBanner, MapplicComponent) {
+    define(['Vue', 'vuex', 'moment', 'moment-timezone', 'vue!inside_banner.vue'], function(Vue, Vuex, moment, tz, insideBanner) {
         return Vue.component("store-details-component", {
             template: template, // the variable template will be injected,
             data: function() {
@@ -136,18 +133,17 @@
             },
             props:['id'],
             beforeRouteUpdate(to, from, next) {
-                this.loadData().then(response => {
+                // this.loadData().then(response => {
                     this.updateCurrentStore(to.params.id);
                     this.dataLoaded = true;
-                });
-                next();
+                // });
+                // next();
             },
             created (){
-                this.loadData().then(response => {
-                    console.log("timezone", this.timezone)
+                // this.loadData().then(response => {
                     this.updateCurrentStore(this.id);
                     this.dataLoaded = true;
-                });
+                // });
             },
             computed: {
                 ...Vuex.mapGetters([
@@ -161,59 +157,17 @@
                     'findPromoById',
                     'findJobById',
                     'findRepoByName'
-                ]),
-                getSVGurl() {
-                    return "https://www.mallmaverick.com" + this.property.svg_map_url;
-                },
-                svgMapRef() {
-                    return this.$refs.svgmap_ref;
-                },
-                allStores() {
-                    this.processedStores.map(function(store){
-                        store.zoom = 4;
-                    })
-                    return this.processedStores;
-                },
-                floorList () {
-                    var floor_list = [];
-                    // Get SVG Maps from Repo
-                    var floor_maps_repo = this.findRepoByName('SVG Maps');
-                    
-                    if(floor_maps_repo !== null && floor_maps_repo !== undefined && floor_maps_repo.images.length > 0){
-                        floor_maps = floor_maps_repo.images;
-                        if (this.currentStore.z_coordinate == 1) {
-                            var floor_1 = {};
-                            floor_1.id = "first-floor";
-                            floor_1.title = "Level 1";
-                            floor_1.map = _.find(floor_maps, function(o){ return _.toNumber(o.id) == _.toNumber(41084);}).image_url;
-                            floor_1.z_index = 1;
-                            floor_1.show = true;
-                            
-                            floor_list.push(floor_1);
-                        } else if (this.currentStore.z_coordinate == 2) {
-                            var floor_2 = {};
-                            floor_2.id = "second-floor";
-                            floor_2.title = "Level 2";
-                            floor_2.map = _.find(floor_maps, function(o){ return _.toNumber(o.id) == _.toNumber(41085);}).image_url;
-                            floor_2.z_index = 2;
-                            floor_2.show = true;
-                            
-                            floor_list.push(floor_2);
-                        }
-                    }
-                    
-                    return floor_list;
-                }
+                ])
             },
             methods: {
-                loadData: async function() {
-                    try {
-                        let results = await Promise.all([
-                            this.$store.dispatch("getData","promotions"), this.$store.dispatch("getData", "jobs"), this.$store.dispatch("getData", "repos")]);
-                    } catch (e) {
-                        console.log("Error loading data: " + e.message);
-                    }
-                },
+                // loadData: async function() {
+                //     try {
+                //         let results = await Promise.all([
+                //             this.$store.dispatch("getData","promotions"), this.$store.dispatch("getData", "jobs"), this.$store.dispatch("getData", "repos")]);
+                //     } catch (e) {
+                //         console.log("Error loading data: " + e.message);
+                //     }
+                // },
                 updateCurrentStore(id) {
                     this.currentStore = this.findStoreBySlug(id);
                     if (this.currentStore === null || this.currentStore === undefined) {
