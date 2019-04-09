@@ -398,7 +398,7 @@ hr{
             width: 30px;
             height: 30px;
             position: relative;
-            border: 1px solid $primary;
+            // border: 1px solid $primary;
             background: $primary; 
             border-radius: 50%;
             transition: color 0.3s ease;
@@ -416,7 +416,7 @@ hr{
     }
     .social_icon:hover {
         div {
-            border: 1px solid $primary;
+            // border: 1px solid $primary;
             background: $secondary_text;    
         }
         .fab {
