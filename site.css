@@ -795,7 +795,7 @@ footer {
     .fab {
         padding-left: 10px;
         font-size: 25px;
-        color: $secondary;
+        color: $secondary_text;
         transition: color 0.3s ease;
         &:hover {
             color: $primary;
