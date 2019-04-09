@@ -7,7 +7,7 @@
                 <div class="main_container margin_30">
                     <div class="details_row">
                         <div class="details_col_3 hidden_phone">
-                            <img class="img_max" src="//codecloud.cdn.speedyrails.net/sites/5b2925776e6f6432b6110000/image/jpeg/1531500101000/sidebanner5.jpg" alt="" />    
+                            <image-component></image-component>  
                         </div>
                         <div class="details_col_9" v-if="currentPromo">
                             <router-link to="/sales-and-events">
@@ -43,7 +43,7 @@
 </template>
 
 <script>
-    define(["Vue", "vuex", "moment", "moment-timezone", "vue-moment", "vue!inside_banner.vue", "vue-lazy-load",  "vue-social-sharing", "json!site.json"], function(Vue, Vuex, moment, tz, VueMoment, insideBanner, VueLazyload, SocialSharing, site) {
+    define(["Vue", "vuex", "moment", "moment-timezone", "vue-moment", "vue!inside_banner.vue", "vue!side_image.vue", "vue-lazy-load",  "vue-social-sharing", "json!site.json"], function(Vue, Vuex, moment, tz, VueMoment, insideBanner, sideImage, VueLazyload, SocialSharing, site) {
         Vue.use(VueLazyload);
         Vue.component('social-sharing', SocialSharing);
         return Vue.component("promo-details-component", {
