@@ -686,7 +686,7 @@ footer {
                 padding: 0;
                 width: 16px;
                 height: 16px;
-                border: 2px solid #FFF;
+                border: 2px solid $secondary_text;
                 border-radius: 20px;
                 background-color: transparent;
                 font-size: 0;
