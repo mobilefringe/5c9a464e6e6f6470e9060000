@@ -156,7 +156,6 @@
                     'findHourById',
                     'findPromoById',
                     'findJobById',
-                    'findRepoByName'
                 ])
             },
             methods: {
@@ -174,11 +173,7 @@
                         this.$router.replace({ path: '/'});
                     } else {
                         this.pageName = this.currentStore.name;
-                        
-                        this.currentStore.zoom = 2;
-                        // if ( _.includes(this.currentStore.store_front_url_abs, 'missing')) {
-                        //     this.currentStore.store_front_url_abs = this.property.default_logo_url;
-                        // }
+
                         if (_.includes(this.currentStore.store_front_url_abs, 'missing')) {
                             this.currentStore.no_logo = true
                         } else {
@@ -226,14 +221,6 @@
                         this.storeJobs = temp_job;
                         this.toggleJobs = true;
                     }
-                },
-                updateSVGMap(map) {
-                    this.map = map;
-                    this.svgMapRef.showLocation(this.currentStore.svgmap_region);
-                    this.svgMapRef.addActiveClass(this.currentStore.svgmap_region);
-                },
-                dropPin(store) {
-                    this.svgMapRef.showLocation(store.svgmap_region);
                 },
                 isMultiDay(promo) {
                     var timezone = this.timezone
