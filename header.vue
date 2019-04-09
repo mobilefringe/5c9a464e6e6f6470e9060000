@@ -31,7 +31,7 @@
                             </div>
                         </div>
                         <div class="header_social">
-                            <span class="social_icon" v-for="item in social_media">
+                            <span class="social_icon" v-for="item in socialInfo">
                                 <a :href="item.url" target="_blank">
                                     <div>
                                         <p class="accessibility">{{item.name}}</p>
@@ -82,7 +82,7 @@
     					        </ul>
     						    <div class="mobile_nav_content">
     						        <div class="header_social">
-        							    <span class="social_icon" v-for="item in social_media">
+        							    <span class="social_icon" v-for="item in socialInfo">
                                             <a :href="item.url" target="_blank">
                                                 <div>
                                                     <p class="accessibility">{{item.name}}</p>
@@ -125,7 +125,7 @@
                     headerReady: false
                 }
             },
-            props:['menu_items', 'social_media'],
+            props:['menu_items'],
             watch: {
                 $route: function() {
                     if (this.windowWidth <= 768) {
