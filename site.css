@@ -1181,6 +1181,7 @@ footer {
     color: #848484;
     .fas {
         font-size: 1rem;
+        color: $secondary_text;
     }
 }
 .coming_soon_store {
@@ -1191,6 +1192,7 @@ footer {
     color: #848484;
     .far {
         font-size: 1rem;
+        color: $secondary_text;
         vertical-align: text-top;
     }
 }
