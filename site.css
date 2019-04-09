@@ -551,7 +551,7 @@ footer {
             border-radius: 0;
             background: $primary;
             font-size: 0.875rem;
-            color: #fff;
+            color: $secondary_text;
             &:hover {
                 color: #FFF;
             }
