@@ -4,7 +4,7 @@
         <transition name="fade">
             <div v-if="dataLoaded" v-cloak>
                 <banner-component :page_name="pageName"></banner-component>
-                <div v-if="postList">
+                <div class="main_container margin_30" v-if="postList">
                     <div class="row"  v-for="(item, index) in postList">
                         <div class="col-xs-5 blogpost_img">
                             <img class="max-width" :src="item.image_url" :alt="item.title" />
