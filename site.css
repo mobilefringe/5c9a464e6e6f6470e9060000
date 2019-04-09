@@ -895,12 +895,6 @@ footer {
             line-height: 1.875rem;
         }
     }
-    .card-body {
-        img {
-            max-width: 100%;
-            border: 1px solid #f5f5f5;
-        }
-    }
 }
 .inside_page_link {
     margin-bottom: 20px;  
