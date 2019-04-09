@@ -539,6 +539,10 @@ footer {
             font-size: 0.875rem;
             color: #000;
         }
+        .newsletter_control::placeholder {
+            font-size: 0.875rem;
+            color: #000;
+        }
         .newsletter_btn {
             margin-bottom: 15px;
             padding: 5px 9px;
