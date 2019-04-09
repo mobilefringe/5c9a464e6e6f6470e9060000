@@ -981,6 +981,9 @@ footer {
 
 /* *** NEWSLETTER *** */
 #newsletter_form {
+    .form-control {
+        color: $text;
+    }
     .form-control::placeholder {
         color: $secondary_text;
     }
