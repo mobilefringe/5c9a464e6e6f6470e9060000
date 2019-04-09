@@ -13,7 +13,7 @@
                             <router-link to="/sales-and-events">
                                 <div class="inside_page_header"><i class="fa fa-caret-left"></i> Back to Sales & Events</div>
                             </router-link>
-                            <img v-lazy="currentPromo.image_url" :alt="'Promotion: ' + currentPromo.name" class="margin_20 img_max"/>
+                            <img v-if="currentPromo.image_url" v-lazy="currentPromo.image_url" :alt="'Promotion: ' + currentPromo.name" class="margin_20 img_max"/>
                             <h3 class="promo_name">{{ currentPromo.name }}</h3>
                             <p class="promo_store_name">
                                 <router-link v-if="currentPromo.promotionable_type == 'Store'" :to="'/stores/'+ currentPromo.store.slug">{{ currentPromo.store.name }}</router-link>
