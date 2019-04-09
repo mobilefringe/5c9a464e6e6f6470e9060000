@@ -838,7 +838,6 @@ footer {
     }
 }
 .animated_btn:hover {
-    color: #FFF;
     text-decoration: none;
     &:before {
         -webkit-transform: scale3d(9, 9, 1);
