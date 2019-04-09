@@ -5,7 +5,7 @@
             <div v-if="dataLoaded" v-cloak>
                 <banner-component :page_name="pageName"></banner-component>
                 <div class="main_container margin_30" v-if="postList">
-                    <div class="row"  v-for="(item, index) in postList">
+                    <div class="row margin_20"  v-for="(item, index) in postList">
                         <div class="col-xs-5 blogpost_img">
                             <img class="max-width" :src="item.image_url" :alt="item.title" />
                             <!--<div class="margin_20"></div>-->
@@ -22,7 +22,6 @@
 	                                <i class="fa fa-caret-right"></i> <span class="read_more">View Post</span>
                                 </router-link>
                             </div>
-                            <div class="margin_20"></div>
                         </div>
                     </div>
                 </div>
