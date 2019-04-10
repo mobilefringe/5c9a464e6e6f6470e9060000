@@ -23,7 +23,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="row" v-if="regularPromotions && showMore <= regularPromotions.length" @click ="loadMore()">
+                    <div class="row" v-if="postList && showMore <= postList.length" @click ="loadMore()">
                         <div class="col-md-12">
                             <div class="animated_btn">
                                 <p>Load More</p>
@@ -90,7 +90,13 @@
                     } catch (e) {
                         console.log("Error loading data: " + e.message);
                     }
-                }
+                },
+                loadMore() {
+                    if (this.showMore <= this.postList.length) {
+                        var num = this.showMore + this.incrementBy;
+                        this.showMore = num;
+                    }
+                },
             }
         });
     });
