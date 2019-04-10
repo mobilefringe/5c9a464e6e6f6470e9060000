@@ -22,6 +22,7 @@
                                 <span>| </span>
                                 <span v-if="isMultiDay(currentJob)" class="promo_date">{{ currentJob.start_date | moment("MMMM D", timezone)}} to {{ currentJob.end_date | moment("MMMM D", timezone)}}</span>
                                 <span v-else class="promo_date">{{ currentJob.start_date | moment("MMMM D", timezone)}}</span>
+                                
                             </p>
                             <div class="promo_desc" v-html="currentJob.rich_description"></div>
                             <social-sharing v-if="currentJob" :url="shareURL(currentJob.slug)" :title="currentJob.title" :description="currentJob.body" :quote="truncate(currentJob.body)" :media="currentJob.image_url" inline-template>
@@ -63,6 +64,7 @@
 					if (this.currentJob === null || this.currentJob === undefined) {
 						this.$router.replace({ path: '/jobs' });
 					}
+					console.log("this.currentJob", this.currentJob)
 					this.dataLoaded = true;
 				}, error => {
 					console.error("Could not retrieve data from server. Please check internet connection and try again.");
