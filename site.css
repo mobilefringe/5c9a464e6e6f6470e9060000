@@ -1638,6 +1638,9 @@ a.store_details_phone:hover {
     .hours_container {
         margin-bottom: 20px;
     }
+    .blog_image {
+        margin-bottom: 20px;
+    }
     .post_details_header {
         -webkit-box-orient: vertical;
         -webkit-box-direction: normal;
