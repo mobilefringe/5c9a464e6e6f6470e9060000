@@ -5,7 +5,7 @@
                 <div class="col-md-3">
                     <div class="site_logo">
                         <a href="/">
-                            <img :src="siteInfo.default_logo_url" :alt="siteInfo.siteName + ' Logo" />
+                            <img :src="siteInfo.default_logo_url" :alt="siteInfo.siteName + ' Logo'" />
                         </a>
                     </div>
                     <div @click="showMenu = !showMenu" :class="{ open: showMenu }" id="menu-icon">
