@@ -29,6 +29,7 @@
                         </div>
                         <div class="details_col_9 store_details">
                             <div class="inside_page_header">Store Hours & Information</div>
+                            <div class=" margin_30 store_details_desc" v-html="currentStore.rich_description"></div>
                             <ul v-if="storeHours" class="store_details_hours_list">
                                 <li v-for="hour in storeHours" :class="{ today: hour.todays_hours }">
                                     <div v-if="hour.is_closed">
@@ -43,7 +44,7 @@
                                     </div>
                                 </li>
                             </ul>
-                            <div class=" margin_30 store_details_desc" v-html="currentStore.rich_description"></div>
+                            
                             <div v-if="currentStore.promotions">
                                 <b-card no-body class="mb-1 inside_page_toggle">
                                     <b-card-header header-tag="header" class="p-1" role="tab">
