@@ -22,7 +22,7 @@
                         </div>
                     </div>
                     <div class="row" v-if="postList && showMore <= postList.length" @click ="loadMore()">
-                        <div class="col-md-12">
+                        <div class="col-md-2">
                             <div class="animated_btn">
                                 <p>Load More</p>
                             </div>
