@@ -1,9 +1,10 @@
 <template>
+    <h1 class="accessibility">{{ property.name }}</h1>
     <router-view></router-view>
 </template>
 
 <script>
-    define(["Vue", "vue-meta"], function(Vue, Meta) {
+    define(["Vue", "vuex", "vue-meta"], function(Vue, Vuex, Meta) {
         Vue.use(Meta);
         return Vue.component("default-component", {
             template: template, // the variable template will be injected
@@ -27,6 +28,9 @@
                 next();
             },
             computed: {
+                 ...Vuex.mapGetters([
+                    'property'
+                ]),
                 findMetaDataByPath () {
                     return this.$store.getters.findMetaDataByPath;
                 }
