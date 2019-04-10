@@ -8,6 +8,39 @@
     </div>
 </template>
 
+<style>
+    .fb-page {
+        width: 100%;
+    /*z-index: 1000;*/
+    /*position: fixed!important;*/
+    /*top: calc(50% - 130px);*/
+    /*left: 0;*/
+    }
+
+#facebook-clicker {
+    opacity: 0;
+    visibility: hidden;
+  /*cursor: pointer;*/
+  /*z-index: 1000;*/
+  /*width: 170px;*/
+  /*height: 60px;*/
+  /*position: fixed;*/
+  /*top: calc(50% - 75px);*/
+  /*left: -59px;*/
+  /*background-image: url('./assets/facebook.png');*/
+  /*background-size: cover;*/
+  /*background-repeat: no-repeat;*/
+  /*transform: rotate(-90deg);*/
+  /*border-radius: 0px 0px 15px 15px;*/
+}
+
+@media screen and (max-width: 615px) {
+  #facebook-clicker {
+    display: none;
+  }
+}
+</style>
+
 <script>
     define(["Vue", "jquery"], function (Vue, $) {
         return Vue.component("VueFacebookPage", {
@@ -49,33 +82,3 @@
         });
     });
 </script>
-
-<style>
-  .fb-page {
-    z-index: 1000;
-    position: fixed!important;
-    top: calc(50% - 130px);
-    left: 0;
-  }
-
-#facebook-clicker {
-  cursor: pointer;
-  z-index: 1000;
-  width: 170px;
-  height: 60px;
-  position: fixed;
-  top: calc(50% - 75px);
-  left: -59px;
-  /*background-image: url('./assets/facebook.png');*/
-  background-size: cover;
-  background-repeat: no-repeat;
-  transform: rotate(-90deg);
-  border-radius: 0px 0px 15px 15px;
-}
-
-@media screen and (max-width: 615px) {
-  #facebook-clicker {
-    display: none;
-  }
-}
-</style>
