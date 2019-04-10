@@ -1552,7 +1552,7 @@ a.store_details_phone:hover {
         .footer_menu {
             margin-top: 20px;
             .footer_newsletter {
-                border-right: none;
+                border-left: none;
             }
             .footer_insta {
                 margin: 40px 0;
