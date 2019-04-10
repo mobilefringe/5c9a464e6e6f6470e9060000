@@ -1252,7 +1252,7 @@ footer {
             width: 100%;
             font-family: Georgia-Italic;
             font-size: 1.375rem;
-            color: $primary;
+            color: $secondary_text;
             text-align: center;
         }
     }
