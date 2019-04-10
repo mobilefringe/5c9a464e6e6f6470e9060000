@@ -1637,7 +1637,7 @@ a.store_details_phone:hover {
             text-align: left;
         }
         .legend {
-        display: block;
+        // display: block;
         text-align: left;
     }
     }
