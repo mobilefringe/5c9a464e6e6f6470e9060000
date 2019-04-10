@@ -24,6 +24,7 @@
                                 <span v-else class="promo_date">{{ currentJob.start_date | moment("MMMM D", timezone)}}</span>
                             </p>
                             <div class="promo_desc" v-html="currentJob.rich_description"></div>
+                            <hr v-if="currentJob.message || currentJob.contact_name || currentJob.contact_email || currentJob.contact_phone || currentJob.contact_website">
                             <div v-if="currentJob.message">
                                 <p><span class="promo_store_name">Additional Message: </span>{{ currentJob.message }}</p>
                             </div>
