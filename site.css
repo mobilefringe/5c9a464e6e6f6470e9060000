@@ -1224,11 +1224,6 @@ footer {
 }
 
 /* *** STORE DETAILS *** */
-// .store_details_image {
-//     margin-bottom: 20px; 
-//     max-width: 100%;
-//     border: 1px solid #D8D8D8;
-// }
 .store_details_image {
     margin-bottom: 20px; 
     @include responsive-ratio(1, 1);
