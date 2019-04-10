@@ -1634,7 +1634,12 @@ a.store_details_phone:hover {
         border: none;
         .col-md-6 {
             width: 100%;
+            text-align: left;
         }
+        .legend {
+        display: block;
+        text-align: left;
+    }
     }
     #selectByCat.v-select .dropdown-toggle {
         border: 1px solid #000;
@@ -1642,10 +1647,7 @@ a.store_details_phone:hover {
     .v-select input[type=search], .v-select input[type=search]:focus {
         width: 100%;
     }
-    .legend {
-        display: block;
-        text-align: left;
-    }
+    
     .hours_container {
         margin-bottom: 20px;
     }
