@@ -1643,9 +1643,14 @@ a.store_details_phone:hover {
             margin-left: -10px;
         }
     }
-    #selectByCat.v-select .dropdown-toggle {
-        border-radius: 0;
-        border: 1px solid #000;
+    #selectByCat.v-select { 
+        .dropdown-toggle {
+            border-radius: 0;
+            border: 1px solid #000;
+        }
+        .dropdown-menu {
+            border-radius: 0;
+        }
     }
     .v-select input[type=search], .v-select input[type=search]:focus {
         width: 100%;
