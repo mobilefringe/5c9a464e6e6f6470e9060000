@@ -16,22 +16,22 @@
     define(["Vue", "jquery"], function (Vue, $) {
         return Vue.component("VueFacebookPage", {
             template: template, // the variable template will be injected,
-            props: ['data-href', 'link-text', 'appId'],
+            props: ['data-href', 'link-text'],
             methods: {
                 showFb() {
-                  let clicker = $('#facebook-clicker')
-                  if(clicker[0].style.left === '') {
-                    $('#hidden-fb').toggle()
-                    clicker.animate({left: "+=340"}, 400, () => console.log('done'))
-                    $('#hidden-fb').animate({left: "500px"}, 1000, () => console.log('done'))
-                  } else {
-                    clicker[0].style.left = ''
-                    $('#hidden-fb')[0].style.left = '-400px'
-                    $('#hidden-fb').toggle()
-                  }
+                    let clicker = $('#facebook-clicker')
+                    if(clicker[0].style.left === '') {
+                        $('#hidden-fb').toggle()
+                        clicker.animate({left: "+=340"}, 400, () => console.log('done'))
+                        $('#hidden-fb').animate({left: "500px"}, 1000, () => console.log('done'))
+                    } else {
+                        clicker[0].style.left = ''
+                        $('#hidden-fb')[0].style.left = '-400px'
+                        $('#hidden-fb').toggle()
+                    }
                 }
-              },
-              mounted() {
+            },
+            mounted() {
                 // (function(d, s, id) {
                 //   var js, fjs = d.getElementsByTagName(s)[0];
                 //   if (d.getElementById(id)) return;
@@ -43,6 +43,7 @@
                   FB.init({
                     appId      : '1987015024884837',
                     xfbml      : true,
+                    autoLogAppEvents : true,
                     version    : 'v3.2'
                   });
               };
@@ -54,7 +55,7 @@
                      js.src = "//connect.facebook.net/en_US/sdk.js";
                      fjs.parentNode.insertBefore(js, fjs);
                     }(document, 'script', 'facebook-jssdk'));
-              }
+            }
         });
     });
 </script>
