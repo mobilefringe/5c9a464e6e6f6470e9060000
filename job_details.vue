@@ -7,7 +7,7 @@
                 <div class="main_container mobile_padding margin_30">
                     <div class="details_row">
                         <div class="details_col_3 hidden_phone">
-                            <img class="img_max" src="//codecloud.cdn.speedyrails.net/sites/5b2925776e6f6432b6110000/image/jpeg/1531500168000/sidebanner10.jpg" alt="" />    
+                            <image-component></image-component>
                         </div>
                         <div class="details_col_9" v-if="currentJob">
                             <router-link to="/jobs">
@@ -44,7 +44,7 @@
 </template>
 
 <script>
-    define(["Vue", "vuex", "moment", "moment-timezone", "vue!inside_banner.vue", "vue-social-sharing", "json!site.json"], function(Vue, Vuex, moment, tz, insideBanner, SocialSharing, site) {
+    define(["Vue", "vuex", "moment", "moment-timezone", "vue!inside_banner.vue", "vue!side_banner.vue", "vue-social-sharing", "json!site.json"], function(Vue, Vuex, moment, tz, insideBanner, sideImage, SocialSharing, site) {
         Vue.component('social-sharing', SocialSharing);
         return Vue.component("job-details-component", {
             template: template, // the variable template will be injected,
