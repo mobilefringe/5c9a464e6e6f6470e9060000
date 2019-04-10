@@ -1636,6 +1636,9 @@ a.store_details_phone:hover {
             width: 100%;
             text-align: left;
         }
+        #selectByCat.v-select {
+            margin-bottom: 20px;
+        }
         .legend {
         // display: block;
         text-align: left;
