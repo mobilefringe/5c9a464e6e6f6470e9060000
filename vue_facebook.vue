@@ -60,7 +60,7 @@
     });
 </script>
 
-<style scoped>
+<style>
   .fb-page {
     z-index: 1000;
     position: fixed!important;
