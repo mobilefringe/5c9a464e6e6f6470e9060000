@@ -1174,7 +1174,7 @@ footer {
     background: $primary;
     font-size: 1.375rem;
     text-transform: uppercase;
-    color: #FFF;
+    color: $secondary_text;
 }
 .store_list_name {
     margin: 0 20px;
