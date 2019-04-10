@@ -35,14 +35,14 @@
             props: ['id'],
             data: function () {
                 return {
-                    dataloaded: false,
+                    dataLoaded: false,
                     currentPost: null
                 }
             },
             created() {
                 this.loadData().then(response => {
                     this.updateCurrentBlog(this.id);
-                    this.dataloaded = true;
+                    this.dataLoaded = true;
                 });
             },
             watch: {
