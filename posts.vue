@@ -71,7 +71,7 @@
                             if (_.includes(value.image_url, 'missing')) {
                                 value.image_url = "//codecloud.cdn.speedyrails.net/sites/5c0581a36e6f643f53050000/image/jpeg/1527006352000/bccblogplaceholder.jpg";
                             }
-                            value.body_short = _.truncate(value.body, { 'length': 99, 'separator': ' ' });
+                            value.body_short = _.truncate(value.body, { 'length': 100, 'separator': ' ' });
                             
                             temp_blog.push(value);
                         }
