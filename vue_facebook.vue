@@ -13,6 +13,7 @@
     }
     .fb-page {
         width: 100%;
+        max-height: 250px !important;
     }
 </style>
 
