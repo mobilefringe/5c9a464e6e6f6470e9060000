@@ -1,7 +1,5 @@
 <template>
     <footer v-if="dataLoaded" v-cloak>
-        <div id="fb-root"></div>
-        <!--<script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v3.2"></script>-->
         <section class="footer_menu main_container">
             <div class="row">
                 <div class="col-xs-12 col-sm-6 col-md-4 footer_hours">
