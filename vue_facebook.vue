@@ -76,7 +76,7 @@
   position: fixed;
   top: calc(50% - 75px);
   left: -59px;
-  background-image: url('./assets/facebook.png');
+  /*background-image: url('./assets/facebook.png');*/
   background-size: cover;
   background-repeat: no-repeat;
   transform: rotate(-90deg);
