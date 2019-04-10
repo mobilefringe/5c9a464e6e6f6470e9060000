@@ -5,22 +5,24 @@
             <div v-if="dataLoaded" v-cloak>
                 <banner-component :page_name="pageName"></banner-component>
                 <div class="main_container margin_30" v-if="postList">
-                    <div class="row margin_40"  v-for="(item, index) in postList" v-if="showMore > index" :key="index">
-                        <div class="col-xs-5 blogpost_img">
-                            <img class="max-width" :src="item.image_url" alt="" />
+                    <transition-group name="list" tag="div">
+                        <div class="row margin_40"  v-for="(item, index) in postList" v-if="showMore > index" :key="index">
+                            <div class="col-xs-5 blogpost_img">
+                                <img class="max-width" :src="item.image_url" alt="" />
+                            </div>
+                            <div class="col-xs-7 blogpost_txt">
+                                <h3 class="promo_name">{{ item.title }}</h3>
+                                <p class="promo_store_name">
+                                    <span v-if="item.author" class="blog-author">by {{ item.author }}<span class="regular"> | </span></span> 
+                                    {{ item.publish_date | moment("MMMM D", timezone) }}
+                                </p>
+                                <div class="promo_desc" v-html="item.body_short"></div>
+                                <router-link :to="'/posts/'+ item.slug" >
+                                    <i class="fa fa-caret-right"></i> <span class="read_more">View Post</span>
+                                </router-link>
+                            </div>
                         </div>
-                        <div class="col-xs-7 blogpost_txt">
-                            <h3 class="promo_name">{{ item.title }}</h3>
-                            <p class="promo_store_name">
-                                <span v-if="item.author" class="blog-author">by {{ item.author }}<span class="regular"> | </span></span> 
-                                {{ item.publish_date | moment("MMMM D", timezone) }}
-                            </p>
-                            <div class="promo_desc" v-html="item.body_short"></div>
-                            <router-link :to="'/posts/'+ item.slug" >
-                                <i class="fa fa-caret-right"></i> <span class="read_more">View Post</span>
-                            </router-link>
-                        </div>
-                    </div>
+                    </transition>
                     <div class="row" v-if="postList && showMore <= postList.length" @click ="loadMore()">
                         <div class="col-md-2">
                             <div class="animated_btn">Load More Posts</div>
