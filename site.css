@@ -1551,11 +1551,11 @@ a.store_details_phone:hover {
     footer {
         .footer_menu {
             margin-top: 20px;
+            > div {
+                margin-bottom: 20px;
+            }
             .footer_newsletter {
                 border-left: none;
-            }
-            .footer_insta {
-                margin: 40px 0;
             }
         }
         .footer_privacy {
