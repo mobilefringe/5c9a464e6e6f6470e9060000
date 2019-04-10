@@ -1632,6 +1632,9 @@ a.store_details_phone:hover {
         -ms-flex-align: start;
         align-items: flex-start;
         border: none;
+        .col-md-6 {
+            width: 100%;
+        }
     }
     #selectByCat.v-select .dropdown-toggle {
         border: 1px solid #000;
