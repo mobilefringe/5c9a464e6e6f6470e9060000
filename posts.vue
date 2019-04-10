@@ -22,7 +22,7 @@
                                 </router-link>
                             </div>
                         </div>
-                    </transition>
+                    </transition-group>
                     <div class="row" v-if="postList && showMore <= postList.length" @click ="loadMore()">
                         <div class="col-md-2">
                             <div class="animated_btn">Load More Posts</div>
