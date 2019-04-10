@@ -1285,11 +1285,6 @@ a.store_details_phone:hover {
         font-family: Avenir-Medium; 
         color: $primary;
     }
-    .hours_list_day {
-        padding-right: 50px;
-        min-width: 145px;
-        display: inline-block;
-    }
 }
 .store_details_desc {
     font-size: 1.125rem !important;
