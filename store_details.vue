@@ -109,12 +109,6 @@
     </div>
 </template>
 
-<style>
-    .mapplic-popup-link {
-        display: none;
-    }
-</style>
-
 <script>
     define(["Vue", "vuex", "moment", "moment-timezone", "vue-moment", "vue!inside_banner.vue"], function(Vue, Vuex, moment, tz, VueMoment, insideBanner) {
         return Vue.component("store-details-component", {
@@ -133,17 +127,13 @@
             },
             props:['id'],
             beforeRouteUpdate(to, from, next) {
-                // this.loadData().then(response => {
-                    this.updateCurrentStore(to.params.id);
-                    this.dataLoaded = true;
-                // });
-                // next();
+                this.updateCurrentStore(to.params.id);
+                this.dataLoaded = true;
+                next();
             },
             created (){
-                // this.loadData().then(response => {
-                    this.updateCurrentStore(this.id);
-                    this.dataLoaded = true;
-                // });
+                this.updateCurrentStore(this.id);
+                this.dataLoaded = true;
             },
             computed: {
                 ...Vuex.mapGetters([
