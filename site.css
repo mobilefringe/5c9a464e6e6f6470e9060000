@@ -1644,6 +1644,7 @@ a.store_details_phone:hover {
         }
     }
     #selectByCat.v-select .dropdown-toggle {
+        border-radius: 0;
         border: 1px solid #000;
     }
     .v-select input[type=search], .v-select input[type=search]:focus {
