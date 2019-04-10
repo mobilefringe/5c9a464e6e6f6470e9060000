@@ -1277,6 +1277,10 @@ a.store_details_phone:hover {
     list-style-type: none;
     font-size: 1.125rem;
     line-height: 1.875rem;
+    li div {
+        display: flex;
+        justify-content: space-between;
+    }
     .today {
         font-family: Avenir-Medium; 
         color: $primary;
