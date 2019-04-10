@@ -15,7 +15,7 @@
                                 <span v-if="item.author" class="blog-author">by {{ item.author }}<span class="regular"> | </span></span> 
                                 {{ item.publish_date | moment("MMMM D", timezone) }}
                             </p>
-                            <p class="blogpost_discription">{{ item.body_short }}</p>
+                            <div class="promo_desc" v-html="item.body_short"></div>
                             <router-link :to="'/posts/'+ item.slug" >
                                 <i class="fa fa-caret-right"></i> <span class="read_more">View Post</span>
                             </router-link>
