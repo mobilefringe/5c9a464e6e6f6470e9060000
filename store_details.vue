@@ -116,7 +116,7 @@
 </style>
 
 <script>
-    define(['Vue', 'vuex', 'moment', 'moment-timezone', 'vue!inside_banner.vue'], function(Vue, Vuex, moment, tz, insideBanner) {
+    define(["Vue", "vuex", "moment", "moment-timezone", "vue-moment", "vue!inside_banner.vue"], function(Vue, Vuex, moment, tz, VueMoment, insideBanner) {
         return Vue.component("store-details-component", {
             template: template, // the variable template will be injected,
             data: function() {
