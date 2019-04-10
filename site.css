@@ -1631,6 +1631,7 @@ a.store_details_phone:hover {
         -webkit-align-items: flex-start;
         -ms-flex-align: start;
         align-items: flex-start;
+        border: none;
     }
     #selectByCat.v-select .dropdown-toggle {
         border: 1px solid #000;
