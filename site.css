@@ -1711,6 +1711,12 @@ a.store_details_phone:hover {
         margin: 0 10px;
         margin-right: 0;
     }
+    .store_nav {
+        .legend {
+            margin-left: -10px;
+            display: block;
+        }
+    }
 }
 
 @media(max-width: 320px){
