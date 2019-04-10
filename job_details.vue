@@ -80,7 +80,6 @@
 					if (this.currentJob === null || this.currentJob === undefined) {
 						this.$router.replace({ path: '/jobs' });
 					}
-					console.log("this.currentJob", this.currentJob)
 					this.dataLoaded = true;
 				}, error => {
 					console.error("Could not retrieve data from server. Please check internet connection and try again.");
