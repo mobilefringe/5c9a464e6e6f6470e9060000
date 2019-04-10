@@ -1,6 +1,8 @@
 <template>
-    <h1 class="accessibility">{{ property.name }}</h1>
-    <router-view></router-view>
+    <div>
+        <h1 class="accessibility">{{ property.name }}</h1>
+        <router-view></router-view>
+    </div>
 </template>
 
 <script>
