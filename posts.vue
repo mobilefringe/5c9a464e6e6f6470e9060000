@@ -8,7 +8,7 @@
                     <transition-group name="list" tag="div">
                         <div class="row margin_40"  v-for="(item, index) in postList" v-if="showMore > index" :key="index">
                             <div class="col-sm-12 col-md-4">
-                                <img class="max-width" :src="item.image_url" alt="" />
+                                <img class="max-width blog_image" :src="item.image_url" alt="" />
                             </div>
                             <div class="col-sm-12 col-md-8">
                                 <h3 class="promo_name">{{ item.title }}</h3>
