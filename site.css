@@ -1283,7 +1283,7 @@ a.store_details_phone:hover {
     }
     .today {
         font-family: Avenir-Medium; 
-        color: $primary;
+        font-weight: 700;
     }
 }
 .store_details_desc {
