@@ -25,16 +25,13 @@
                             </p>
                             <div class="promo_desc" v-html="currentJob.rich_description"></div>
                             <div v-if="currentJob.message">
-                                <p class="promo_store_name">Additional Message:</p>
-                                <p>{{ currentJob.message }}</p>
+                                <p><span class="promo_store_name">Additional Message: </span>{{ currentJob.message }}</p>
                             </div>
                             <div v-if="currentJob.contact_name">
-                                <p><span class="promo_store_name">Contact Name:</span>
-                                {{ currentJob.contact_name }}</p>
+                                <p><span class="promo_store_name">Contact Name: </span>{{ currentJob.contact_name }}</p>
                             </div>
                             <div v-if="currentJob.contact_email">
-                                <p><span class="promo_store_name">Contact Email:</span>
-                                {{ currentJob.contact_email }}</p>
+                                <p><span class="promo_store_name">Contact Email: </span>{{ currentJob.contact_email }}</p>
                             </div>
                             <div v-if="currentJob.contact_phone">
                                 <p class="promo_store_name">Contact Phone:</p>
