@@ -1,5 +1,7 @@
 <template>
     <footer v-if="dataLoaded" v-cloak>
+        <div id="fb-root"></div>
+        <!--<script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v3.2"></script>-->
         <section class="footer_menu main_container">
             <div class="row">
                 <div class="col-xs-12 col-sm-6 col-md-4 footer_hours">
@@ -45,7 +47,7 @@
 </template>
 
 <script>
-    define(["Vue", "vuex", "moment", "moment-timezone", "json!site.json"], function (Vue, Vuex, moment, tz, site) {
+    define(["Vue", "vuex", "moment", "moment-timezone", "json!site.json", 'facebook'], function (Vue, Vuex, moment, tz, site, facebook) {
         return Vue.component("footer-component", {
             template: template, // the variable template will be injected,
             data: function data() {
