@@ -1639,10 +1639,9 @@ a.store_details_phone:hover {
         #selectByCat.v-select {
             margin-bottom: 20px;
         }
-        .legend {
-        // display: block;
-        text-align: left;
-    }
+        .legend:first-of-type {
+            margin-left: -10px;
+        }
     }
     #selectByCat.v-select .dropdown-toggle {
         border: 1px solid #000;
