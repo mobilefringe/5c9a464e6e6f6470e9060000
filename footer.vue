@@ -15,6 +15,7 @@
                 </div>
                 <div class="col-xs-12 col-sm-12 col-md-4 footer_insta">
                     <p class="footer_heading">FOLLOW US ON FACEBOOK</p>
+                    <div id="fb-root"></div>
                     <div class="fb-page" data-href="https://www.facebook.com/facebook" data-tabs="timeline" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true"><blockquote cite="https://www.facebook.com/facebook" class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/facebook">Facebook</a></blockquote></div>
                 </div>
             </div>
