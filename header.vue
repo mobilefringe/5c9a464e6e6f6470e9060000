@@ -5,7 +5,7 @@
                 <div class="col-md-3">
                     <div class="site_logo">
                         <a href="/">
-                            <img :alt="siteInfo.siteName" src="//codecloud.cdn.speedyrails.net/sites/5c9a464e6e6f6470e9060000/image/jpeg/1554825694661/Alta-Loma-Horizontal-RGB.jpg">
+                            <img :src="siteInfo.default_logo_url" :alt="siteInfo.siteName + ' Logo" />
                         </a>
                     </div>
                     <div @click="showMenu = !showMenu" :class="{ open: showMenu }" id="menu-icon">
