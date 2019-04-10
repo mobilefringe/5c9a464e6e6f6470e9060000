@@ -7,7 +7,7 @@
                 <div class="main_container margin_30" v-if="postList">
                     <div class="row margin_40"  v-for="(item, index) in postList">
                         <div class="col-xs-5 blogpost_img">
-                            <img class="max-width" :src="item.image_url" :alt="item.title" />
+                            <img class="max-width" :src="item.image_url" :alt="item.title + ' image'" />
                         </div>
                         <div class="col-xs-7 blogpost_txt">
                             <h2 class="blogpost_title">{{ item.title }}</h2>
