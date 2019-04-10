@@ -2,7 +2,7 @@
     <div> <!-- without an outer container div this component template will not render -->
         <div id="fb-root"></div>
         <div @click="showFb" id="facebook-clicker"></div>
-        <div style="display: none;" id="hidden-fb">
+        <div id="hidden-fb">
             <div class="fb-page" :data-href="dataHref" data-tabs="timeline" data-small-header="true" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="false"><blockquote :cite="dataHref" class="fb-xfbml-parse-ignore"><a :href="dataHref">{{linkText}}</a></blockquote></div>
         </div>
     </div>
@@ -40,7 +40,7 @@
                     fjs.parentNode.insertBefore(js, fjs);
                 }(document, 'script', 'facebook-jssdk'));
                     
-                this.showFb();
+                // this.showFb();
             },
             methods: {
                 showFb() {
