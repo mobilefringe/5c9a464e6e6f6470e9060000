@@ -7,10 +7,10 @@
                 <div class="main_container margin_30" v-if="postList">
                     <transition-group name="list" tag="div">
                         <div class="row margin_40"  v-for="(item, index) in postList" v-if="showMore > index" :key="index">
-                            <div class="col-sm-12 col-md-4">
+                            <div class="col-xs-12 col-sm-4">
                                 <img class="max-width blog_image" :src="item.image_url" alt="" />
                             </div>
-                            <div class="col-sm-12 col-md-8">
+                            <div class="col-xs-12 col-sm-8">
                                 <h3 class="promo_name">{{ item.title }}</h3>
                                 <p class="promo_store_name">
                                     <span v-if="item.author" class="blog-author">by {{ item.author }}<span class="regular"> | </span></span> 
