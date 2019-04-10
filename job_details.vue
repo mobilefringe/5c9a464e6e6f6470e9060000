@@ -40,6 +40,7 @@
                             <div v-if="currentJob.contact_website">
                                 <p><span class="promo_store_name">Contact Website: </span>{{ currentJob.contact_website }}</p>
                             </div>
+                            <hr>
                             <social-sharing v-if="currentJob" :url="shareURL(currentJob.slug)" :title="currentJob.title" :description="currentJob.body" :quote="truncate(currentJob.body)" :media="currentJob.image_url" inline-template>
                                 <div class="social_share">
                                     <p>Share</p>
