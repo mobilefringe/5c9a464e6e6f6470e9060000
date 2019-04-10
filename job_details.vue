@@ -22,9 +22,28 @@
                                 <span>| </span>
                                 <span v-if="isMultiDay(currentJob)" class="promo_date">{{ currentJob.start_date | moment("MMMM D", timezone)}} to {{ currentJob.end_date | moment("MMMM D", timezone)}}</span>
                                 <span v-else class="promo_date">{{ currentJob.start_date | moment("MMMM D", timezone)}}</span>
-                                
                             </p>
                             <div class="promo_desc" v-html="currentJob.rich_description"></div>
+                            <div v-if="currentJob.message">
+                                <p class="promo_store_name">Additional Message:</p>
+                                <p>{{ currentJob.message }}</p>
+                            </div>
+                            <div v-if="currentJob.contact_name">
+                                <p class="promo_store_name">Contact Name:</p>
+                                <p>{{ currentJob.contact_name }}</p>
+                            </div>
+                            <div v-if="currentJob.contact_email">
+                                <p class="promo_store_name">Contact Email:</p>
+                                <p>{{ currentJob.contact_email }}</p>
+                            </div>
+                            <div v-if="currentJob.contact_phone">
+                                <p class="promo_store_name">Contact Phone:</p>
+                                <p>{{ currentJob.contact_phone }}</p>
+                            </div>
+                            <div v-if="currentJob.contact_website">
+                                <p class="promo_store_name">Contact Website:</p>
+                                <p>{{ currentJob.contact_website }}</p>
+                            </div>
                             <social-sharing v-if="currentJob" :url="shareURL(currentJob.slug)" :title="currentJob.title" :description="currentJob.body" :quote="truncate(currentJob.body)" :media="currentJob.image_url" inline-template>
                                 <div class="social_share">
                                     <p>Share</p>
