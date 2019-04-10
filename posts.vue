@@ -5,7 +5,7 @@
             <div v-if="dataLoaded" v-cloak>
                 <banner-component :page_name="pageName"></banner-component>
                 <div class="main_container margin_30" v-if="postList">
-                    <div class="row margin_40"  v-for="(item, index) in postList">
+                    <div class="row margin_40"  v-for="(item, index) in postList" v-if="showMore > index" :key="index">
                         <div class="col-xs-5 blogpost_img">
                             <img class="max-width" :src="item.image_url" alt="" />
                         </div>
