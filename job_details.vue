@@ -34,12 +34,10 @@
                                 <p><span class="promo_store_name">Contact Email: </span>{{ currentJob.contact_email }}</p>
                             </div>
                             <div v-if="currentJob.contact_phone">
-                                <p class="promo_store_name">Contact Phone:</p>
-                                <p>{{ currentJob.contact_phone }}</p>
+                                <p><span class="promo_store_name">Contact Phone: </span>{{ currentJob.contact_phone }}</p>
                             </div>
                             <div v-if="currentJob.contact_website">
-                                <p class="promo_store_name">Contact Website:</p>
-                                <p>{{ currentJob.contact_website }}</p>
+                                <p><span class="promo_store_name">Contact Website: </span>{{ currentJob.contact_website }}</p>
                             </div>
                             <social-sharing v-if="currentJob" :url="shareURL(currentJob.slug)" :title="currentJob.title" :description="currentJob.body" :quote="truncate(currentJob.body)" :media="currentJob.image_url" inline-template>
                                 <div class="social_share">
