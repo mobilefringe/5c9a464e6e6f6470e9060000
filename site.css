@@ -1128,6 +1128,7 @@ footer {
     }
     .dropdown-menu > .highlight > a {
         background: $primary;
+        color: $secondary_text;
     }
 }
 // .store_nav .col-md-3:nth-child(1) {
