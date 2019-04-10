@@ -24,7 +24,7 @@
                         </div>
                     </transition-group>
                     <div class="row" v-if="postList && showMore <= postList.length" @click ="loadMore()">
-                        <div class="col-md-2">
+                        <div class="col-sm-4 col-md-2">
                             <div class="animated_btn">Load More Posts</div>
                         </div>
                     </div>
