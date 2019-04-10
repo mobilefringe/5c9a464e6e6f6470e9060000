@@ -23,6 +23,13 @@
                             </div>
                         </div>
                     </div>
+                    <div class="row" v-if="regularPromotions && showMore <= regularPromotions.length" @click ="loadMore()">
+                        <div class="col-md-12">
+                            <div class="animated_btn">
+                                <p>Load More</p>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </transition>
@@ -38,11 +45,8 @@
                 return {
                     dataLoaded: false,
                     pageName: "What's New",
-                    // posts: [],
-                    // morePosts: [],
-                    // morePostsFetched: false,
-                    // noMorePosts: false,
-                    // noPosts: false
+                    showMore: 3,
+                    incrementBy: 3
                 }
             },
             created() {
