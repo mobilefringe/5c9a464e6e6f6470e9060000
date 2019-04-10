@@ -29,12 +29,12 @@
                                 <p>{{ currentJob.message }}</p>
                             </div>
                             <div v-if="currentJob.contact_name">
-                                <p class="promo_store_name">Contact Name:</p>
-                                <p>{{ currentJob.contact_name }}</p>
+                                <p><span class="promo_store_name">Contact Name:</span>
+                                {{ currentJob.contact_name }}</p>
                             </div>
                             <div v-if="currentJob.contact_email">
-                                <p class="promo_store_name">Contact Email:</p>
-                                <p>{{ currentJob.contact_email }}</p>
+                                <p><span class="promo_store_name">Contact Email:</span>
+                                {{ currentJob.contact_email }}</p>
                             </div>
                             <div v-if="currentJob.contact_phone">
                                 <p class="promo_store_name">Contact Phone:</p>
