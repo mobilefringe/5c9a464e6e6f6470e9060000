@@ -74,7 +74,6 @@
                         }
                     });
                     blog = _.reverse(_.sortBy(temp_blog, function (o) { return o.publish_date }));
-                    console.log("blog", blog)
                     return blog
                 }
             },
