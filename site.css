@@ -1551,7 +1551,7 @@ a.store_details_phone:hover {
     footer {
         .footer_menu {
             margin-top: 20px;
-            > div {
+            .col-md-4 {
                 margin-bottom: 20px;
             }
             .footer_newsletter {
