@@ -123,7 +123,7 @@
                     var listTwo = [];
                     _.forEach( this.processedStores , function( value, key ) {
                         var starter = "A";
-                        var breaker = "K";
+                        var breaker = "M";
                         var store_initial = _.toUpper(value.name[0]);
                         if (store_initial.charCodeAt(0) <= breaker.charCodeAt(0) && store_initial.charCodeAt(0) >= starter.charCodeAt(0)){
                             listOne.push(value);
