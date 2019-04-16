@@ -11,14 +11,17 @@
             props:['page_name'],
             data: function() {
                 return {
-                    sideImage: null
+                    sideImage: null,
+
                 }
             },
             mounted() {
                 this.$nextTick(function() {
                     var temp_repo = this.findRepoByName('Inside Page Side Image').images;
                     if (temp_repo != null) {
-                        this.pageBanner = temp_repo[0];
+                        if (_.includes(this.page_name, "Jobs")) {
+                            this.sideImage = _.filter(temp_repo, function(o) { return o.name === "Jobs"; });
+                        }
                     } else {
                         this.sideImage = "//codecloud.cdn.speedyrails.net/sites/5c9a464e6e6f6470e9060000/image/png/1554587000151/default_side_banner.png"
                     }
