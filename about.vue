@@ -5,12 +5,17 @@
             <div v-if="dataLoaded" v-cloak>
                 <banner-component :page_name="pageName"></banner-component>
                 <div class="main_container margin_30">
-                    <div class="details_row">
+                    <div v-if="currentPage" class="details_row">
                         <div class="details_col_3 hidden_phone">
                             <img class="img_max" v-if="currentImage" :src="currentImage" alt="" />    
                         </div>
                         <div class="details_col_9">
-                            <div class="contact_page_body" v-if="currentPage" v-html="currentPage.body"></div>
+                            <div class="contact_page_body"  v-html="currentPage.body"></div>
+                        </div>
+                    </div>
+                    <div v-else class="row">
+                        <div class="col-md-12">
+                            <div class="page_body" v-html="currentPage.body"></div>
                         </div>
                     </div>
                 </div>
