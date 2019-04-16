@@ -25,7 +25,7 @@
             props:['inside_banner'],
             data: function() {
                 return {
-                    dataLoaded: true,
+                    dataLoaded: false,
                     pageName: "About Us",
                     currentPage: null,
                     currentImage: null
