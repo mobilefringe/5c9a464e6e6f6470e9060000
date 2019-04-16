@@ -26,6 +26,9 @@
                         } else if (_.includes(this.page_name, "Sales")) {
                             var item = _.filter(temp_repo, function(o) { return _.includes(o.name, "Sales"); });
                             this.sideImage = item[0].image_url;
+                        } else {
+                            var item = _.filter(temp_repo, function(o) { return _.includes(o.name, "Default"); });
+                            this.sideImage = item[0].image_url;
                         }
                     } else {
                         this.sideImage = "//codecloud.cdn.speedyrails.net/sites/5c9a464e6e6f6470e9060000/image/png/1554587000151/default_side_banner.png"
