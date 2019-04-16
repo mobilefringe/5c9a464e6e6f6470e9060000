@@ -7,7 +7,7 @@
                 <div class="main_container margin_30">
                     <div class="details_row">
                         <div class="details_col_3 hidden_phone">
-                            <img class="img_max" v-if="currentImage" :src="currentImage" alt="" />    
+                            <image-component :page_name="pageName"></image-component>
                         </div>
                         <div class="details_col_9">
                             <div class="row">
@@ -67,7 +67,7 @@
     </div>
 </template>
 <script>
-    define(["Vue", "vuex", "vue!inside_banner.vue", "vee-validate"], function (Vue, Vuex, insideBanner, VeeValidate) {
+    define(["Vue", "vuex", "vue!inside_banner.vue", "vue!side_image.vue", "vee-validate"], function (Vue, Vuex, insideBanner, sideImage, VeeValidate) {
         Vue.use(VeeValidate);
         return Vue.component("contact-component", {
             template: template, // the variable template will be injected
