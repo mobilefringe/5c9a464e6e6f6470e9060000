@@ -22,6 +22,7 @@
                         console.log("temp_repo", temp_repo)
                         if (_.includes(this.page_name, "Jobs")) {
                             var item = _.filter(temp_repo, function(o) { return _.includes(o.name, "Jobs"); });
+                            console.log("item", item)
                             this.sideImage = item.image_url;
                         } else if (_.includes(this.page_name, "Sales")) {
                             this.sideImage = _.filter(temp_repo, function(o) { return o.name === "Sales"; });
