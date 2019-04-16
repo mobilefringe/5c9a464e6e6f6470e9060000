@@ -87,16 +87,6 @@
             created() {
                 this.loadData().then(response => {
                     this.currentPage = response[0].data;
-                    if (this.currentPage.image_url === null) {
-                        var img_repo = this.findRepoByName('Inside Page Default Side Image').images;
-                        if (img_repo != null) {
-                            var image_url = img_repo[0].image_url;
-                            this.currentImage = image_url;
-                        }
-                    } else {
-                        this.currentImage = this.currentPage.image_url;
-                    }
-                    
                     this.dataLoaded = true;
                 });
             },
