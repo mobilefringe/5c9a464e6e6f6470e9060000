@@ -24,7 +24,7 @@
     </div>
 </template>
 <script>
-    define(["Vue", "vuex", "json!site.json", "vue!inside_banner.vue"], function(Vue, Vuex, site, insideBanner) {
+    define(["Vue", "vuex", "json!site.json", "vue!inside_banner.vue", "vue!side_image.vue"], function(Vue, Vuex, site, insideBanner, sideImage) {
         return Vue.component("about-component", {
             template: template, // the variable template will be injected
             props:['inside_banner'],
