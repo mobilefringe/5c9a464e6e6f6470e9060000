@@ -19,6 +19,7 @@
                 this.$nextTick(function() {
                     var temp_repo = this.findRepoByName('Inside Page Side Image').images;
                     if (temp_repo != null) {
+                        console.log("temp_repo", temp_repo)
                         if (_.includes(this.page_name, "Jobs")) {
                             this.sideImage = _.filter(temp_repo, function(o) { return o.name === "Jobs"; });
                         } else if (_.includes(this.page_name, "Sales")) {
