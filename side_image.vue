@@ -21,6 +21,8 @@
                     if (temp_repo != null) {
                         if (_.includes(this.page_name, "Jobs")) {
                             this.sideImage = _.filter(temp_repo, function(o) { return o.name === "Jobs"; });
+                        } else if (_.includes(this.page_name, "Sales")) {
+                            this.sideImage = _.filter(temp_repo, function(o) { return o.name === "Sales"; });
                         }
                     } else {
                         this.sideImage = "//codecloud.cdn.speedyrails.net/sites/5c9a464e6e6f6470e9060000/image/png/1554587000151/default_side_banner.png"
