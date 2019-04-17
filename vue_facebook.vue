@@ -6,10 +6,6 @@
 </template>
 
 <style>
-    #facebook-clicker {
-        opacity: 0;
-        visibility: hidden;
-    }
     .fb-page {
         width: 100%;
         max-height: 250px !important;
