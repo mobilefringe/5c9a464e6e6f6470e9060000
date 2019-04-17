@@ -1466,7 +1466,7 @@ a.store_details_phone:hover {
     }
     #mobile_nav {
         width: 100vw;
-        height: calc(100vh - 90px);
+        height: calc(100vh - 86px);
         position: absolute;
         top: 14px;
         left: 0;
