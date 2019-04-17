@@ -1749,6 +1749,11 @@ a.store_details_phone:hover {
             display: block;
         }
     }
+    .store_details_image {
+        padding-top: 100%;
+        max-width: unset;
+        height: unset;
+    }
 }
 
 @media(max-width: 320px){
