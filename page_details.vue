@@ -46,9 +46,9 @@
                     this.pageBanner = temp_repo[0];
                 } else {
                     this.pageBanner = {
-                        "image_url": "//codecloud.cdn.speedyrails.net/sites/5b2925776e6f6432b6110000/image/png/1531495616000/inside_banner.png"
+                        "image_url": "//codecloud.cdn.speedyrails.net/sites/5c9a464e6e6f6470e9060000/image/png/1554588744991/default_inside_banner.png"
                     }
-                } 
+                }
                             
                 this.updateCurrentPage(this.id);
             },
