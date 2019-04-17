@@ -1541,6 +1541,7 @@ a.store_details_phone:hover {
             margin: 0;
         }
         .mobile_property_address.center {
+            margin: 20px 0 0 0;
             text-align: center;
         }
     }
