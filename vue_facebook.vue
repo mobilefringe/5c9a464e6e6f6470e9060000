@@ -38,22 +38,6 @@
                     js.src = "//connect.facebook.net/en_US/sdk.js";
                     fjs.parentNode.insertBefore(js, fjs);
                 }(document, 'script', 'facebook-jssdk'));
-                    
-                // this.showFb();
-            },
-            methods: {
-                showFb() {
-                    let clicker = $('#facebook-clicker')
-                    if(clicker[0].style.left === '') {
-                        $('#hidden-fb').toggle()
-                        clicker.animate({left: "+=340"}, 400, () => console.log('done'))
-                        $('#hidden-fb').animate({left: "500px"}, 1000, () => console.log('done'))
-                    } else {
-                        clicker[0].style.left = ''
-                        $('#hidden-fb')[0].style.left = '-400px'
-                        $('#hidden-fb').toggle()
-                    }
-                }
             }
         });
     });
