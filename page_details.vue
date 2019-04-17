@@ -52,9 +52,7 @@
                     this.$nextTick(function() {
                         // Determine the incoming route
                         var route_url = "";
-                        if (_.includes(this.$route.path, "leasing")) {  
-                            route_url = "/pages/" + this.property.slug + "-leasing.json";
-                        } else if (_.includes(this.$route.path, "privacy-policy")) {
+                        if (_.includes(this.$route.path, "privacy-policy")) {
                             route_url = "/pages/" + this.property.slug + "-privacy-policy.json"
                         } else if (_.includes(this.$route.path, "terms-of-use")) {
                             route_url = "/pages/" + this.property.slug + "-terms-of-use.json"
@@ -67,7 +65,7 @@
                         this.$store.dispatch('LOAD_PAGE_DATA', { url: this.property.mm_host +   route_url }).then(function (response) {
                             _this.currentPage = response.data;
                             _this.pageName = _this.currentPage.name;
-                            
+        
                             _this.dataLoaded = true;
                         }, function (error) {
                             console.error( "Could not retrieve data from server. Please check internet connection and try again.");
