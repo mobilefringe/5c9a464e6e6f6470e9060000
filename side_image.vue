@@ -11,8 +11,7 @@
             props:['page_name'],
             data: function() {
                 return {
-                    sideImage: null,
-
+                    sideImage: null
                 }
             },
             mounted() {
