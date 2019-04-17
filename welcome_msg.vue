@@ -1,5 +1,5 @@
 <template>
-    <div v-if="property" class="main_container">
+    <div v-if="property">
         <div class="message_content">
             <h1 v-if="property.welcome_message" class="center">{{ property.welcome_message }}</h1>
             <p v-if="property.description" class="center">{{ property.description }}</p> 
