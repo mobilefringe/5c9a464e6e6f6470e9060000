@@ -34,7 +34,6 @@
                 }
             },
             mounted() {
-                this.pageName = "";
                 this.updateCurrentPage(this.id);
             },
             watch: {
