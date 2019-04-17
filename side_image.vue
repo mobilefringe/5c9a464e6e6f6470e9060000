@@ -19,7 +19,6 @@
                 this.$nextTick(function() {
                     var temp_repo = this.findRepoByName('Inside Page Side Image').images;
                     if (temp_repo != null) {
-                        console.log("temp_repo", temp_repo)
                         if (_.includes(this.page_name, "About Us")) {
                             var item = _.filter(temp_repo, function(o) { return _.includes(o.name, "About Us"); });
                             this.sideImage = item[0].image_url;
@@ -29,11 +28,11 @@
                         } else if (_.includes(this.page_name, "Jobs")) {
                             var item = _.filter(temp_repo, function(o) { return _.includes(o.name, "Jobs"); });
                             this.sideImage = item[0].image_url;
-                        } else if (_.includes(this.page_name, "Sales")) {
-                            var item = _.filter(temp_repo, function(o) { return _.includes(o.name, "Sales"); });
-                            this.sideImage = item[0].image_url;
                         } else if (_.includes(this.page_name, "Newsletter")) {
                             var item = _.filter(temp_repo, function(o) { return _.includes(o.name, "Newsletter"); });
+                            this.sideImage = item[0].image_url;
+                        } else if (_.includes(this.page_name, "Sales")) {
+                            var item = _.filter(temp_repo, function(o) { return _.includes(o.name, "Sales"); });
                             this.sideImage = item[0].image_url;
                         } else {
                             var item = _.filter(temp_repo, function(o) { return _.includes(o.name, "Default"); });
