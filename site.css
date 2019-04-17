@@ -223,8 +223,7 @@ strong {
 
 /* *** HEADER *** */
 .header {
-   margin-top: 13px;
-   margin-bottom: 13px;
+   margin: 13px 0;
    min-height: 90px;
 }
 .logo_container {
