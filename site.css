@@ -250,9 +250,8 @@ strong {
 #menu-icon {
     display: none;
 }
-#search_component_wrapper {
+.search_component_wrapper {
     margin-right: 30px;
-    // transition: all ease 0.5s;
     .search_component_container {
         position: relative;
         .search-component {
