@@ -91,6 +91,19 @@
                                             </a>
                                         </span>
                                     </div>
+                                    <div id="search_component_wrapper">
+                                        <div class="search_component_container">
+                                            <search-component v-if="headerReady" :list="searchList" placeholder="Search" :suggestion-attribute="suggestionAttribute" :keys="keys" v-model="search_result" @select="onOptionSelect" :autocomplete="false" :minMatchCharLength="3" :tokenize="true" class="text-left">
+                                                <template slot="item" scope="option" class="manual">
+                                                    <article class="media">
+                                                    <p>
+                                                        {{ option.data.name }}
+                                                    </p>
+                                                    </article>
+                                                </template>
+                                            </search-component>
+                                        </div>
+                                    </div>
                                     <div class="mobile_property_address center">
                                         <p>{{ property.name }}<br>
                                             <a :href="siteInfo.googleMapsURL" target="_blank">{{ getPropertyAddress }}</a>
@@ -136,7 +149,7 @@
                     });
                 },
                 showMenu: function() {
-                    if(this.showMenu == true){
+                    if (this.showMenu == true) {
                         document.body.classList.add("no_scroll");
                     } else if (this.showMenu == false) {
                         document.body.classList.remove("no_scroll");
