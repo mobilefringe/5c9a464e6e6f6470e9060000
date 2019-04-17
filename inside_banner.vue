@@ -20,26 +20,44 @@
                 }
             },
             mounted() {
-                
-                this.$nextTick(function() {
-                    console.log("page_name", this.page_name)
-                    var temp_repo = this.findRepoByName('Inside Page Banner').images;
-                    if (temp_repo != null) {
-                        this.pageBanner = temp_repo[0];
-                    } else {
-                        this.pageBanner = {
-                            "image_url": "//codecloud.cdn.speedyrails.net/sites/5c9a464e6e6f6470e9060000/image/png/1554588744991/default_inside_banner.png"
-                        }
-                    }
+                this.updateBanner(this.page_name)
+                // this.$nextTick(function() {
+                //     console.log("page_name", this.page_name)
+                //     var temp_repo = this.findRepoByName('Inside Page Banner').images;
+                //     if (temp_repo != null) {
+                //         this.pageBanner = temp_repo[0];
+                //     } else {
+                //         this.pageBanner = {
+                //             "image_url": "//codecloud.cdn.speedyrails.net/sites/5c9a464e6e6f6470e9060000/image/png/1554588744991/default_inside_banner.png"
+                //         }
+                //     }
                     
-                    this.pageName = this.page_name;
-                });
+                //     this.pageName = this.page_name;
+                // });
             },
             computed: {
                 ...Vuex.mapGetters([
                     'property',
                     'findRepoByName'
                 ])
+            },
+            methods: {
+                updateBanner(page_name) {
+                    this.$nextTick(function() {
+                        console.log("page_name", this.page_name)
+                        var temp_repo = this.findRepoByName('Inside Page Banner').images;
+                        if (temp_repo != null) {
+                            this.pageBanner = temp_repo[0];
+                        } else {
+                            this.pageBanner = {
+                                "image_url": "//codecloud.cdn.speedyrails.net/sites/5c9a464e6e6f6470e9060000/image/png/1554588744991/default_inside_banner.png"
+                            }
+                        }
+                        
+                        this.pageName = this.page_name;
+                    });
+                    
+                }
             }
         })
     });
