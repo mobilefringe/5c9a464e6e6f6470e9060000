@@ -1468,7 +1468,7 @@ a.store_details_phone:hover {
         width: 100vw;
         height: calc(100vh - 86px);
         position: absolute;
-        top: 14px;
+        top: 13px;
         left: 0;
         right: 0;
         overflow: scroll;
