@@ -239,18 +239,17 @@
                 getWindowWidth(event) {
                     this.windowWidth = window.innerWidth;
                 },
-                 onOptionSelect(option) {
-                    console.log("option", option);
+                onOptionSelect(option) {
                     ga('send', 'event', 'Search Keywords', 'search', this.search_result);
-                  this.$router.push({
-                    name: "search-results",
-                    query: { searchQuery: this.search_result },
-                    params: { results: option }
-                  });
-                  this.$nextTick(function() {
-                    this.search_result = "";
-                  });
-                },
+                    this.$router.push({
+                        name: "search-results",
+                        query: { searchQuery: this.search_result },
+                        params: { results: option }
+                    });
+                    this.$nextTick(function() {
+                        this.search_result = "";
+                    });
+                }
             },
             beforeDestroy: function() {
                 window.removeEventListener('resize', this.getWindowWidth);
