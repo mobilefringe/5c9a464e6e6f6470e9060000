@@ -1709,6 +1709,14 @@ a.store_details_phone:hover {
     .home_banner_container .banner_image {
         height: 200px;
     }
+    .feature_item {
+        .feature_image_container {
+            margin-bottom: 20px;
+        }
+        .feature_image_container:last-of-type {
+            margin-bottom: 0;
+        }
+    }
     .store_list_name {
         margin: 0 10px;
         margin-right: 0;
