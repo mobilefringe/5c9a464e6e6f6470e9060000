@@ -1674,7 +1674,11 @@ a.store_details_phone:hover {
     .v-select input[type=search], .v-select input[type=search]:focus {
         width: 100%;
     }
-    
+    .store_details_image {
+        padding-top: 0;
+        max-width: 300px;
+        height: 300px;
+    }
     .hours_container {
         margin-bottom: 20px;
     }
