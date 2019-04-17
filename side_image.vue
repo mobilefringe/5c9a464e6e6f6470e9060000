@@ -26,6 +26,9 @@
                         } else if (_.includes(this.page_name, "Sales")) {
                             var item = _.filter(temp_repo, function(o) { return _.includes(o.name, "Sales"); });
                             this.sideImage = item[0].image_url;
+                        } else if (_.includes(this.page_name, "Newsletter")) {
+                            var item = _.filter(temp_repo, function(o) { return _.includes(o.name, "Newsletter"); });
+                            this.sideImage = item[0].image_url;
                         } else {
                             var item = _.filter(temp_repo, function(o) { return _.includes(o.name, "Default"); });
                             this.sideImage = item[0].image_url;
