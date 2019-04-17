@@ -1,7 +1,6 @@
 <template>
     <div v-if="property" class="main_container">
         <div class="message_content">
-            <h1 class="center">{{ property.welcome_message }}</h1>
             <p class="center">{{ property.description }}</p> 
         </div>
     </div>
