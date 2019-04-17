@@ -3,22 +3,15 @@
         <loading-spinner v-if="!dataLoaded"></loading-spinner>
         <transition name="fade">
             <div v-if="dataLoaded" v-cloak>
-                <div class="inside_header_background" :style="{ backgroundImage: 'url(' + pageBanner.image_url + ')' }">
-                    <div class="main_container">
-                        <h2 v-html="currentPage.title"></h2>
-                    </div>
-                </div>
+                <banner-component :page_name="pageName"></banner-component>
                 <div class="main_container mobile_padding margin_30">
-                    <div v-if="currentImage" class="details_row">
+                    <div class="details_row">
                         <div class="details_col_3 hidden_phone">
-                            <img class="img_max" :src="currentImage" alt="" />    
+                            <image-component :page_name="pageName"></image-component>  
                         </div>
                         <div class="details_col_9">
                             <div class="page_body" v-html="currentPage.body"></div>
                         </div>
-                    </div>
-                    <div v-else class="row">
-                        <div class="page_body" v-html="currentPage.body"></div>
                     </div>
                 </div>
             </div>
@@ -27,7 +20,7 @@
 </template>
 
 <script>
-    define(["Vue", "vuex", "lightbox"], function (Vue, Vuex, Lightbox) {
+    define(["Vue", "vuex", "vue!inside_banner.vue", "vue!side_image.vue", "lightbox"], function (Vue, Vuex, insideBanner, sideImage, Lightbox) {
         Vue.use(Lightbox);
         return Vue.component("page-details-component", {
             template: template, // the variable template will be injected,
@@ -35,21 +28,12 @@
             data: function data() {
                 return {
                     dataLoaded: false,
-                    pageBanner: null,
+                    pageName: "",
                     currentPage: null,
                     currentImage: null
                 }
             },
             created() {
-                var temp_repo = this.findRepoByName('Inside Page Banner').images;
-                if (temp_repo != null) {
-                    this.pageBanner = temp_repo[0];
-                } else {
-                    this.pageBanner = {
-                        "image_url": "//codecloud.cdn.speedyrails.net/sites/5b2925776e6f6432b6110000/image/png/1531495616000/inside_banner.png"
-                    }
-                } 
-                            
                 this.updateCurrentPage(this.id);
             },
             watch: {
@@ -82,9 +66,8 @@
                         this.property.mm_host = this.property.mm_host.replace("http:", "");
                         this.$store.dispatch('LOAD_PAGE_DATA', { url: this.property.mm_host +   route_url }).then(function (response) {
                             _this.currentPage = response.data;
-                            if (!_.includes(_this.currentPage.image_url, "missing")) {
-                                _this.currentImage = _this.currentPage.image_url;
-                            }
+                            _this.pageName = _this.currentPage.name;
+                            
                             _this.dataLoaded = true;
                         }, function (error) {
                             console.error( "Could not retrieve data from server. Please check internet connection and try again.");
