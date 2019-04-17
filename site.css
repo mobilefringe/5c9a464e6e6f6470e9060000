@@ -1534,6 +1534,9 @@ a.store_details_phone:hover {
                 }
             }
         }
+        .search_component_wrapper {
+            margin: 0;
+        }
         .mobile_property_address.center {
             text-align: center;
         }
