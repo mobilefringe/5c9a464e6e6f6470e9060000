@@ -35,6 +35,11 @@
                 //     this.pageName = this.page_name;
                 // });
             },
+            watch: {
+                $route: function () {
+                    this.updateBanner(this.page_name)
+                }
+            },
             computed: {
                 ...Vuex.mapGetters([
                     'property',
