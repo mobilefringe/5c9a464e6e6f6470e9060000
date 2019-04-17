@@ -1713,7 +1713,9 @@ a.store_details_phone:hover {
         .feature_image_container {
             margin-bottom: 20px;
         }
-        .feature_image_container:last-child {
+    }
+    .feature_item:last-child {
+        .feature_image_container {
             margin-bottom: 0;
         }
     }
