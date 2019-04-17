@@ -17,7 +17,7 @@
                 </div>
                 <div class="col-md-9">
                     <div class="header_social_container hidden-sm hidden-xs">
-                        <div class="search_component_wrapper" class="hidden_phone">
+                        <div class="search_component_wrapper hidden_phone">
                             <div class="search_component_container">
                                 <search-component v-if="headerReady" :list="searchList" placeholder="Search" :suggestion-attribute="suggestionAttribute" :keys="keys" v-model="search_result" @select="onOptionSelect" :autocomplete="false" :minMatchCharLength="3" :tokenize="true" class="text-left">
                                     <template slot="item" scope="option" class="manual">
