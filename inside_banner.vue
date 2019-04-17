@@ -20,7 +20,9 @@
                 }
             },
             mounted() {
+                
                 this.$nextTick(function() {
+                    console.log("page_name", this.page_name)
                     var temp_repo = this.findRepoByName('Inside Page Banner').images;
                     if (temp_repo != null) {
                         this.pageBanner = temp_repo[0];
