@@ -33,7 +33,7 @@
                     currentImage: null
                 }
             },
-            created() {
+            mounted() {
                 this.updateCurrentPage(this.id);
             },
             watch: {
