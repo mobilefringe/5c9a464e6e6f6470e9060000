@@ -7,7 +7,7 @@
                 <div class="main_container mobile_padding margin_30">
                     <div class="details_row">
                         <div class="details_col_3 hidden_phone">
-                            <image-component></image-component>
+                            <image-component :page_name="pageName"></image-component>
                         </div>
                         <div class="details_col_9" v-if="currentJob">
                             <router-link to="/jobs">
