@@ -36,6 +36,7 @@
                 return {
                     dataLoaded: false,
                     pageBanner: null,
+                    pageName: "Default"
                     currentPage: null,
                     currentImage: null
                 }
