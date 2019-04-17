@@ -1538,7 +1538,7 @@ a.store_details_phone:hover {
     }
     .site_logo {
         margin: 0;
-        padding-top: 10px;
+        padding-top: 0;
         width: 150px;
     }
     .header {
