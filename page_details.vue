@@ -65,7 +65,7 @@
                         this.$store.dispatch('LOAD_PAGE_DATA', { url: this.property.mm_host +   route_url }).then(function (response) {
                             _this.currentPage = response.data;
                             console.log(_this.currentPage)
-                            _this.pageName = _this.currentPage.name;
+                            _this.pageName = _this.currentPage.title;
         
                             _this.dataLoaded = true;
                         }, function (error) {
