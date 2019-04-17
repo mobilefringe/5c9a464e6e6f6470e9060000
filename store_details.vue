@@ -23,7 +23,7 @@
                                 <h3 class="inside_page_title">Address</h3>
                                 <p class="store_details_phone">{{ currentStore.unit }}</p>    
                             </div>
-                            <a v-if="currentStore.website" :href="currentStore.website" target="_blank">
+                            <a v-if="currentStore.website" :href="'http://' + currentStore.website" target="_blank">
                                 <div class="animated_btn">Visit Website</div>
                             </a>
                         </div>
