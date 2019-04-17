@@ -1365,6 +1365,9 @@ a.store_details_phone:hover {
         padding: 0 20px;
     }
     /* *** MOBILE MENU *** */
+    .header {
+        min-height: unset;
+    }
     .logo_container { 
         margin-left: -20px;
         margin-right: -20px;
@@ -1541,9 +1544,7 @@ a.store_details_phone:hover {
         padding-top: 0;
         width: 150px;
     }
-    .header {
-        min-height:70px;
-    }
+
     .details_row {
         margin: 0;
         margin-bottom: 25px;
