@@ -1529,6 +1529,9 @@ a.store_details_phone:hover {
         .header_social {
             margin: 30px 0;
             .social_icon {
+                a {
+                    margin: 0;
+                }
                 div {
                     border: 1px solid #000;    
                 }
