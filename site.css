@@ -1601,6 +1601,9 @@ a.store_details_phone:hover {
             }
         }
     }
+    .animated_btn {
+        max-width: 250px;
+    }
     .home_banner_container .banner_image {
         height: 300px;
         .banner_text {
