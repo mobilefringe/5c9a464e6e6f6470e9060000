@@ -1713,7 +1713,7 @@ a.store_details_phone:hover {
         .feature_image_container {
             margin-bottom: 20px;
         }
-        .feature_image_container:last-of-type {
+        .feature_image_container:last-child {
             margin-bottom: 0;
         }
     }
