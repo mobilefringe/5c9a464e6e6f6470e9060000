@@ -138,6 +138,9 @@ hr{
     max-width: 100%;
 }
 
+strong {
+    font-family: Avenir-Heavy; 
+}
 /* *** LOADING *** */
 .loading-container {
     margin: auto;
