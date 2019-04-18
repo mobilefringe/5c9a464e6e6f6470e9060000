@@ -1702,7 +1702,7 @@ a.store_details_phone:hover {
 }
 
 @media(max-width: 480px){
-    h2 {
+    h2, .inside_header_background h2 {
         font-size: 2rem;
     }
     footer {
