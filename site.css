@@ -1125,7 +1125,7 @@ footer {
             border-color: $text;
         }
     }
-    .form-control {
+    input.form-control {
         width: calc(100% - 50px) !important;
     }
     .dropdown-menu {
