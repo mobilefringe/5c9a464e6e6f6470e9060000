@@ -990,6 +990,7 @@ footer {
 /* *** NEWSLETTER *** */
 #newsletter_form {
     .form-control {
+        height: 40px;
         color: $text;
     }
     .form-control::placeholder {
