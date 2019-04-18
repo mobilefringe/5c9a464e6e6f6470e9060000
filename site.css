@@ -1702,6 +1702,9 @@ a.store_details_phone:hover {
 }
 
 @media(max-width: 480px){
+    h2 {
+        font-size: 2rem;
+    }
     footer {
         .footer_menu {
             .col-md-4 {
