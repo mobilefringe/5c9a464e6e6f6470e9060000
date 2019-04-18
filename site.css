@@ -1126,7 +1126,7 @@ footer {
         }
     }
     .form-control {
-        width: calc(100% - 50px);
+        width: calc(100% - 50px) !important;
     }
     .dropdown-menu {
         padding: 0;
