@@ -1125,7 +1125,7 @@ footer {
             border-color: $text;
         }
     }
-    input[type=search] {
+    input[type="search"] {
         width: calc(100% - 50px);
     }
     .dropdown-menu {
