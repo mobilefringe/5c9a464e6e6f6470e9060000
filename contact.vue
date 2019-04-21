@@ -87,6 +87,13 @@
             mounted() {
                 this.loadData().then(response => {
                     this.currentPage = response[0].data;
+                    
+                    // Ensure the variables are created in this order for email
+                    this.form_data.name = null;
+                    this.form_data.email = null;
+                    this.form_data.subject = this.property.name + ' Contact Us Form';
+                    this.form_data.message = null;
+                
                     this.dataLoaded = true;
                 });
             },
@@ -112,8 +119,8 @@
                     this.$validator.validateAll().then((result) => {
                         if (result) {
                             let errors = this.errors;
-                            send_data = {};
-                            send_data.form_data = JSON.stringify(this.serializeObject(this.form_data));
+                            let send_data = {};
+                            send_data.form_data = JSON.stringify(Utility.serializeObject(this.form_data));
                             this.$store.dispatch("CONTACT_US", send_data).then(res => {
                                 this.formSuccess = true;
                             }).catch(error => {
