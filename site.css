@@ -78,7 +78,7 @@ a {
         text-decoration: none;
     }
 }
-hr{
+hr {
    max-width: 100%;
    border-top: 2px solid #eee;
 }
@@ -121,6 +121,9 @@ hr{
 }
 .margin_20 {
     margin-bottom: 20px;
+}
+.margin_30 {
+    margin-bottom: 30px;
 }
 .margin_40 {
     margin-bottom: 40px;
