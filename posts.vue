@@ -35,13 +35,14 @@
 </template>
 
 <script>
-    define(["Vue", "vuex", "moment", "moment-timezone", "vue-moment", "vue!inside_banner.vue", "vue-lazy-load", "vue-social-sharing"], function (Vue, Vuex, moment, tz, VueMoment, insideBanner, VueLazyload, SocialSharing) {
+    define(["Vue", "vuex", "moment", "moment-timezone", "vue-moment", "vue!inside_banner.vue", "vue!site.json"], function (Vue, Vuex, moment, tz, VueMoment, insideBanner, site) {
         Vue.use(VueLazyload);
         return Vue.component("blog-component", {
             template: template, // the variable template will be injected
             data: function () {
                 return {
                     dataLoaded: false,
+                    siteInfo: site,
                     pageName: "What's New",
                     showMore: 3,
                     incrementBy: 3
