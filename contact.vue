@@ -25,11 +25,6 @@
                                         <input id="email" v-model="form_data.email" v-validate="'required|email'" class="form-control" :class="{'input': true}" name="email" type="email" data-vv-delay="1000">
                                         <span v-show="errors.has('email')" class="form-control-feedback">{{ errors.first('email') }}</span>
                                     </div>
-                                    <!--<div class="col-xs-12 margin_20" :class="{'has-error': errors.has('subject')}">-->
-                                    <!--    <label for="subject">Subject</label>-->
-                                    <!--    <input id="subject" v-model="form_data.subject" v-validate="'required:true'" class="form-control" :class="{'input': true}" name="subject" type="text" data-vv-delay="1000">-->
-                                    <!--    <span v-show="errors.has('subject')" class="form-control-feedback">{{ errors.first('subject') }}</span>-->
-                                    <!--</div>-->
                                     <div class="col-xs-12 margin_20" :class="{'has-error': errors.has('message')}">
                                         <label for="message">Message</label>
                                         <textarea id="message" v-model="form_data.message" v-validate="'required:true'" class="form-control" :class="{'input': true}" name="message" type="text" data-vv-delay="1000"></textarea>
