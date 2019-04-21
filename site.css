@@ -1352,6 +1352,11 @@ textarea.form-control {
 }
 
 /* *** BLOG *** */
+.store_details_image {
+    margin-bottom: 20px; 
+    @include responsive-ratio(430, 287);
+    position: relative;
+}
 .post_details_header {
     margin-bottom: 10px;
     display: -webkit-box;
