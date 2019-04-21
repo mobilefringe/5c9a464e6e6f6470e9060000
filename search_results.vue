@@ -52,7 +52,7 @@
                         </div>
             		</div>
                     <div class="page_container text-left" v-else> 
-                        <h3>Sorry, there are no results that match your query. Please try again.</h3>
+                        <p>Sorry, there are no results that match your search. Please try again.</p>
                     </div>
 	            </div>
             </div>
