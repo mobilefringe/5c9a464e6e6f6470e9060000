@@ -343,18 +343,12 @@ strong {
             margin-bottom: 10px;
         }
     }
-    .store_details_image {
-        border: none;
-    }
     .no_logo {
         height: auto;
         border: 1px solid #D8D8D8; 
         .store_details_name {
             font-size: 1rem;
         }
-    }
-    .result_logo {
-        border: 1px solid #D8D8D8; 
     }
     .result_container_row {
         margin-bottom: 30px;
