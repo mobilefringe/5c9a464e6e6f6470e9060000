@@ -1316,7 +1316,7 @@ a.store_details_phone:hover {
     border-radius: 0;
 }
 textarea.form-control {
-    height: 250px;
+    height: 200px;
 }
 .form-control-feedback {
     position: absolute;
