@@ -345,7 +345,6 @@ strong {
     }
     .no_logo {
         height: auto;
-        border: 1px solid #D8D8D8; 
         .store_details_name {
             font-size: 1rem;
         }
