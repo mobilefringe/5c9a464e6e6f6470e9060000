@@ -101,7 +101,8 @@
                                         </div>
                                     </div>
                                     <div class="mobile_property_address center">
-                                        <p>{{ property.name }}<br>
+                                        <p>
+                                            {{ property.name }}<br>
                                             <a :href="siteInfo.googleMapsURL" target="_blank">{{ getPropertyAddress }}</a>
                                         </p>
                                     </div>
