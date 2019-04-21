@@ -73,8 +73,7 @@
                     formSuccess: false,
                     formError: false,
                     time: new Date(),
-                    currentPage: null,
-                    currentImage: null
+                    currentPage: null
                 }
             },
             mounted() {
