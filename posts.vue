@@ -14,7 +14,7 @@
                                 <h3 class="promo_name">{{ item.title }}</h3>
                                 <p class="promo_store_name">
                                     <span v-if="item.author" class="blog-author">by {{ item.author }}<span class="regular"> | </span></span> 
-                                    {{ item.publish_date | moment("MMMM D", timezone) }}
+                                    {{ item.publish_date | moment("MMM D", timezone) }}
                                 </p>
                                 <div class="promo_desc" v-html="item.body_short"></div>
                                 <router-link :to="'/posts/'+ item.slug" >
