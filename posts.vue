@@ -35,8 +35,7 @@
 </template>
 
 <script>
-    define(["Vue", "vuex", "moment", "moment-timezone", "vue-moment", "vue!inside_banner.vue", "vue!site.json"], function (Vue, Vuex, moment, tz, VueMoment, insideBanner, site) {
-        Vue.use(VueLazyload);
+    define(["Vue", "vuex", "moment", "moment-timezone", "vue-moment", "vue!inside_banner.vue", "json!site.json"], function (Vue, Vuex, moment, tz, VueMoment, insideBanner, site) {
         return Vue.component("blog-component", {
             template: template, // the variable template will be injected
             data: function () {
