@@ -11,11 +11,11 @@
 }
 
 
-// @font-face { 
-//     font-family: Avenir-Medium; 
-//     src: url('https://codecloud.cdn.speedyrails.net/sites/57f3bee46e6f643959000000/font/truetype/1462834422000/Avenir-Medium.ttf') format('truetype');
-//     src: url('https://codecloud.cdn.speedyrails.net/sites/57f3bee46e6f643959000000//1463611310000/Avenir-Medium.woff') format('woff');
-// }
+@font-face { 
+    font-family: Avenir-Medium; 
+    src: url('https://codecloud.cdn.speedyrails.net/sites/57f3bee46e6f643959000000/font/truetype/1462834422000/Avenir-Medium.ttf') format('truetype');
+    src: url('https://codecloud.cdn.speedyrails.net/sites/57f3bee46e6f643959000000//1463611310000/Avenir-Medium.woff') format('woff');
+}
 
 @font-face{
     font-family: Georgia-Italic;
