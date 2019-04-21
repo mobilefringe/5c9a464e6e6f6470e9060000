@@ -28,7 +28,9 @@
             methods: {
                 loadData: async function () {
                     try {
-                        let results = await Promise.all([this.$store.dispatch("getData", "property")]);
+                        let results = await Promise.all([
+                            this.$store.dispatch("getData", "property");
+                        ]);
                         return results;
                     } catch (e) {
                         console.log("Error loading data: " + e.message);
@@ -38,30 +40,3 @@
         });
     });
 </script>
-
-<style>
-    #overlay {
-        position: fixed;
-        /*Sit on top of the page content */
-        width: 100%;
-        /*Full width (cover the whole page) */
-        height: 100%;
-        /*Full height (cover the whole page) */
-        overflow: hidden;
-        top: 0;
-        left: 0;
-        right: 0;
-        bottom: 0;
-        background-color: #ffffff;
-        z-index: 999;
-        display: -webkit-box;
-        display: -webkit-flex;
-        display: -moz-box;
-        display: -moz-flex;
-        display: -ms-flexbox;
-        display: flex;
-    }
-    /*.loading-container .vue-simple-spinner-text{*/
-    /*    line-height: 1;*/
-    /*}*/
-</style>
