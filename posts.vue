@@ -9,7 +9,7 @@
                         <div class="row margin_40"  v-for="(item, index) in postList" v-if="showMore > index" :key="index">
                             <div class="col-xs-12 col-sm-4">
                                 <div v-if="item.no_image" class="store_details_image center-block">
-                                    <img :src="promo.image_url" alt="" class="max_img" />
+                                    <img :src="item.image_url" alt="" class="max_img" />
                                 </div>
                                 <img v-else class="max-width blog_image" :src="item.image_url" alt="" />
                             </div>
