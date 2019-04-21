@@ -52,7 +52,7 @@
 						    </li>
 						</ul>
 					</nav>
-					<div v-show="!isMobile" class="nav_container visible_phone">
+					<div class="nav_container visible_phone">
 					    <transition name="custom-classes-transition" enter-active-class="animated slideInRight" leave-active-class="animated slideOutRight">
     					    <nav id="mobile_nav" v-show="showMenu" class="">
     					        <ul>
@@ -90,7 +90,7 @@
                                         </span>
                                     </div>
                                     <div class="search_component_wrapper">
-                                        <div v-show="isMobile" class="search_component_container">
+                                        <div class="search_component_container">
                                             <search-component id="mobile-search" v-if="headerReady" :list="searchList" placeholder="Search" :suggestion-attribute="suggestionAttribute" :keys="keys" v-model="search_result" @select="onOptionSelect" :autocomplete="false" :minMatchCharLength="3" :tokenize="true" class="text-left">
                                                 <template slot="item" scope="option" class="manual">
                                                     <article class="media">
@@ -161,6 +161,7 @@
                     } else {
                         this.isMobile = false;
                     }
+                    console.log("is Mobile?", this.isMobile)
                 }
             },
             created() {
