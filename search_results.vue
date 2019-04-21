@@ -6,7 +6,8 @@
                 <banner-component :page_name="pageName"></banner-component>
                 <div class="main_container margin_30">
             		<div class="page_container text-left" v-if="searchResults && searchResults.length > 0" id="searchResults">
-                        <p class="search_result_title">Found {{searchResults.length}} results matching "{{searchQuery}}"</p>
+                        <p v-if="searchResults.length > 1" class="search_result_title">Found {{ searchResults.length }} results matching "{{ searchQuery }}"</p>
+                        <p v-else class="search_result_title">Found {{ searchResults.length }} result matching "{{ searchQuery }}"</p>
             			<div v-for="(result,index) in searchResults" :key="index">
                             <div class="row result_container_row">
                                 <div v-if="result.is_store" class="col-sm-3">
