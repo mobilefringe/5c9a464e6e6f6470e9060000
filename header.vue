@@ -152,6 +152,9 @@
                     } else if (this.showMenu == false) {
                         document.body.classList.remove("no_scroll");
                     }
+                },
+                windowWidth: function() {
+                    console.log("width", this.windowWidth)
                 }
             },
             created() {
