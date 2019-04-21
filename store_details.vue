@@ -150,18 +150,10 @@
                 ])
             },
             methods: {
-                // loadData: async function() {
-                //     try {
-                //         let results = await Promise.all([
-                //             this.$store.dispatch("getData","promotions"), this.$store.dispatch("getData", "jobs"), this.$store.dispatch("getData", "repos")]);
-                //     } catch (e) {
-                //         console.log("Error loading data: " + e.message);
-                //     }
-                // },
                 updateCurrentStore(id) {
                     this.currentStore = this.findStoreBySlug(id);
                     if (this.currentStore === null || this.currentStore === undefined) {
-                        this.$router.replace({ path: '/'});
+                        this.$router.replace({ path: '/stores'});
                     } else {
                         this.pageName = this.currentStore.name;
 
