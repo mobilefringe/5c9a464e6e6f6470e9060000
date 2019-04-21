@@ -1353,7 +1353,6 @@ textarea.form-control {
 
 /* *** BLOG *** */
 .post_image {
-    margin-bottom: 20px; 
     @include responsive-ratio(430, 287);
     position: relative;
 }
