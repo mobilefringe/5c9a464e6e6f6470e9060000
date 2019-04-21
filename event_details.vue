@@ -73,7 +73,7 @@
 			},
 			watch: {
                 currentEvent : function (){
-                    if(this.currentEvent != null) {
+                    if (this.currentEvent != null) {
                         if (_.includes(this.currentEvent.event_image_url_abs, 'missing')) {
                             this.currentEvent.image_url = ""
                         }
