@@ -133,7 +133,8 @@
                     search_result: null,
                     suggestionAttribute: "name",
                     keys: ["name", "description", "tags", "keywords", "store.name"],
-                    headerReady: false
+                    headerReady: false,
+                    isMobile: false
                 }
             },
             props:['menu_items'],
@@ -155,6 +156,11 @@
                 },
                 windowWidth: function() {
                     console.log("width", this.windowWidth)
+                    if (this.windowWidth <= 768) {
+                        this.isMobile = true;
+                    } else {
+                        this.isMobile = false;
+                    }
                 }
             },
             created() {
