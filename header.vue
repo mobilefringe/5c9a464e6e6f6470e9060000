@@ -52,7 +52,7 @@
 						    </li>
 						</ul>
 					</nav>
-					<div class="nav_container visible_phone">
+					<div v-show="isMobile" class="nav_container visible_phone">
 					    <transition name="custom-classes-transition" enter-active-class="animated slideInRight" leave-active-class="animated slideOutRight">
     					    <nav id="mobile_nav" v-show="showMenu" class="">
     					        <ul>
