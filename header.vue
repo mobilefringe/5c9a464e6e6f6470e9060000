@@ -232,7 +232,6 @@
             methods: {
                 loadData: async function() {
                     try {
-                        
                         let results = await Promise.all([
                             this.$store.dispatch("getData", "stores"), 
                             this.$store.dispatch("getData", "events"),
