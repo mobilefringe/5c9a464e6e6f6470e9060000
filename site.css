@@ -17,12 +17,11 @@
     src: url('https://codecloud.cdn.speedyrails.net/sites/57f3bee46e6f643959000000//1463611310000/Avenir-Medium.woff') format('woff');
 }
 
-@font-face {
-    font-family: Georgia, Times, Times New Roman, serif; 
-    src: url('https://codecloud.cdn.speedyrails.net/sites/57f3bee46e6f643959000000/font/truetype/1461457460000/Georgia Italic.ttf') format('truetype');
-    src: url('https://codecloud.cdn.speedyrails.net/sites/57f3bee46e6f643959000000//1463611626000/Georgia-Italic.woff') format('woff');
-    font-style: Italic;
-}
+// @font-face {
+//     font-family: Georgia, Times, Times New Roman, serif; 
+//     src: url('https://codecloud.cdn.speedyrails.net/sites/57f3bee46e6f643959000000/font/truetype/1461457460000/Georgia Italic.ttf') format('truetype');
+//     src: url('https://codecloud.cdn.speedyrails.net/sites/57f3bee46e6f643959000000//1463611626000/Georgia-Italic.woff') format('woff');
+// }
 @font-face {
     font-family: 'Brusher';
     src: url('https://codecloud.cdn.speedyrails.net/sites/5c9a464e6e6f6470e9060000//1543976422000/Brusher-Regular.woff2') format('woff2'),
@@ -337,7 +336,8 @@ strong {
     .search_result_content {
         font-family: Avenir-Book;
         h3 {
-            font-family: Georgia-Italic;
+            font-family: Georgia, Times, Times New Roman, serif; 
+            font-style: italic;
         }
         p {
             margin-bottom: 10px;
