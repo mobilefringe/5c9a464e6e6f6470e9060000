@@ -86,20 +86,6 @@ define([], function () {
             ]
         },
         {
-            path: '/leasing',
-            component: view('default'),
-            children: [
-                {
-                    path: '',
-                    component: view('page_details'),
-                    meta: {
-                        pageName: 'Leasing',
-                    },
-                    name: 'leasing'
-                }
-            ]
-        },
-        {
             path: '/newsletter',
             component: view('default'),
             children: [
