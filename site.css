@@ -588,7 +588,8 @@ footer {
     }
     .footer_text {
         margin-bottom: 0;
-        font-family: Georgia-Italic;
+        font-family: Georgia, Times, Times New Roman, serif; 
+        font-style: italic;
         font-size: 0.6875rem;
         line-height: 16px;
         color: #fff;
@@ -763,11 +764,10 @@ footer {
     h2 {
         margin: 0;
         padding-top: 82px;
-        font-family: Georgia;
+        font-family: Georgia, Times, Times New Roman, serif; 
         font-style: italic;
         font-size: 2.5rem;
         color: $secondary_text;
-        // text-shadow: -1px 2px 4px rgba(0,0,0,0.5);
     }
 }
 .leasing_photo[lazy=loading]{
@@ -869,14 +869,15 @@ footer {
     margin-bottom: 20px;
     padding: 8px 20px;
     background: $primary;
-    font-family: Georgia-Italic;
+    font-family: Georgia, Times, Times New Roman, serif; 
+    font-style: italic;
     font-size: 1.375rem;
     color: $secondary_text;
 }
 .inside_page_title {
     margin-top: 0;
     margin-bottom: 10px;
-    font-family: Georgia;
+    font-family: Georgia, Times, Times New Roman, serif; 
     font-style: italic;
     font-size: 1.375rem;
     line-height: 1.375rem;
@@ -893,7 +894,8 @@ footer {
         height: 38px;
         border-radius: 0;
         background: $primary;
-        font-family: Georgia-Italic;
+        font-family: Georgia, Times, Times New Roman, serif; 
+        font-style: italic;
         font-size: 1.375rem;
         line-height: normal;
         color: $secondary_text;
@@ -1012,7 +1014,8 @@ footer {
         margin-bottom: 20px;
         padding: 8px 20px;
         background: $primary;
-        font-family: Georgia-Italic;
+        font-family: Georgia, Times, Times New Roman, serif; 
+        font-style: italic;
         font-size: 1.375rem;
         color: #FFF;
     }
@@ -1044,7 +1047,8 @@ footer {
 .promo_name {
     margin: 0;
     margin-bottom: 10px;
-    font-family: Georgia-Italic;
+    font-family: Georgia, Times, Times New Roman, serif; 
+    font-style: italic;
     font-size: 1.375rem;
     line-height: 1.375rem;
 }
@@ -1261,7 +1265,8 @@ footer {
             -ms-transform: translate(-50%, -50%);
             transform: translate(-50%, -50%);
             width: 100%;
-            font-family: Georgia-Italic;
+            font-family: Georgia, Times, Times New Roman, serif; 
+            font-style: italic;
             font-size: 1.375rem;
             color: $secondary_text;
             text-align: center;
