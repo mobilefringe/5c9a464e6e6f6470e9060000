@@ -277,9 +277,10 @@
                     });
                 },
                 menuClick: function() {
-                    // console.log("event", event)
-                    this.showDropDown = !this.showDropDown
-                    // this.$emit('click', this.page, event); 
+                    this.$nextTick(function() {
+                        this.showDropDown = !this.showDropDown
+                    });
+
                 }
             },
             beforeDestroy: function() {
