@@ -161,6 +161,9 @@
                         this.isMobile = false;
                     }
                     console.log("is Mobile?", this.isMobile)
+                },
+                showDropDown: function() {
+                    console.log("this.showDropDown", this.showDropDown)
                 }
             },
             created() {
