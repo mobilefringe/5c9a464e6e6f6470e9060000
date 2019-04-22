@@ -503,7 +503,7 @@ strong {
 	}
 }
 #primary_nav ul .menu_item:hover > ul {
-	display: block !important;
+	display: block;
 	z-index: 99;
 }
 /* *** FOOTER *** */
