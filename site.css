@@ -355,9 +355,6 @@ strong {
             text-decoration: none;
         }
     }
-    .search_result_title {
-        color: $secondary;
-    }
     .search_result_content {
         font-family: Avenir-Book;
         h3 {
