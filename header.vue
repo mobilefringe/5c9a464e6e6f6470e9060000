@@ -277,7 +277,7 @@
                     });
                 },
                 menuClick: function() {
-                    console.log("event", event)
+                    // console.log("event", event)
                     this.showDropDown = !this.showDropDown
                     // this.$emit('click', this.page, event); 
                 }
