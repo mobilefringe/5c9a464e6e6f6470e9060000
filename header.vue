@@ -155,7 +155,6 @@
                     }
                 },
                 windowWidth: function() {
-                    console.log("width", this.windowWidth)
                     if (this.windowWidth <= 768) {
                         this.isMobile = true;
                     } else {
@@ -222,7 +221,6 @@
                     });
                     
                     var list = _.union( stores, events, promos, jobs );
-                    console.log("list", list)
                     return list;
                 },
                 locale: {
@@ -261,7 +259,6 @@
                     this.windowWidth = window.innerWidth;
                 },
                 onOptionSelect(option) {
-                    console.log("option", option)
                     try {
                         ga('send', 'event', 'Search Keywords', 'search', this.search_result);
                     } catch (err) {
