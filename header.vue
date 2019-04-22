@@ -260,6 +260,7 @@
                     this.windowWidth = window.innerWidth;
                 },
                 onOptionSelect(option) {
+                    console.log("option", option)
                     try {
                         ga('send', 'event', 'Search Keywords', 'search', this.search_result);
                     } catch (err) {
