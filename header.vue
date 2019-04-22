@@ -279,7 +279,7 @@
                 menuClick: function(event) {
                     console.log("event", event)
                     this.showDropDown = !this.showDropDown
-                    this.$emit('click', this.page, event); 
+                    // this.$emit('click', this.page, event); 
                 }
             },
             beforeDestroy: function() {
