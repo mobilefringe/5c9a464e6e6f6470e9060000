@@ -19,7 +19,7 @@
                     <div class="header_social_container hidden-sm hidden-xs">
                         <div class="search_component_wrapper hidden_phone">
                             <div class="search_component_container">
-                                <search-component id="desktop-search" v-if="headerReady" :list="searchList" placeholder="Search" :suggestion-attribute="suggestionAttribute" :keys="keys" v-model="search_result" @select="onOptionSelect" :autocomplete="false" :minMatchCharLength="3" :tokenize="true" class="text-left">
+                                <search-component v-if="headerReady" :list="searchList" placeholder="Search" :suggestion-attribute="suggestionAttribute" :keys="keys" v-model="search_result" @select="onOptionSelect" :autocomplete="false" :minMatchCharLength="3" :tokenize="true" class="text-left">
                                     <template slot="item" scope="option" class="manual">
                                         <article class="media">
                                             <p>{{ option.data.name }}</p>
@@ -91,7 +91,7 @@
                                     </div>
                                     <div class="search_component_wrapper">
                                         <div class="search_component_container">
-                                            <search-component id="mobile-search" v-if="headerReady" :list="searchList" placeholder="Search" :suggestion-attribute="suggestionAttribute" :keys="keys" v-model="search_result" @select="onOptionSelect" :autocomplete="false" :minMatchCharLength="3" :tokenize="true" class="text-left">
+                                            <search-component v-if="headerReady" :list="searchList" placeholder="Search" :suggestion-attribute="suggestionAttribute" :keys="keys" v-model="search_result" @select="onOptionSelect" :autocomplete="false" :minMatchCharLength="3" :tokenize="true" class="text-left">
                                                 <template slot="item" scope="option" class="manual">
                                                     <article class="media">
                                                         <p>{{ option.data.name }}</p>
