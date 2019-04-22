@@ -43,7 +43,7 @@
 						<ul>
 						    <li class="menu_item" v-for="item in menu_items" :id="item.id" @mouseleave="showDropDown = false" @mouseover="showDropDown = true">
 						        <router-link v-if="item.sub_menu == undefined" :to="item.href">{{ item.name }}</router-link>
-						        <span @click.native="menuClick" v-if="item.sub_menu != undefined">{{ item.name }}</span>
+						        <span @click="menuClick()" v-if="item.sub_menu != undefined">{{ item.name }}</span>
 						        <ul v-show="showDropDown" v-if="item.sub_menu">
 						            <li @click.native="showDropDown = !showDropDown" v-for="sub_menu in item.sub_menu" class="dropdown_item">
 						                <router-link :to="sub_menu.href">{{ sub_menu.name }}</router-link>
