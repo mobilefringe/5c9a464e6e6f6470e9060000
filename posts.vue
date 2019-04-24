@@ -15,10 +15,11 @@
                             </div>
                             <div class="col-xs-12 col-sm-8">
                                 <h3 class="promo_name">{{ item.title }}</h3>
-                                <p class="promo_store_name">
-                                    <span v-if="item.author" class="blog-author">by {{ item.author }}<span class="regular"> | </span></span> 
-                                    <!--{{ item.publish_date | moment("MMM D, YYYY", timezone) }}-->
-                                </p>
+                                <!--<p class="promo_store_name">-->
+                                <!--    <span v-if="item.author" class="blog-author">by {{ item.author }}<span class="regular"> | </span></span> -->
+                                <!--    {{ item.publish_date | moment("MMM D, YYYY", timezone) }}-->
+                                <!--</p>-->
+                                <p class="promo_store_name" v-if="currentPost.author">by: {{ currentPost.author }}</p>
                                 <div class="promo_desc" v-html="item.body_short"></div>
                                 <router-link :to="'/posts/'+ item.slug" >
                                     <i class="fa fa-caret-right"></i> <span class="read_more">View Post</span>
