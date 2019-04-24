@@ -34,6 +34,7 @@
                             <div class="feature_image_container">
                                 <a :href="item.url">
                                     <img :src="item.image_url" :alt="item.name" />
+                                    <h3>{{ item.name }}</h3>
                                 </a>
                             </div>
                         </div>
