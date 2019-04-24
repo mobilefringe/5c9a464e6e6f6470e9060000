@@ -21,7 +21,9 @@
                             </div>
                             <div v-if="currentStore.unit">
                                 <h3 class="inside_page_title">Address</h3>
-                                <p class="store_details_phone">{{ currentStore.unit }}</p>    
+                                <a :href="getStoreAddress(currentStore)">
+                                    <p class="store_details_phone">{{ currentStore.unit }}</p>    
+                                </a>
                             </div>
                             <a v-if="currentStore.website" :href="'http://' + currentStore.website" target="_blank">
                                 <div class="animated_btn">Visit Website</div>
@@ -44,7 +46,6 @@
                                     </div>
                                 </li>
                             </ul>
-                            
                             <div v-if="currentStore.promotions">
                                 <b-card no-body class="mb-1 inside_page_toggle">
                                     <b-card-header header-tag="header" class="p-1" role="tab">
@@ -161,6 +162,10 @@
                             this.currentStore.no_logo = true
                         } else {
                             this.currentStore.no_logo = false
+                        }
+                        
+                        if (this.currentStore.unit) {
+                            this.currentStore.address_link = "https://maps.google.com/?q=" + this.currentStore.unit;
                         }
                         
                         var hours = this.currentStore.store_hours;
