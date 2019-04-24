@@ -21,9 +21,7 @@
                             </div>
                             <div v-if="currentStore.unit">
                                 <h3 class="inside_page_title">Address</h3>
-                                <a :href="currentStore.address_link" target="_blank">
-                                    <p class="store_details_phone">{{ currentStore.unit }}</p>    
-                                </a>
+                                <a class="store_details_phone" :href="currentStore.address_link" target="_blank">{{ currentStore.unit }}</a>
                             </div>
                             <a v-if="currentStore.website" :href="'http://' + currentStore.website" target="_blank">
                                 <div class="animated_btn">Visit Website</div>
