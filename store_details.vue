@@ -21,7 +21,7 @@
                             </div>
                             <div v-if="currentStore.unit">
                                 <h3 class="inside_page_title">Address</h3>
-                                <a :href="getStoreAddress(currentStore)">
+                                <a :href="currentStore.address_link">
                                     <p class="store_details_phone">{{ currentStore.unit }}</p>    
                                 </a>
                             </div>
