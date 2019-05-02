@@ -11,38 +11,43 @@
                         </div>
                         <div class="details_col_9">
                             <p class="inside_page_link">Be the first to know about upcoming events and special announcements from {{ property.name }}!</p>
-                            <form id="newsletter_form" class="form-horizontal" action="//mobilefringe.createsend.com/t/d/s/vuutyk/" method="post" @submit.prevent="validateBeforeSubmit">
-                                <div class="row">
-                                    <div class="col-md-6">
-                                        <label for="fieldzyklkj">First Name</label>
-                                        <input id="fieldzyklkj" class="margin_20 form-control" name="cm-f-zyklkj" type="text" required placeholder="First Name" />
-                                    </div>
-                                    <div class="col-md-6">
-                                        <label for="fieldzyklkt">Last Name</label>
-                                        <input id="fieldzyklkt" class="margin_20 form-control" name="cm-f-zyklkt" type="text" required placeholder="Last Name" />
-                                    </div>
-                                    <div class="col-md-6">
-                                        <label for="fieldzyklki">Postal Code</label>
-                                        <input id="fieldzyklki" class="margin_20 form-control" name="cm-f-zyklki" type="text" placeholder="Postal Code"/>
-                                    </div>
-                                    <div class="col-md-6">
-                                        <label for="cm-vuutyk-vuutyk">Email</label>
-                                        <input id="cm-vuutyk-vuutyk" required class="margin_20 form-control" name="cm-vuutyk-vuutyk" type="email" placeholder="Email">
-                                    </div>
-                                    <div class="col-md-12">
-                                        <div style="margin-left: 20px">
-                                            <label class="checkbox">
-                                                <input name="agree_newsletter" required  type="checkbox">
-                                                    I agree to receive electronic communications from {{ property.name }}.
-                                            </label>
-                                        </div>
-            					    </div>
-            					    <div class="margin_20 clearfix"></div>
-                                    <div class="col-xs-12">
-                                        <button class="animated_btn" type="submit" :disabled="formSuccess">Subscribe</button>
-                                    </div>
-                                </div>
-                            </form> 
+                     <!--       <form id="newsletter_form" class="form-horizontal" action="//mobilefringe.createsend.com/t/d/s/vuutyk/" method="post" @submit.prevent="validateBeforeSubmit">-->
+                     <!--           <div class="row">-->
+                     <!--               <div class="col-md-6">-->
+                     <!--                   <label for="fieldzyklkj">First Name</label>-->
+                     <!--                   <input id="fieldzyklkj" class="margin_20 form-control" name="cm-f-zyklkj" type="text" required placeholder="First Name" />-->
+                     <!--               </div>-->
+                     <!--               <div class="col-md-6">-->
+                     <!--                   <label for="fieldzyklkt">Last Name</label>-->
+                     <!--                   <input id="fieldzyklkt" class="margin_20 form-control" name="cm-f-zyklkt" type="text" required placeholder="Last Name" />-->
+                     <!--               </div>-->
+                     <!--               <div class="col-md-6">-->
+                     <!--                   <label for="fieldzyklki">Postal Code</label>-->
+                     <!--                   <input id="fieldzyklki" class="margin_20 form-control" name="cm-f-zyklki" type="text" placeholder="Postal Code"/>-->
+                     <!--               </div>-->
+                     <!--               <div class="col-md-6">-->
+                     <!--                   <label for="cm-vuutyk-vuutyk">Email</label>-->
+                     <!--                   <input id="cm-vuutyk-vuutyk" required class="margin_20 form-control" name="cm-vuutyk-vuutyk" type="email" placeholder="Email">-->
+                     <!--               </div>-->
+                     <!--               <div class="col-md-12">-->
+                     <!--                   <div style="margin-left: 20px">-->
+                     <!--                       <label class="checkbox">-->
+                     <!--                           <input name="agree_newsletter" required  type="checkbox">-->
+                     <!--                               I agree to receive electronic communications from {{ property.name }}.-->
+                     <!--                       </label>-->
+                     <!--                   </div>-->
+            					    <!--</div>-->
+            					    <!--<div class="margin_20 clearfix"></div>-->
+                     <!--               <div class="col-xs-12">-->
+                     <!--                   <button class="animated_btn" type="submit" :disabled="formSuccess">Subscribe</button>-->
+                     <!--               </div>-->
+                     <!--           </div>-->
+                     <!--       </form> -->
+                     <script src="//app-sj03.marketo.com/js/forms2/js/forms2.min.js"></script>
+
+<form id="mktoForm_3265"></form>
+
+<script>MktoForms2.loadForm("//app-sj03.marketo.com", "561-LJY-710", 3265);</script>
                         </div>
                     </div>
                 </div>
