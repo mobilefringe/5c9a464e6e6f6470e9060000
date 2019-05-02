@@ -140,8 +140,8 @@
                             listTwo.push(value);    
                         }
                     });
-                    this.listOne = _.groupBy(listOne, store => (isNaN(_.upperCase(store.name.charAt(0))) ? _.upperCase(store.name.charAt(0)) : "#"));
-                    this.listTwo = _.groupBy(listTwo, store => (isNaN(_.upperCase(store.name.charAt(0))) ? _.upperCase(store.name.charAt(0)) : "#"));
+                    this.listOne = _.groupBy(listOne, store => (isNaN(_.upperCase(store.name_sort.charAt(0))) ? _.upperCase(store.name_sort.charAt(0)) : "#"));
+                    this.listTwo = _.groupBy(listTwo, store => (isNaN(_.upperCase(store.name_sort.charAt(0))) ? _.upperCase(store.name_sort.charAt(0)) : "#"));
                 },
                 dropDownCats() {
                     var cats = _.filter(this.processedCategories, function(o) { return o.store_ids !== null && o.store_ids.length > 0 });
