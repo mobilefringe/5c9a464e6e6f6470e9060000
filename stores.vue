@@ -123,7 +123,8 @@
                     var listOne = [];
                     var listTwo = [];
                     _.forEach( all_stores, function( value, key ) {
-                        if(_.startsWith(value.name, 'The ')) {
+                        if (_.startsWith(value.name, 'The ')) {
+                            console.log(value.name)
                             value.name_sort = _.trimStart(value.name, 'The ')
                             value.name_sort = _.trimStart(value.name_sort)
                         } else {
