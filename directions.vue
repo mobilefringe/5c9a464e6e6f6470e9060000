@@ -8,7 +8,7 @@
                     <div class="row">
                         <div class="col-md-12">
                             <iframe :src="siteInfo.googleMapURL" width="100%" height="350" frameborder="0" style="border:0" allowfullscreen></iframe>
-                            <div v-if="currentPage">
+                            <div v-if="currentPage.body">
                                 <hr>
                                 <div class="contact_page_body" v-html="currentPage.body"></div>
                             </div>
