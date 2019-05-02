@@ -43,7 +43,7 @@
                      <!--               </div>-->
                      <!--           </div>-->
                      <!--       </form> -->
-                     <script src="//app-sj03.marketo.com/js/forms2/js/forms2.min.js"></script>
+
 
 <form id="mktoForm_3265"></form>
 
@@ -56,7 +56,7 @@
     </div>
 </template>
 <script>
-    define(["Vue", "vuex", "jquery", "vee-validate", "json!site.json", "vue!inside_banner.vue", "vue!side_image.vue"], function(Vue, Vuex, $, VeeValidate, site, insideBanner, sideImage) {
+    define(["Vue", "vuex", "jquery", "vee-validate", "json!site.json", "vue!inside_banner.vue", "vue!side_image.vue", "marketo"], function(Vue, Vuex, $, VeeValidate, site, insideBanner, sideImage, marketo) {
         Vue.use(VeeValidate);
         return Vue.component("newsletter-component", {
             template: template, // the variable template will be injected
