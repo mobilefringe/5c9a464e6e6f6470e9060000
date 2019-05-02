@@ -845,7 +845,7 @@ footer {
         }
     }
 }
-.animated_btn, .mktoButtonRow {
+.animated_btn, button.mktoButton {
     padding: 7.5px 0;
     min-width: 200px;
     display: block;
