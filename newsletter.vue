@@ -76,6 +76,10 @@
                 this.form_data.email = this.$route.query.email;
                 $("#email").val(this.form_data.email);
             },
+            created() {
+                this.form_data.email = this.$route.query.email;
+                $("#email").val(this.form_data.email);
+            },
             watch : {
                 $route () {
                     this.form_data.email = this.$route.query.email;
