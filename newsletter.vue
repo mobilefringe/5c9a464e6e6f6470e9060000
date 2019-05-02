@@ -45,7 +45,7 @@
                      <!--       </form> -->
 
 
-<form id="mktoForm_3265"></form>
+                            <form id="mktoForm_3265"></form>
 
 <!--<script>MktoForms2.loadForm("//app-sj03.marketo.com", "561-LJY-710", 3265);</script>-->
                         </div>
@@ -71,8 +71,10 @@
                 }
             },
             mounted () {
-                this.form_data.email = this.$route.query.email;
-                $("#cm-vuutyk-vuutyk").val(this.form_data.email);
+                window.MktoForms2.loadForm("//app-sj03.marketo.com", "561-LJY-710", 3265);
+                
+                // this.form_data.email = this.$route.query.email;
+                // $("#cm-vuutyk-vuutyk").val(this.form_data.email);
             },
             watch : {
                 $route () {
