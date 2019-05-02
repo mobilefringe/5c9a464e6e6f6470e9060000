@@ -12,10 +12,6 @@
         "href": "/newsletter"
     },
     {
-        "name": "What's New",
-        "href": "/posts"
-    },
-    {
         "name": "Center Information",
         "id": "menu1",
         "href": "",
@@ -23,10 +19,6 @@
             {
                 "name": "Directions",
                 "href": "/directions"
-            },
-            {
-                "name": "Jobs",
-                "href": "/jobs"
             },
             {
                 "name": "About Us",
