@@ -79,7 +79,7 @@
             watch : {
                 $route () {
                     this.form_data.email = this.$route.query.email;
-                    $("#cm-vuutyk-vuutyk").val(this.form_data.email);
+                    $("#email").val(this.form_data.email);
                 }
             },
             computed: {
