@@ -73,8 +73,8 @@
             mounted () {
                 window.MktoForms2.loadForm("//app-sj03.marketo.com", "561-LJY-710", 3265);
                 
-                this.form_data.email = this.$route.query.email;
-                $("#email").val(this.form_data.email);
+                // this.form_data.email = this.$route.query.email;
+                // $("#email").val(this.form_data.email);
             },
             created() {
                 this.form_data.email = this.$route.query.email;
