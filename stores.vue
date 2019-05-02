@@ -124,13 +124,12 @@
                     var listTwo = [];
                     _.forEach( all_stores, function( value, key ) {
                         if (_.startsWith(value.name, 'The ')) {
-                            console.log(value.name)
                             value.name_sort = _.trimStart(value.name, 'The ')
                             value.name_sort = _.trimStart(value.name_sort)
                         } else {
                             value.name_sort = value.name
                         } 
-              console.log("value.name_sort", value.name_sort)
+
                         var starter = "A";
                         var breaker = "M";
                         var store_initial = _.toUpper(value.name_sort[0]);
