@@ -56,7 +56,7 @@
     </div>
 </template>
 <script>
-    define(["Vue", "vuex", "jquery", "vee-validate", "json!site.json", "vue!inside_banner.vue", "vue!side_image.vue", "marketo"], function(Vue, Vuex, $, VeeValidate, site, insideBanner, sideImage, marketo) {
+    define(["Vue", "vuex", "jquery", "vee-validate", "json!site.json", "vue!inside_banner.vue", "vue!side_image.vue"], function(Vue, Vuex, $, VeeValidate, site, insideBanner, sideImage) {
         Vue.use(VeeValidate);
         return Vue.component("newsletter-component", {
             template: template, // the variable template will be injected
