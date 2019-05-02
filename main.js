@@ -36,7 +36,7 @@ require.config({
         'vue-select': 'https://cdn.jsdelivr.net/npm/vue-select@2.3.0/dist/vue-select.min',
         'bootstrap-vue' : 'https://codecloud.cdn.speedyrails.net/sites/59347e776e6f64538f150000/text/javascript/1554736414383/bootstrap-vue',
         'loader': 'https://mmvue.codecloudapp.com/loader.vue?noext',
-        'marketo': 'https://app-sj03.marketo.com/js/forms2/js/forms2.min.js'
+        // 'marketo': 'https://app-sj03.marketo.com/js/forms2/js/forms2.min.js'
     }
 });
 
