@@ -1226,7 +1226,8 @@ footer {
 .store_initial_container {
     margin: 20px 0;
     padding: 10px 20px;
-    background: $primary;
+    border-bottom: 2px solid $primary;
+    // background: $primary;
     font-family: Georgia, Times, Times New Roman, serif; 
     font-style: italic;
     font-size: 1.375rem;
