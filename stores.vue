@@ -119,12 +119,20 @@
                     'findCategoryById'
                 ]), 
                 allStores() {
+                    var all_stores = this.processedStores;
                     var listOne = [];
                     var listTwo = [];
-                    _.forEach( this.processedStores , function( value, key ) {
+                    _.forEach( all_stores, function( value, key ) {
+                        if(_.startsWith(value.name, 'The ')) {
+                            value.name_sort = _.trimStart(value.name, 'The ')
+                            value.name_sort = _.trimStart(value.name_sort)
+                        } else {
+                            value.name_sort = value.name
+                        } 
+              
                         var starter = "A";
                         var breaker = "M";
-                        var store_initial = _.toUpper(value.name[0]);
+                        var store_initial = _.toUpper(value.name_sort[0]);
                         if (store_initial.charCodeAt(0) <= breaker.charCodeAt(0) && store_initial.charCodeAt(0) >= starter.charCodeAt(0)){
                             listOne.push(value);
                         } else {
