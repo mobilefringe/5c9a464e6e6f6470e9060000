@@ -33,7 +33,7 @@
                             this.sideImage = item[0].image_url;
                         } else if (_.includes(this.page_name, "Sales")) {
                             var item = _.filter(temp_repo, function(o) { return _.includes(o.name, "Sales"); });
-                            console.log("item", _.filter(temp_repo, function(o) { return _.includes(o.name, "Sales"); }))
+                            console.log("item", item)
                             if (item != 0) {
                                 this.sideImage = default_image;
                             } else {
