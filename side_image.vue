@@ -21,34 +21,49 @@
                     if (temp_repo != null) {
                         if (_.includes(this.page_name, "About Us")) {
                             var item = _.filter(temp_repo, function(o) { return _.includes(o.name, "About Us"); });
-                            this.sideImage = item[0].image_url;
-                        } else if (_.includes(this.page_name, "Contact Us")) {
-                            var item = _.filter(temp_repo, function(o) { return _.includes(o.name, "Contact Us"); });
-                            this.sideImage = item[0].image_url;
-                        } else if (_.includes(this.page_name, "Jobs")) {
-                            var item = _.filter(temp_repo, function(o) { return _.includes(o.name, "Jobs"); });
-                            this.sideImage = item[0].image_url;
-                        } else if (_.includes(this.page_name, "Newsletter")) {
-                            var item = _.filter(temp_repo, function(o) { return _.includes(o.name, "Newsletter"); });
-                            this.sideImage = item[0].image_url;
-                        } else if (_.includes(this.page_name, "Sales")) {
-                            var item = _.filter(temp_repo, function(o) { return _.includes(o.name, "Sales"); });
-                            console.log("item", default_image)
                             if (_.isEmpty(item) || item.length === 0) {
-                                console.log("empty")
-                                
                                 this.sideImage = default_image;
                             } else {
-                                console.log("full")
                                 this.sideImage = item[0].image_url;
                             }
-                            console.log("this.sideImage", this.sideImage)
+                        } else if (_.includes(this.page_name, "Contact Us")) {
+                            var item = _.filter(temp_repo, function(o) { return _.includes(o.name, "Contact Us"); });
+                            if (_.isEmpty(item) || item.length === 0) {
+                                this.sideImage = default_image;
+                            } else {
+                                this.sideImage = item[0].image_url;
+                            }
+                        } else if (_.includes(this.page_name, "Jobs")) {
+                            var item = _.filter(temp_repo, function(o) { return _.includes(o.name, "Jobs"); });
+                            if (_.isEmpty(item) || item.length === 0) {
+                                this.sideImage = default_image;
+                            } else {
+                                this.sideImage = item[0].image_url;
+                            }
+                        } else if (_.includes(this.page_name, "Newsletter")) {
+                            var item = _.filter(temp_repo, function(o) { return _.includes(o.name, "Newsletter"); });
+                            if (_.isEmpty(item) || item.length === 0) {
+                                this.sideImage = default_image;
+                            } else {
+                                this.sideImage = item[0].image_url;
+                            }
+                        } else if (_.includes(this.page_name, "Sales")) {
+                            var item = _.filter(temp_repo, function(o) { return _.includes(o.name, "Sales"); });
+                            if (_.isEmpty(item) || item.length === 0) {
+                                this.sideImage = default_image;
+                            } else {
+                                this.sideImage = item[0].image_url;
+                            }
                         } else {
                             var item = _.filter(temp_repo, function(o) { return _.includes(o.name, "Default"); });
-                            this.sideImage = item[0].image_url;
+                            if (_.isEmpty(item) || item.length === 0) {
+                                this.sideImage = default_image;
+                            } else {
+                                this.sideImage = item[0].image_url;
+                            }
                         }
                     } else {
-                        this.sideImage = "//codecloud.cdn.speedyrails.net/sites/5c9a464e6e6f6470e9060000/image/png/1554587000151/default_side_banner.png"
+                        this.sideImage = default_image;
                     }
                 });
             },
