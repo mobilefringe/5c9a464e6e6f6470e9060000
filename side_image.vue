@@ -16,6 +16,7 @@
             },
             mounted() {
                 this.$nextTick(function() {
+                    var default_image = "//codecloud.cdn.speedyrails.net/sites/5c9a464e6e6f6470e9060000/image/png/1554587000151/default_side_banner.png"
                     var temp_repo = this.findRepoByName('Inside Page Side Image').images;
                     if (temp_repo != null) {
                         if (_.includes(this.page_name, "About Us")) {
@@ -35,9 +36,8 @@
                             if (item) {
                                 this.sideImage = item[0].image_url;
                             } else {
-                                this.sideImage = "//codecloud.cdn.speedyrails.net/sites/5c9a464e6e6f6470e9060000/image/png/1554587000151/default_side_banner.png"
+                                this.sideImage = default_image;
                             }
-                            
                         } else {
                             var item = _.filter(temp_repo, function(o) { return _.includes(o.name, "Default"); });
                             this.sideImage = item[0].image_url;
