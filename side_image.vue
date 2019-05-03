@@ -39,6 +39,7 @@
                             } else {
                                 this.sideImage = default_image;
                             }
+                            console.log("this.sideImage", this.sideImage)
                         } else {
                             var item = _.filter(temp_repo, function(o) { return _.includes(o.name, "Default"); });
                             this.sideImage = item[0].image_url;
