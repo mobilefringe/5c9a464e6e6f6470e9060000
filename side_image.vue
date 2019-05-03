@@ -35,10 +35,12 @@
                             var item = _.filter(temp_repo, function(o) { return _.includes(o.name, "Sales"); });
                             console.log("item", default_image)
                             if (_.isEmpty(item) || item.length === 0) {
-                                this.sideImage = item[0].image_url;
+                                console.log("empty")
                                 
-                            } else {
                                 this.sideImage = default_image;
+                            } else {
+                                console.log("full")
+                                this.sideImage = item[0].image_url;
                             }
                             console.log("this.sideImage", this.sideImage)
                         } else {
