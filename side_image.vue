@@ -34,10 +34,11 @@
                         } else if (_.includes(this.page_name, "Sales")) {
                             var item = _.filter(temp_repo, function(o) { return _.includes(o.name, "Sales"); });
                             console.log("item", item)
-                            if (item != 0) {
-                                this.sideImage = default_image;
-                            } else {
+                            if (_.isEmpty(item) || item.length === 0) {
                                 this.sideImage = item[0].image_url;
+                                
+                            } else {
+                                this.sideImage = default_image;
                             }
                             console.log("this.sideImage", this.sideImage)
                         } else {
