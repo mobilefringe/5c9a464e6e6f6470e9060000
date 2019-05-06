@@ -577,6 +577,9 @@ footer {
 }
 #mktoForm_3265 {
     width: 100% !important;
+    .mktoOffset {
+        display: none;
+    }
     .mktoFieldDescriptor.mktoFormCol {
         width: 100%;
     }
