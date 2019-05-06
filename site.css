@@ -597,7 +597,7 @@ footer {
             margin-left: 0 !important;
             button.mktoButton {
                 padding: 7.5px 0;
-                min-width: 200px;
+                width: 100%
                 display: block;
                 position: relative;
                 overflow: hidden;
