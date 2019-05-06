@@ -590,9 +590,9 @@ footer {
     }
     .mktoButtonRow {
         width: 100% !important;
-        // span.mktoButtonWrap.mktoSimple {
-        //     display: none !important;
-        // }
+        span.mktoButtonWrap.mktoSimple {
+            margin-left: 0 !important;
+        }
     }
 }
 #Email {
