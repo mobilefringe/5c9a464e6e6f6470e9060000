@@ -596,14 +596,18 @@ footer {
         span.mktoButtonWrap.mktoSimple {
             margin-left: 0 !important;
             button.mktoButton {
-                width: 100%;
-                width: 100%;
+                padding: 7.5px 0;
+                min-width: 200px;
+                display: block;
                 position: relative;
-                border: 0px solid #CCC;
-                border-radius: 0;
-                background: $primary;
-                font-size: 0.875rem;
-                color: $secondary_text;
+                overflow: hidden;
+                z-index: 1;
+                border: none;
+                background: #f70;
+                font-family: Avenir-Medium;
+                font-size: 1rem;
+                color: #363636;
+                text-align: center;
                 &:before {
                     content: '';
                     z-index: -1;
