@@ -578,7 +578,7 @@ footer {
 #Email {
     margin-bottom: 15px;
     padding: 4px 10px;
-    width: calc(100% - 32px);
+    width: calc(100% - 32px) !important;
     float: left;
     border: 1px solid #CCCCCC;
     border-right: 0;
