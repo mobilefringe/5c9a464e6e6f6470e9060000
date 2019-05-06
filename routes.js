@@ -85,20 +85,20 @@ define([], function () {
                 }
             ]
         },
-        {
-            path: '/newsletter',
-            component: view('default'),
-            children: [
-                {
-                    path: '',
-                    component: view('newsletter'),
-                    meta: {
-                        pageName: 'Newsletter',
-                    },
-                    name: 'newsletter'
-                }
-            ]
-        },
+        // {
+        //     path: '/newsletter',
+        //     component: view('default'),
+        //     children: [
+        //         {
+        //             path: '',
+        //             component: view('newsletter'),
+        //             meta: {
+        //                 pageName: 'Newsletter',
+        //             },
+        //             name: 'newsletter'
+        //         }
+        //     ]
+        // },
         {
             path: '/pages',
             component: view('default'),
