@@ -588,6 +588,11 @@ footer {
     .mktoFieldWrap {
         width: 100% !important;
     }
+    .mktoButtonRow {
+        span.mktoButtonWrap.mktoSimple {
+            display: none !important;
+        }
+    }
 }
 #Email {
     padding: 4px 10px;
