@@ -577,6 +577,9 @@ footer {
 }
 #mktoForm_3265 {
     width: 100% !important;
+    .mktoFieldDescriptor.mktoFormCol {
+        width: 100%;
+    }
     .mktoForm .mktoFormCol {
         min-height: unset !important;
         width: 100% !important;
