@@ -581,9 +581,9 @@ footer {
         min-height: unset !important;
         width: 100% !important;
         float: none !important;
-        .mktoFieldWrap {
-            width: 100% !important;
-        }
+    }
+    .mktoForm .mktoFieldWrap {
+        width: 100% !important;
     }
 }
 #Email {
