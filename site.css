@@ -589,6 +589,7 @@ footer {
         width: 100% !important;
     }
     .mktoButtonRow {
+        width: 100% !important;
         span.mktoButtonWrap.mktoSimple {
             display: none !important;
         }
