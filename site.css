@@ -603,6 +603,33 @@ footer {
                 background: $primary;
                 font-size: 0.875rem;
                 color: $secondary_text;
+                &:before {
+                    content: '';
+                    z-index: -1;
+                    position: absolute;
+                    top: 50%;
+                    left: 100%;
+                    margin: -15px 0 0 1px;
+                    width: 60px;
+                    height: 30px;
+                    border-radius: 50%;
+                    background: $accent;
+                    -webkit-transform-origin: 100% 50%;
+                    transform-origin: 100% 50%;
+                    -webkit-transform: scale3d(1, 2, 1);
+                    transform: scale3d(1, 2, 1);
+                    -webkit-transition: -webkit-transform 0.3s, opacity 0.3s;
+                    transition: transform 0.3s, opacity 0.3s;
+                    -webkit-transition-timing-function: cubic-bezier(0.7, 0, 0.9, 1);
+                    transition-timing-function: cubic-bezier(0.7, 0, 0.9, 1);
+                }
+            }
+            button.mktoButton:hover {
+                text-decoration: none;
+                &:before {
+                    -webkit-transform: scale3d(9, 9, 1);
+                    transform: scale3d(9, 9, 1);
+                }
             }
         }
     }
@@ -909,7 +936,7 @@ footer {
         }
     }
 }
-.animated_btn, button.mktoButton {
+.animated_btn {
     padding: 7.5px 0;
     min-width: 200px;
     display: block;
