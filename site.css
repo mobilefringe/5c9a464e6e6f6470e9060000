@@ -575,6 +575,38 @@ footer {
         }
     }
 }
+#email {
+    margin-bottom: 15px;
+    padding: 4px 10px;
+    width: calc(100% - 32px);
+    float: left;
+    border: 1px solid #CCCCCC;
+    border-right: 0;
+    border-radius: 0;
+    font-size: 0.875rem;
+    color: #000;
+}
+.newsletter_control::placeholder {
+    font-size: 0.875rem;
+    color: #000;
+}
+.newsletter_btn {
+    margin-bottom: 15px;
+    padding: 5px 9px;
+    // min-width: auto;
+    // width: 32px;
+    width: 100%;
+    border: 0px solid #CCC;
+    border-radius: 0;
+    background: $primary;
+    font-size: 0.875rem;
+    color: $secondary_text;
+}
+.newsletter_label {
+    font-size: 0.875rem;
+    letter-spacing: 0px;
+    color: #333;
+}
 .footer_privacy {
     padding: 15px 0;
     background: #505050;
