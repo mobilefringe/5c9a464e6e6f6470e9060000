@@ -577,6 +577,12 @@ footer {
 }
 #mktoForm_3265 {
     width: 100% !important;
+    .mktoForm .mktoFormCol {
+        min-height: unset !important;
+        width: 100% !important;
+        float: none !important;
+        
+    }
 }
 #Email {
     margin-bottom: 15px;
