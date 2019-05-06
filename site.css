@@ -541,7 +541,7 @@ footer {
     .footer_newsletter {
         border-right: 1px solid #979797;
         border-left: 1px solid #979797;  
-        .newsletter_control {
+        #email, .newsletter_control {
             margin-bottom: 15px;
             padding: 4px 10px;
             width: calc(100% - 32px);
