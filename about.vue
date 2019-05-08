@@ -11,22 +11,25 @@
                         </div>
                         <div class="details_col_9">
                             <div class="contact_page_body" v-if="currentPage" v-html="currentPage.body"></div>
-                            <hr v-if="aboutPage.body">
-                            <div class="contact_page_body" v-if="aboutPage" v-html="aboutPage.body"></div>
-                            <p>Visit Lewis Retail Centers</p>
-                            <div class="about_social_icons">
-                                <a href="" target="_blank">
-                                    <p class="accessibility">Visit Lewis Retail on Facebook</p>
-                                    <i class="fab fa-facebook-square"></i>
-                                </a>
-                                <a href="" target="_blank">
-                                    <p class="accessibility">Visit Lewis Retail on LinkedIn</p>
-                                    <i class="fab fa-linkedin"></i>
-                                </a>
-                                <a href="" target="_blank">
-                                    <p class="accessibility">Visit Lewis Retail website</p>
-                                    <i class="fas fa-globe"></i>
-                                </a>
+                            <div v-if="aboutPage.body">
+                                <hr>
+                                <div class="contact_page_body" v-if="aboutPage" v-html="aboutPage.body"></div>
+                                <p>Visit Lewis Retail Centers</p>
+                                <div class="about_social_icons">
+                                    <a href="" target="_blank">
+                                        <p class="accessibility">Visit Lewis Retail on Facebook</p>
+                                        <i class="fab fa-facebook-square"></i>
+                                    </a>
+                                    <a href="" target="_blank">
+                                        <p class="accessibility">Visit Lewis Retail on LinkedIn</p>
+                                        <i class="fab fa-linkedin"></i>
+                                    </a>
+                                    <a href="" target="_blank">
+                                        <p class="accessibility">Visit Lewis Retail website</p>
+                                        <i class="fas fa-globe"></i>
+                                    </a>
+                                </div>
+                                <hr>
                             </div>
                         </div>
                     </div>
