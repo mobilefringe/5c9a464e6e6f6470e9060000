@@ -16,15 +16,15 @@
                                 <div class="contact_page_body" v-if="aboutPage" v-html="aboutPage.body"></div>
                                 <hr>
                                 <div class="about_social_icons">
-                                    <a href="" target="_blank">
+                                    <a href="https://www.facebook.com/LewisRetailCenters/" target="_blank">
                                         <p class="accessibility">Visit Lewis Retail on Facebook</p>
                                         <i class="fab fa-facebook-square"></i>
                                     </a>
-                                    <a href="" target="_blank">
+                                    <a href="https://www.linkedin.com/company/the-lewis-group-of-companies" target="_blank">
                                         <p class="accessibility">Visit Lewis Retail on LinkedIn</p>
                                         <i class="fab fa-linkedin"></i>
                                     </a>
-                                    <a href="" target="_blank">
+                                    <a href="https://lewisretailcenters.com/" target="_blank">
                                         <p class="accessibility">Visit Lewis Retail website</p>
                                         <i class="fas fa-globe"></i>
                                     </a>
