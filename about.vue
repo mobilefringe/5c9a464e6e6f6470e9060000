@@ -13,6 +13,7 @@
                             <div class="contact_page_body" v-if="currentPage" v-html="currentPage.body"></div>
                             <hr v-if="aboutPage.body">
                             <div class="contact_page_body" v-if="aboutPage" v-html="aboutPage.body"></div>
+                            <p>Visit Lewis Retail Centers</p>
                             <div class="about_social_icons">
                                 <a href="" target="_blank">
                                     <p class="accessibility">Visit Lewis Retail on Facebook</p>
