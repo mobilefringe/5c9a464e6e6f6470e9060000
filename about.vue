@@ -20,7 +20,7 @@
                                 </a>
                                 <a href="" target="_blank">
                                     <p class="accessibility">Visit Lewis Retail on LinkedIn</p>
-                                    <i class="fa fa-linkedin"></i>
+                                    <i class="fab fa-linkedin"></i>
                                 </a>
                                 <a href="" target="_blank">
                                     <p class="accessibility">Visit Lewis Retail website</p>
