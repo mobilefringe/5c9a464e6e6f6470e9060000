@@ -11,6 +11,8 @@
                         </div>
                         <div class="details_col_9">
                             <div class="contact_page_body" v-if="currentPage" v-html="currentPage.body"></div>
+                            <hr v-if="aboutPage.body">
+                            <div class="contact_page_body" v-if="aboutPage" v-html="aboutPage.body"></div>
                         </div>
                     </div>
                 </div>
@@ -28,12 +30,14 @@
                     dataLoaded: false,
                     pageName: "About Us",
                     currentPage: null,
-                    currentImage: null
+                    currentImage: null,
+                    aboutPage: null
                 }
             },
             created() {
                 this.loadData().then(response => {
                     this.currentPage = response[0].data;
+                    this.aboutPage = response[1].data;
                     this.dataLoaded = true;
                 });
             },
@@ -48,7 +52,8 @@
                     this.property.mm_host = this.property.mm_host.replace("http:", "");
                     try {
                         let results = await Promise.all([
-                            this.$store.dispatch('LOAD_PAGE_DATA', { url: this.property.mm_host + "/pages/"+ this.property.slug + "-about-us.json" })
+                            this.$store.dispatch('LOAD_PAGE_DATA', { url: this.property.mm_host + "/pages/"+ this.property.slug + "-about-us.json" }),
+                            this.$store.dispatch('LOAD_PAGE_DATA', { url: this.property.mm_host + "/pages/"+ this.property.slug + "-about-lewis-retail.json" })
                         ]);
                         return results;
                     } catch (e) {
