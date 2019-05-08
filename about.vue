@@ -24,7 +24,7 @@
                                 </a>
                                 <a href="" target="_blank">
                                     <p class="accessibility">Visit Lewis Retail website</p>
-                                    <i class="fa fa-globe"></i>
+                                    <i class="fas fa-globe"></i>
                                 </a>
                             </div>
                         </div>
