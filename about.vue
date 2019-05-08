@@ -14,7 +14,7 @@
                             <div v-if="aboutPage.body">
                                 <hr>
                                 <div class="contact_page_body" v-if="aboutPage" v-html="aboutPage.body"></div>
-                                <hr>
+                                <!--<hr>-->
                                 <div class="about_social_icons">
                                     <a href="https://www.facebook.com/LewisRetailCenters/" target="_blank">
                                         <p class="accessibility">Visit Lewis Retail on Facebook</p>
@@ -29,7 +29,6 @@
                                         <i class="fas fa-globe"></i>
                                     </a>
                                 </div>
-                                
                             </div>
                         </div>
                     </div>
