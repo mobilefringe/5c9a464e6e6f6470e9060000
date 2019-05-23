@@ -133,10 +133,14 @@
                         var starter = "A";
                         var breaker = "M";
                         var store_initial = _.toUpper(value.name_sort[0]);
-                        if (store_initial.charCodeAt(0) <= breaker.charCodeAt(0) && store_initial.charCodeAt(0) >= starter.charCodeAt(0)){
-                            listOne.push(value);
+                        if (isNaN(store_initial)){
+                            if (store_initial.charCodeAt(0) <= breaker.charCodeAt(0) && store_initial.charCodeAt(0) >= starter.charCodeAt(0)){
+                                listOne.push(value);
+                            } else {
+                                listTwo.push(value);    
+                            }
                         } else {
-                            listTwo.push(value);    
+                            listOne.push(value);
                         }
                     });
                     this.listOne = _.groupBy(listOne, store => (isNaN(_.upperCase(store.name_sort.charAt(0))) ? _.upperCase(store.name_sort.charAt(0)) : "#"));
