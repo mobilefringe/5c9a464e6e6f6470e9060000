@@ -150,7 +150,6 @@
                     var cats = _.filter(this.processedCategories, function(o) { return o.store_ids !== null && o.store_ids.length > 0 });
                     cats = _.map(cats, 'name');
                     cats.unshift('Alphabetical');
-                    console.log("cats", cats)
                     return cats;
                 }
             },
