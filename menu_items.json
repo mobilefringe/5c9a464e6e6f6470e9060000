@@ -8,6 +8,10 @@
         "href": "/sales-and-events"
     },
     {
+        "name": "What's New",
+        "href": "/posts"
+    },
+    {
         "name": "Center Information",
         "id": "menu1",
         "href": "",
