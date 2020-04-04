@@ -4,7 +4,7 @@
         <transition name="fade">
             <div v-if="dataLoaded" v-cloak>
                 <banner-component :page_name="pageName"></banner-component>
-                <div class="main_container margin_30" v-if="postList">
+                <div class="main_container margin_30" v-if="postList.length > 0">
                     <transition-group name="list" tag="div">
                         <div class="row margin_40"  v-for="(item, index) in postList" v-if="showMore > index" :key="index">
                             <div class="col-xs-12 col-sm-4">
@@ -30,6 +30,13 @@
                     <div class="row" v-if="postList && showMore < postList.length" @click="loadMore()">
                         <div class="col-sm-4 col-md-2">
                             <div class="animated_btn">Load More Posts</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="main_container margin_30" v-else>
+                    <div class="row">
+                        <div class="col-md-12">
+                            <p>There are no news items posted at this time. Please check back soon!</p>
                         </div>
                     </div>
                 </div>
