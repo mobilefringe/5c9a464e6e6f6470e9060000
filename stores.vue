@@ -84,6 +84,11 @@
     </div>
 </template>
 
+<!-- Event snippet for Page view conversion page -->
+<script>
+    gtag('event', 'conversion', {'send_to': 'AW-718925610/62gqCO-FhcYBEKre59YC'});
+</script>
+
 <script>
     define(["Vue", "vuex", "vue-select", "vue!inside_banner.vue"], function(Vue, Vuex, VueSelect, insideBanner) {
         Vue.component('v-select', VueSelect.VueSelect);
@@ -187,8 +192,4 @@
             }
         });
     });
-</script>
-<!-- Event snippet for Page view conversion page -->
-<script>
-    gtag('event', 'conversion', {'send_to': 'AW-718925610/62gqCO-FhcYBEKre59YC'});
 </script>
