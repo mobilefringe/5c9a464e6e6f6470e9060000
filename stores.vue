@@ -189,6 +189,6 @@
     });
 </script>
 <!-- Event snippet for Page view conversion page -->
-<script>
-    gtag('event', 'conversion', {'send_to': 'AW-718925610/62gqCO-FhcYBEKre59YC'});
-</script>
+<!--<script>-->
+<!--    gtag('event', 'conversion', {'send_to': 'AW-718925610/62gqCO-FhcYBEKre59YC'});-->
+<!--</script>-->
