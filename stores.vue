@@ -106,6 +106,8 @@
                     this.allStores;
                     this.dataLoaded = true;
                 });
+                //  <!--Event snippet for Page view conversion page -->
+                gtag('event', 'conversion', {'send_to': 'AW-718925610/62gqCO-FhcYBEKre59YC'});
             },
             computed: {
                 ...Vuex.mapGetters([
